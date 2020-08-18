@@ -102,4 +102,25 @@ if(month === 2 || month === 10 || month === 12){
 }
 console.log(sweetSeason(4));
 console.log('-------------------------------------')
+//Цвета на флаге
+// Американский флаг представляет собой прямоугольное полотнище с горизонтальными
+// семью красными и шестью белыми полосами. В крыже тёмно-синего цвета — 50 пятиконечных белых звёзд.
+//
+//     Напишите функцию с именем flagColors, которая принимает строку color,
+//     содержащую название цвета и возвращает:
+//
+//     "This color is on the flag", если color равен 'red', 'navy' или 'white';
+// "This color is not on the flag", в остальных случаях.
+//     Примеры:
+//
+// функция flagColors('red') должна возвратить "This color is on the flag";
+// функция flagColors('green') должна возвратить "This color is not on the flag".
+function flagColors(color){
+if(color === 'red' || color === 'navy' || color === 'white'){
+    return 'This color is on the flag';
+    }
+    return 'This color is not on the flag';
+}
+console.log(flagColors('blue'));
+console.log(flagColors('red'));
 
