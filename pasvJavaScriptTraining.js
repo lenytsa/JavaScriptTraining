@@ -62,3 +62,20 @@ function nameStartsWithA1(str1, str2, str3){
     return 'No';
 }
 console.log(nameStartsWithA1('Boris', "Bob", "Fill"));
+console.log('-------------------------------------')
+//Вставать на работу или можно еще немного поспать?
+// Напишите функцию с именем dayOfWeek, которая принимает номер дня недели day (число от 1 до 7) в качестве аргумента и возвращает:
+//
+//     "You can get some sleep", если номер дня недели 6 или 7;
+// "Time to get up for work", в остальных случаях.
+//     Примеры:
+//
+// функция dayOfWeek(3) должна возвратить "Time to get up for work";
+// функция dayOfWeek(7) должна возвратить "You can get some sleep".
+function dayOfWeek(day){
+    if(day === 6 || day === 7){
+        return 'You can get some sleep';
+    }
+        return 'Time to get up for work';
+}
+console.log(dayOfWeek(7));
