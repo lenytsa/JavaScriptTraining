@@ -29,3 +29,36 @@ function numberDescription1(num){
    }
 }
 console.log(numberDescription1(11));
+console.log('-------------------------------------')
+//Начинается ли хотя бы одно имя с буквы "A"?
+// Даны три переменных, содержащие имена людей. Есть ли хоть одно имя, которое начинается на букву "A"?
+//
+//     Напишите функцию с именем nameStartsWithA, которая принимает три строки str1, str2, str3 в качестве аргументов и возвращает:
+//
+//     "Yes", если хотя бы одно имя начинается с буквы "A",
+//     "No", в противном случае.
+//     Примеры:
+//
+// функция nameStartsWithA('Alice', "Bob", "Fill") должна возвратить "Yes";
+// функция nameStartsWithA('Nick', 'Bill', 'Ronald') должна возвратить "No".
+function nameStartsWithA(str1, str2, str3){
+let arr = [str1, str2, str3];
+for (let i=0; i<arr.length; i++){
+    if(arr[i].startsWith('A')){
+        return 'Yes';
+    }
+}
+return 'No';
+}
+console.log(nameStartsWithA('Alice', "Bob", "Fill"));
+console.log('-------------------------------------')
+function nameStartsWithA1(str1, str2, str3){
+    let arr = [str1, str2, str3];
+    for (letters of arr){
+        if(letters.startsWith('A') ){
+            return 'Yes';
+        }
+    }
+    return 'No';
+}
+console.log(nameStartsWithA1('Boris', "Bob", "Fill"));
