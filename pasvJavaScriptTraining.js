@@ -18,3 +18,14 @@ function numberDescription(num){
     return num.toString().length;
 }
 console.log(numberDescription(311));
+function numberDescription1(num){
+   if(num.toString().length === 1){
+       return 'one-digit number';
+     }
+   else if(num.toString().length === 2){
+       return 'two-digit number';
+   }else if(num.toString().length === 3){
+       return 'three-digit number';
+   }
+}
+console.log(numberDescription1(11));
