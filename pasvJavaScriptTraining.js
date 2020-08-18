@@ -123,4 +123,50 @@ if(color === 'red' || color === 'navy' || color === 'white'){
 }
 console.log(flagColors('blue'));
 console.log(flagColors('red'));
+console.log('-------------------------------------')
+
+// //Время года
+// Дан номер месяца (число от 1 до 12). Получить время года (зима, весна, лето, осень).
+//
+//     Напишите функцию с именем season, которая принимает номер месяца month, и возвращает время года:
+//
+//     "Winter", если месяц = 1, 2 или 12;
+// "Spring", если месяц = 3, 4 или 5;
+// "Summer", если месяц = 6, 7 или 8;
+// "Fall", если месяц = 9, 10 или 11.
+// Примеры:
+//
+//     функция season(12) должна возвратить "Winter".
+function season(month){
+    let result;
+switch (month) {
+    case 1:
+    case 2:
+    case 12:
+        result = 'Winter';
+    break;
+    case 3:
+    case 4:
+    case 5:
+        result = 'Spring';
+        break;
+    case 6:
+    case 7:
+    case 8:
+        result = 'Summer';
+        break;
+    case 9:
+    case 10:
+    case 11:
+        result = 'Fall';
+       break;
+       default:
+        result = 'Not a valid number'
+
+    }
+    return  result;
+}
+console.log(season(1));
+console.log('-------------------------------------')
+
 
