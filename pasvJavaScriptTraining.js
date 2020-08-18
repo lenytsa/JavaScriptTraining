@@ -79,3 +79,27 @@ function dayOfWeek(day){
         return 'Time to get up for work';
 }
 console.log(dayOfWeek(7));
+console.log('-------------------------------------')
+
+// //Месяц покупки конфет
+// Больше всего конфет люди покупают в декабре к Рождеству и Новому году,
+//     и в феврале - ко дню Святого Валентина, и в октябре - к Хеллоуину.
+//
+//     Напишите функцию с именем sweetSeason, которая принимает номер месяца month
+// (число от 1 до 12) в качестве аргумента и возвращает:
+//
+//     "Time to buy sweets", если номер месяца 2, 10, 12;
+// "Not the time to buy sweets", в остальных случаях.
+//     Примеры:
+//
+// функция sweetSeason(12) должна возвратить "Time to buy sweets";
+// функция sweetSeason(7) должна возвратить "Not the time to buy sweets"
+function sweetSeason(month){
+if(month === 2 || month === 10 || month === 12){
+    return 'Time to buy sweets';
+    }
+    return 'Not the time to buy sweets';
+}
+console.log(sweetSeason(4));
+console.log('-------------------------------------')
+
