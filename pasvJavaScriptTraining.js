@@ -189,7 +189,7 @@ console.log('-------------------------------------')
 // функция atLeastOneEven(3, 4, 5) должна возвратить true;
 // функция atLeastOneEven(3, 7, 9) должна возвратить false.
 function atLeastOneEven(a, b, c){
-return a % 2===0 || b %2 === 0 || c %2 === 0;
+    return a % 2===0 || b %2 === 0 || c %2 === 0;
 }
 console.log(atLeastOneEven(3, 4, 5));
 console.log(atLeastOneEven(3, 7, 9));
@@ -200,7 +200,7 @@ console.log('-------------------------------------')
 // функция atLeastOneNegative(3, -4, 5, 0) должна возвратить true;
 // функция atLeastOneNegative(3, 7, 9, 12) должна возвратить false.
 function atLeastOneNegative(a, b, c, d){
-return a < 0 || b < 0 || c < 0 || d < 0;
+    return a < 0 || b < 0 || c < 0 || d < 0;
 }
 console.log(atLeastOneNegative(3, -4, 5, 0));
 console.log(atLeastOneNegative(3, 7, 9, 12));
@@ -214,11 +214,27 @@ console.log('-------------------------------------')
 // функция luckyNumber(7, 8) должна возвратить true;
 // функция luckyNumber(1, 2) должна возвратить false.
 function luckyNumber(a, b){
-return a === 8 || a === 3 || a === 5 || a === 7 || b === 8 || b === 3 || b === 5 || b === 7;
+    return a === 8 || a === 3 || a === 5 || a === 7 || b === 8 || b === 3 || b === 5 || b === 7;
 }
 console.log(luckyNumber(3, 6));
 console.log(luckyNumber(7, 8));
 console.log(luckyNumber(1, 2));
+console.log('-------------------------------------')
+
+//Пифагорова тройка
+// Дано три числа. Определить, являются ли эти числа “Пифагоровой тройкой”.
+// Числа a, b, c являются “Пифагоровой тройкой”, если квадрат одного из чисел равен
+// сумме квадратов двух других чисел, например, a**2 + b**2 = c**2.
+// Напишите функцию с именем pythagoreanThree, которая принимает три числа a, b, c в
+// качестве аргументов и возвращает
+// true, если числа являются “Пифагоровой тройкой”, и false, в противном случае.
+// функция pythagoreanThree(3, 4, 5) должна возвратить true;
+// функция pythagoreanThree(5, 7, 9) должна возвратить false.
+function pythagoreanThree(a, b, c){
+    return a**2 + b**2 === c**2;
+}
+console.log(pythagoreanThree(3, 4, 5));
+console.log(pythagoreanThree(5, 7, 9));
 
 
 
