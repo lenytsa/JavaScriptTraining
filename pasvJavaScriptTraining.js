@@ -178,8 +178,21 @@ console.log('-------------------------------------')
 // функция rainbowСolor('red') должна возвратить true.
 function rainbowColor(color){
     return color === 'red' || color === 'orange' || color === 'yellow' || color === 'green' || color === 'blue' || color === 'indigo' || color === 'violet';
-
 }
 console.log(rainbowColor('orange'));
+console.log('-------------------------------------')
+// //Есть ли хотя бы одно четное число в наборе?
+// Напишите функцию с именем atLeastOneEven, которая принимает три числа a, b, c в качестве аргументов, и возвращает true, если хотя бы одно из чисел четное, и false в противном случае.
+//
+//     Примеры:
+//
+// функция atLeastOneEven(3, 4, 5) должна возвратить true;
+// функция atLeastOneEven(3, 7, 9) должна возвратить false.
+function atLeastOneEven(a, b, c){
+return a % 2===0 || b %2 === 0 || c %2 === 0;
+}
+console.log(atLeastOneEven(3, 4, 5));
+console.log(atLeastOneEven(3, 7, 9));
+console.log('-------------------------------------')
 
 
