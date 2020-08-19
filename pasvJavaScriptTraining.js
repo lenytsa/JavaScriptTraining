@@ -200,7 +200,7 @@ console.log('-------------------------------------')
 // функция atLeastOneNegative(3, -4, 5, 0) должна возвратить true;
 // функция atLeastOneNegative(3, 7, 9, 12) должна возвратить false.
 function atLeastOneNegative(a, b, c, d){
-return a<0 || b< 0 || c<0 || d<0;
+return a < 0 || b < 0 || c < 0 || d < 0;
 }
 console.log(atLeastOneNegative(3, -4, 5, 0));
 console.log(atLeastOneNegative(3, 7, 9, 12));
