@@ -175,9 +175,11 @@ console.log('-------------------------------------')
 //
 //     Примеры:
 //
-// // функция rainbowСolor('red') должна возвратить true.
-// function rainbowСolor(color){
-//
-// }
+// функция rainbowСolor('red') должна возвратить true.
+function rainbowColor(color){
+    return color === 'red' || color === 'orange' || color === 'yellow' || color === 'green' || color === 'blue' || color === 'indigo' || color === 'violet';
+
+}
+console.log(rainbowColor('orange'));
 
 
