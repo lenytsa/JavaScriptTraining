@@ -194,5 +194,16 @@ return a % 2===0 || b %2 === 0 || c %2 === 0;
 console.log(atLeastOneEven(3, 4, 5));
 console.log(atLeastOneEven(3, 7, 9));
 console.log('-------------------------------------')
+// //Есть ли хотя бы одно отрицательное число среди данных четырех чисел?
+// Напишите функцию с именем atLeastOneNegative, которая принимает четыре числа a, b, c, d в качестве аргументов,
+// и возвращает true, если хотя бы одно из чисел отрицательное, и false в противном случае.
+// функция atLeastOneNegative(3, -4, 5, 0) должна возвратить true;
+// функция atLeastOneNegative(3, 7, 9, 12) должна возвратить false.
+function atLeastOneNegative(a, b, c, d){
+return a<0 || b< 0 || c<0 || d<0;
+}
+console.log(atLeastOneNegative(3, -4, 5, 0));
+console.log(atLeastOneNegative(3, 7, 9, 12));
+
 
 
