@@ -321,6 +321,23 @@ function floorNumber(floor, amount){
     return floor !== 4 && floor <= amount + 1;
 }
 console.log(floorNumber(6, 4));
+console.log('-------------------------------------')
+
+//
+// Есть ли в кошельке хоть один цент?
+//     Напишите функцию с именем moneyInCash, которая принимает число money
+//     (количество наличных денег в центах) в качестве аргумента
+//     и возвращает true, если количество денег не равно 0, и false в противном случае.
+// функция moneyInCash(1) должна возвратить true;
+// функция moneyInCash(100) должна возвратить true;
+// функция moneyInCash(0) должна возвратить false.
+function moneyInCash(money){
+    //return money !==0? true : false;
+    return money !==0;
+}
+console.log(moneyInCash(0));
+console.log(moneyInCash(100));
+
 
 
 
