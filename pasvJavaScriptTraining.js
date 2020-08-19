@@ -204,6 +204,21 @@ return a < 0 || b < 0 || c < 0 || d < 0;
 }
 console.log(atLeastOneNegative(3, -4, 5, 0));
 console.log(atLeastOneNegative(3, 7, 9, 12));
+console.log('-------------------------------------')
+
+//Счастливые числа в Японии
+// Счастливые числа в Японии: «8», «3», «5», «7».
+// Напишите функцию с именем luckyNumber, которая принимает два числа a, b в качестве аргументов, и возвращает true,
+// если хотя бы одно из данных чисел считается в Японии счастливым, и false в противном случае.
+// функция luckyNumber(3, 6) должна возвратить true;
+// функция luckyNumber(7, 8) должна возвратить true;
+// функция luckyNumber(1, 2) должна возвратить false.
+function luckyNumber(a, b){
+return a === 8 || a === 3 || a === 5 || a === 7 || b === 8 || b === 3 || b === 5 || b === 7;
+}
+console.log(luckyNumber(3, 6));
+console.log(luckyNumber(7, 8));
+console.log(luckyNumber(1, 2));
 
 
 
