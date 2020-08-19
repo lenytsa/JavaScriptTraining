@@ -332,7 +332,9 @@ console.log('-------------------------------------')
 // функция moneyInCash(100) должна возвратить true;
 // функция moneyInCash(0) должна возвратить false.
 function moneyInCash(money){
-    //return money !==0? true : false;
+    /*
+    return money !==0? true : false;
+    */
     return money !==0;
 }
 console.log(moneyInCash(0));

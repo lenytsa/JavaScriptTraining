@@ -12,6 +12,8 @@ function isVeryEvenNumber(n) {
     }
     return n%2 === 0;
 }
+console.log('-------------------------------------')
+
 //const inputs =    [0,    4,    12,    222,  5,     45,    4554,  1234,  88,    24,   400000220];
 //  const expecteds = [true, true, false, true, false, false, false, false, false, true, true     ];
 //Are You Playing Banjo?
@@ -26,6 +28,8 @@ function areYouPlayingBanjo(name) {
 }
 console.log(areYouPlayingBanjo("Martin"));
 console.log(areYouPlayingBanjo("Rikke"));
+console.log('-------------------------------------')
+
 //Calculate Two People's Individual Ages
 //https://www.codewars.com/kata/58e0bd6a79716b7fcf0013b1/train/javascript
 function getAges(sum,difference){
@@ -39,3 +43,16 @@ function getAges(sum,difference){
 };
 console.log(getAges(24,4)); // [ 14, 10 ]
 console.log(getAges(63,-14)); // null
+console.log('-------------------------------------')
+
+//Plural
+//https://www.codewars.com/kata/52ceafd1f235ce81aa00073a/train/javascript
+function plural(n) {
+   if( n!== 1)
+       return true;
+   return false;
+}
+console.log(plural(0));
+console.log(plural(0.8));
+console.log(plural(1));
+console.log(plural(Infinity));
