@@ -26,3 +26,16 @@ function areYouPlayingBanjo(name) {
 }
 console.log(areYouPlayingBanjo("Martin"));
 console.log(areYouPlayingBanjo("Rikke"));
+//Calculate Two People's Individual Ages
+//https://www.codewars.com/kata/58e0bd6a79716b7fcf0013b1/train/javascript
+function getAges(sum,difference){
+    if(difference < 0 || sum < 0){
+        return null;
+    }
+    sum = sum /2;
+    difference = difference /2;
+    if (sum + difference < 0 ||sum - difference <0 ) return null;
+    return [sum + difference, sum - difference];
+};
+console.log(getAges(24,4)); // [ 14, 10 ]
+console.log(getAges(63,-14)); // null
