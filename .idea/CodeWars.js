@@ -74,4 +74,28 @@ function divide1(weight){
 }
 
 console.log('-------------------------------------')
+//https://www.codewars.com/kata/56d6c333c9ae3fc32800070f/train/javascript
+//Days in the year
+// function yearDays(year)
+// {
+//    if(year%4 === 0 && year%400 === 0  )
+//        return `${year} has 366 days`;
+//    return `${year} has 365 days`;
+// }
+// console.log(yearDays(0));
+// console.log(yearDays(-64));
+// console.log(yearDays(1974));
+// console.log(yearDays(1900));//365
+// console.log(yearDays(1000));//365
+function yearDays(year) {
+    if(year % 4===0 && year % 100 !==0 || (year % 400===0) )
+        return `${year} has 366 days`;
+    return `${year} has 365 days`;
+}
+console.log(yearDays(0));
+console.log(yearDays(-64));
+console.log(yearDays(1974));
+console.log(yearDays(1900));//365
+console.log(yearDays(1000));//365
+console.log(yearDays(-64));//366
 
