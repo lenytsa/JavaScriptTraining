@@ -427,6 +427,30 @@ console.log('-------------------------------------')
 function boolToString(bool){
     return bool ? "True": "False";
 }
+// Найдите модуль числа.
+//     question
+// Напишите функцию absValue, которая принимает число x в качестве аргумента и возвращает модуль числа. В решении необходимо использовать тернарный оператор.
+//
+//     Примеры:
+//
+// функция absValue(5) должна возвратить 5;
+// функция absValue(-5) должна возвратить 5;
+// функция absValue(0) должна возвратить 0.
+function absValue(x){
+  return x === 0 ? 0:
+         x < 0 ? -x: x;
+}
+console.log(absValue(-10));
+function absValue1(x){
+    if(x === 0)
+        return 0;
+    else if(x<0)
+        return -x;
+    else return x;
+}
+console.log(absValue1(-20));
+
+
 
 
 
