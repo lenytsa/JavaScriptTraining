@@ -339,6 +339,33 @@ function moneyInCash(money){
 }
 console.log(moneyInCash(0));
 console.log(moneyInCash(100));
+console.log('-------------------------------------')
+
+//Содержит ли символ цифру?
+// Строки сравниваются посимвольно. При сравнении символов сравниваются их коды. Например,
+//     Символы, содержащие цифры, больше или равны "0" и меньше или равны "9".
+//     Напишите функцию с именем isDigit, которая в качестве аргумента принимает строку,
+//     содержащую один символ letter и возвращает
+//     строку "digit" или "not a digit". В решении необходимо использовать тернарный оператор.
+// функция isDigit('6') должна возвратить "digit";
+// функция isDigit('a') должна возвратить "not a digit".
+function isDigit(letter){
+if(+letter % 2 === 0 || +letter %2 === 1 ){
+    return 'digit';
+    }
+return 'not a digit';
+}
+console.log(isDigit('ad'));
+console.log(isDigit('0'));
+console.log(isDigit('c'));
+//Or
+function isDigit1(letter){
+    return (+letter % 2 === 0 || +letter %2 === 1 ) ? 'digit': 'not a digit';
+}
+console.log(isDigit1('10'));
+console.log(isDigit1('c'));
+console.log('-------------------------------------')
+
 
 
 
