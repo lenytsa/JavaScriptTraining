@@ -415,6 +415,18 @@ return      level === 'easy'? current + 2:
             level === 'hard' ? current + 8: NaN;
 }
 console.log(scoreIncrease(400, 'medium'));
+console.log('-------------------------------------')
+
+//Перевод булевой величины в строку - исправьте баги
+// Требуется создать функцию boolToString, которая принимает булевую величину
+// в качестве аргумента и возвращает строку "True" для аргумента true или "False" для аргумента
+// false. В решении необходимо использовать тернарный оператор.
+//
+// функция boolToString(true) должна возвратить "True";
+// функция boolToString(false) должна возвратить "False".
+function boolToString(bool){
+    return bool ? "True": "False";
+}
 
 
 
