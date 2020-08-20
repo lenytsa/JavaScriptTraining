@@ -56,3 +56,22 @@ console.log(plural(0));
 console.log(plural(0.8));
 console.log(plural(1));
 console.log(plural(Infinity));
+console.log('-------------------------------------')
+
+//Watermelon
+https://www.codewars.com/kata/55192f4ecd82ff826900089e/train/javascript
+    function divide(weight){
+        if(weight > 2)
+            if(weight%2 !== 1)
+                return true;
+        return false;
+    }
+console.log(divide(2));
+//Other soulutions, same task
+function divide1(weight){
+  //your code here
+  return weight > 2 && weight%2 == 0;
+}
+
+console.log('-------------------------------------')
+
