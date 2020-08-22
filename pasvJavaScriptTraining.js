@@ -481,10 +481,107 @@ function saleFruits1(n){
 console.log(saleFruits1(10));
 console.log('-------------------------------------')
 
+//Find maximum in array
+function maximum(arr) {
+let max = arr[0];
+for( i =1; i<arr.length;i++){
+    if(arr[i] > max){
+        max = arr[i];
+        }
+    }
+return max;
+}
+console.log(maximum([8, 5,100,  2, 90, 23 ]))
 
+console.log('-------------------------------------')
+//Find maximum in array another solution
+let arr1 =[8, 5,  2, 90, 23, 101 ];
+let max = Math.max(...arr1); //find max using Math.max
+console.log(max);
+console.log('-------------------------------------')
 
+//Find maximum element and his index
+function maximum2(arr) {
+    let max = arr[0];
+    let index = 0;
+    for(let i = 1; i < arr.length; i++){
+        if(arr[i] > max){
+            max = arr[i];
+            index = i;
+        }
+    }
+    return [max, index];
+}
+console.log(maximum2([11, 333, 8,234, 5,  2, 90, 23 ]))
+console.log('-------------------------------------')
 
+//find max element using methods indexOf
+function maximum3(arr) {
+    let max = Math.max(...arr)
+    console.log(max);
+    let index = arr.indexOf(max)
+    console.log(index);
+    return [max, index];
+}
+console.log(maximum3([11, 333, 500, 8,234, 5,  2, 90, 23 ]))
+console.log('-------------------------------------')
+// Задача 2 . В массиве хранится информация о стоимости покупок
+// каждого из n покупателей. Магазин хочет подарить скидочную карту
+// покупателю, который потратил больше всего денег.
+// Найти номер покупателя, стоимость покупок которого максимальна.
 
+function shopping(arr) {
+    let arr2 = [];
+    let sum;
+    for (let i = 0; i < arr.length; i++) {
+        sum = 0;
+        for (let j = 0; j < arr[i].length; j++) {
+            sum = sum + arr[i][j];
+        }
+        arr2.push(sum);
+    }
+    let maxi = Math.max(...arr2);
+    let index = arr2.indexOf(maxi);
+    return index + 1;
+}
+    arr = [[3, 5, 2], [7, 8, 1, 12], [10], [12, 3, 10], [8, 2]];
+    console.log(shopping(arr));
+    console.log('-------------------------------------')
+// Задача 3 .Массив хранит в себе слова.
+// Найти количество слов - палиндромов
 
+    function palindromes(arr) {
+        let count = 0;
+        for (let elm of arr) {
+            let str = '';
+            for (let i = 0; i < elm.length; i++) {
+                str = elm[i] + str;
+            }
+            if (str === elm) {
+                count++
+            }
+            console.log(str);
+        }
+        return count;
+    }
 
+    let words = ['deed', 'noon', 'door', 'mum', 'madam', 'am'];
+    console.log(palindromes(words));
+    console.log('-------------------------------------')
+//
 
+console.log('-------------------------------------')
+//
+    function countPalindromes(n, m) {
+        let count = [];
+        for (let i = n; i <= m; i++) {
+            let res = +((i + '').split('').reverse().join(''));
+            if (res === i) {
+                count.push(i);
+            }
+        }
+        return count;
+    }
+console.log(countPalindromes(1, 10));
+console.log(countPalindromes(878, 898));
+console.log('-------------------------------------');
