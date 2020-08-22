@@ -16,7 +16,7 @@ console.log('-------------------------------------')
 
 //const inputs =    [0,    4,    12,    222,  5,     45,    4554,  1234,  88,    24,   400000220];
 //  const expecteds = [true, true, false, true, false, false, false, false, false, true, true     ];
-//Are You Playing Banjo?
+//CodeWars: Are You Playing Banjo?
 //https://www.codewars.com/kata/53af2b8861023f1d88000832/train/javascript
 function areYouPlayingBanjo(name) {
 
