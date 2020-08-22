@@ -167,5 +167,14 @@ function bonusTime(salary, bonus) {
 console.log(bonusTime(10000, true));
 console.log(bonusTime(25000, true));
 console.log(bonusTime(2, true));
+console.log('-------------------------------------')
+
+
+//Training JS #7: if..else and ternary operator
+//https://www.codewars.com/kata/57202aefe8d6c514300001fd/train/javascript
+function saleHotdogs(n){
+    return n < 5 ? n * 100: n >=5 && n<10 ? n * 95: n * 90;
+}
+console.log(saleHotdogs(5));
 
 
