@@ -98,4 +98,30 @@ console.log(yearDays(1974));
 console.log(yearDays(1900));//365
 console.log(yearDays(1000));//365
 console.log(yearDays(-64));//366
+console.log('-------------------------------------')
+
+//Be Concise I - The Ternary Operator
+//https://www.codewars.com/kata/56f3f6a82010832b02000f38/train/javascript
+
+function describeAge(age) {
+    if (age <= 12) {
+        return "You're a(n) kid";
+    } else if (age >= 13 && age <= 17) {
+        return "You're a(n) teenager";
+    } else if (age >= 18 && age <= 64) {
+        return "You're a(n) adult";
+    } else {
+        return "You're a(n) elderly";
+    }
+}
+
+function describeAge1(age) {
+    //let s = 'You\'re a(n) ';
+    //return (age<=12)?`kid':(age >= 13 && age<=17)?str+'teenager':(age>=18&& age<=64)?str+'adult':str+'elderly';
+    //return (age<13)?`${s}kid`:(age <18)?`${s}teenager`:(age<65)?`${s}adult`:`${s}elderly`;
+    //return `You're a(n) ${age<13?'kid':age<18?'teenager':age<65?'adult':'elderly'}`
+    return `You're a(n) ${age < 13 ? 'kid' : age < 18 ? 'teenager' : age < 65 ? 'adult' : 'elderly'}`;
+
+}
+console.log(describeAge1(68));
 
