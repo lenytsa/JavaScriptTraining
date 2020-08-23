@@ -281,7 +281,33 @@ function switchItUp(number){
         default: return "NaN"
     }
 }
+//Or switchItUp=n=>["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
 console.log(switchItUp(5));
+
+console.log('-------------------------------------')
+//simple calculator
+//https://www.codewars.com/kata/5810085c533d69f4980001cf/solutions/javascript/me/best_practice
+function calculator(a,b,sign) {
+    if (typeof a !== 'number' || typeof b !== 'number'){
+    }
+        switch (sign) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+            default:
+                return 'unknown value';
+        }
+
+}
+console.log(calculator(12,23,'-'));
+
+
+
 
 
 
