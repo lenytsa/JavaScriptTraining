@@ -96,3 +96,36 @@ switch (n) {
     }
 }
 console.log(digitToName(4));
+console.log('---------------------------------------')
+
+//Числительные в английском языке
+// Напишите функцию с именем digitToWords, которая в качестве аргумента принимает целое число
+// от 0 до 12, и возвращает массив из двух слов, содержащий названия количественного и порядкового числительного.
+//     Если аргументом является число, меньшее 0 или большее 12, функция должна
+//     вернуть undefined. В решении необходимо использовать оператор switch.
+//     Количественные числительные: zero, one, two, three, four, five, six, seven,
+//     eight, nine, ten, eleven, twelve.
+//         Порядковые числительные: zeroth, first, second, third, fourth, fifth, sixth,
+//         seventh, eighth, ninth, tenth, eleventh, twelfth.
+//     функция digitToWords(2) должна возвратить [two, second];
+//     функция digitToWords(20) должна возвратить undefined.
+function digitToWords(n){
+switch (n) {
+    case 0: return ['zero', 'zeroth'];
+    case 1: return ['one', 'first'];
+    case 2: return ['two', 'second'];
+    case 3: return ['three', 'third'];
+    case 4: return ['four', 'fourth'];
+    case 5: return ['five', 'fifth'];
+    case 6: return ['six', 'sixth'];
+    case 7: return ['seven', 'seventh'];
+    case 8: return ['eight', 'eighth'];
+    case 9: return ['nine', 'ninth'];
+    case 10: return ['ten', 'tenth'];
+    case 11: return ['eleven', 'eleventh'];
+    case 12: return ['twelve', 'twelfth'];
+    default: return undefined;
+    }
+}
+console.log(digitToWords(3));
+console.log(digitToWords(20));
