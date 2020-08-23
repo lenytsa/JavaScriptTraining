@@ -177,7 +177,7 @@ function saleHotdogs(n){
 }
 console.log(saleHotdogs(5));
 
-//Get Planet Name By ID
+//CodeWars: Get Planet Name By ID
 //https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript
 function getPlanetName(id){
     var name;
