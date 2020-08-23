@@ -68,3 +68,31 @@ switch (n) {
     }
 }
 console.log(polygonName(8));
+console.log('---------------------------------------')
+
+//Изображение мебели на плане комнаты
+// Напишите функцию с именем digitToName, которая в качестве аргумента принимает целое число от
+// 1 до 7, обозначающее предмет мебели или оборудования, и возвращает строку, содержащую название этого предмета.
+// Если аргументом является число, меньшее 1 или большее 7, функция должна вернуть undefined.
+// В решении необходимо использовать оператор switch.
+//
+//     1 - 'wardrobe'; 2 - 'table'; 3 - 'chair'; 4 - 'bed'; 5 - 'bookshelf'; 6 - 'exercise bike';
+//     7 - 'air-conditioner'.
+//
+//         Примеры:
+//
+//     функция digitToName(2) должна возвратить "table";
+//     функция digitToName(0) должна возвратить undefined.
+function digitToName(n){
+switch (n) {
+    case 1: return 'wardrobe';
+    case 2: return 'table';
+    case 3: return  'chair';
+    case 4: return  'bed';
+    case 5: return 'bookshelf';
+    case 6: return 'exercise bike';
+    case 7: return 'air-conditioner';
+    default: return undefined;
+    }
+}
+console.log(digitToName(4));
