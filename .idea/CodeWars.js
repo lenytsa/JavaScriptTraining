@@ -177,6 +177,8 @@ function saleHotdogs(n){
 }
 console.log(saleHotdogs(5));
 
+console.log('-------------------------------------')
+
 //CodeWars: Get Planet Name By ID
 //https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript
 function getPlanetName(id){
@@ -209,6 +211,8 @@ function getPlanetName(id){
     return name;
 }
 console.log(getPlanetName(3));
+console.log('-------------------------------------')
+
 
 //Basic Calculator
 //https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/train/javascript
@@ -217,10 +221,39 @@ function calculate(num1, operation, num2) {
         case '+': return num1 + num2;
         case '-': return num1 - num2;
         case '*': return num1 * num2;
-        case '/': if(num2 !==0) return num1 / num2;
+        case '/': if(num2 !==0) return num1 / num2; //return num2 === 0 ? null : num1 / num2;
         default: return null;
     }
 }
 console.log(calculate(3.2,"/", 0));
+console.log('-------------------------------------')
+
+
+//https://www.codewars.com/kata/572059afc2f4612825000d8a/train/javascript
+function howManydays(month){
+  var days;
+  switch (month){
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+          return days = 31;
+      break;
+      case 4: case 6: case 9: case 11:
+          return  days = 30;
+      case 2:
+          return days = 28;
+      default: return 'NaN';
+  }
+  return days;
+}
+console.log(howManydays(132));
+
+
+console.log('-------------------------------------')
+
 
 
