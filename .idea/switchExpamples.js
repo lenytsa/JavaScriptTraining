@@ -211,3 +211,25 @@ function examinationMark(mark){
     }
 }
 console.log(examinationMark(5));
+console.log('---------------------------------------')
+
+//Время года - найдите баги
+// Требуется создать функцию с именем season, которая принимает число от 1 до 12 month в качестве
+// аргумента (номер месяца) и возвращает соответствующее название времени года: 'Winter', 'Spring',
+// 'Summer', 'Autumn'. Если аргументом является число, меньшее 1
+// или большее 12, функция должна вернуть строку "Wrong month".
+//     Исправьте ошибки, чтобы функция возвращала верный результат.
+// функция season(4) должна возвратить "Spring";
+// функция season(13) должна возвратить "Wrong month"
+function season(month){
+    let res;
+    switch (month) {
+        case 12: case 1: case 2: res = 'Winter'; break;
+        case 3: case 4: case 5: res = 'Spring'; break;
+        case 6: case 7: case 8: res = 'Summer'; break;
+        case 9: case 10: case 11: res = 'Autumn'; break;
+        default: res = 'Wrong month';
+    }
+    return res;
+}
+console.log(season(4));
