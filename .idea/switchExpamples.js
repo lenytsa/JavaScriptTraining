@@ -341,3 +341,29 @@ function robot(x, y, direction){
 }
 console.log(robot(5, 5, 'E'));
 console.log(robot(5, 5, 'N'));
+console.log('---------------------------------------')
+
+
+//Какой это день недели?
+// Дни недели пронумерованы так: 0 - 'Sunday', 1 - 'Monday', 2 - 'Tuesday', 3 - 'Wednesday', 4 - 'Thursday',
+// 5 - 'Friday', 6 - 'Saturday'.
+//
+//     Дано целое число k (от 1 до 365). Определите название дня недели для k-го дня года, если считать, что
+//     1 января был понедельник.
+//
+//     Напишите функцию с именем dayOfWeek, которая принимает число k в качестве аргумента (число от 1 до
+//     365 - номер дня года) и возвращает название дня недели.
+// функция dayOfWeek(3) должна возвратить "Wednesday";
+// функция dayOfWeek(14) должна возвратить "Sunday".
+function dayOfWeek(k){
+    switch (k%7) {
+        case 0: return 'Sunday';
+        case 1: return 'Monday';
+        case 2: return 'Tuesday';
+        case 3: return 'Wednesday';
+        case 4: return 'Thursday';
+        case 5: return 'Friday';
+        case 6: return 'Saturday';
+    }
+}
+console.log(dayOfWeek(17));
