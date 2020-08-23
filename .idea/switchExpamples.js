@@ -128,4 +128,42 @@ switch (n) {
     }
 }
 console.log(digitToWords(3));
-console.log(digitToWords(20));
+console.log(digitToWords(2));
+console.log('---------------------------------------')
+
+//Приветствие на разных языках
+// Напишите функцию с именем greetings, которая в качестве аргументов принимает
+// имя человека name и язык language и возвращает приветствие типа "Hello name!"
+// на указанном языке. Если аргументом является язык, не входящий в словарь, функция должна
+// вернуть приветствие на английском языке.
+// 'English' : 'Hello';
+//
+// 'German' : 'Hallo';
+//
+// 'French': 'Bonjour';
+//
+// 'Spanish': 'Hola';
+//
+// 'Italian': 'Saluto';
+//
+// 'Russian': 'Привет';
+//
+// 'Czech': 'Nazdar'.
+//
+//     В решении необходимо использовать оператор switch.
+// функция greetings('Peter', 'Russian') должна возвратить "Привет Peter!";
+// функция greetings('Ann', 'Chinese') должна возвратить "Hello Ann!".
+//
+function greetings(name, language){
+switch (language) {
+    case 'Russian': return `Привет ${name}!`;
+    case 'German': return `Hallo ${name}!`;
+    case 'French': return `Bonjour ${name}!`;
+    case 'Spanish': return `Hola ${name}!`;
+    case 'Italian': return `Saluto ${name}!`;
+    case 'Czech': return `Nazdar ${name}!`;
+    default:  return `Hello ${name}!`;
+    }
+}
+console.log(greetings('Peter', 'Russian'));
+console.log(greetings('Ann', 'Chinese'));
