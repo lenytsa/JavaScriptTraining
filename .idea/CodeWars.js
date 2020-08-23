@@ -210,4 +210,17 @@ function getPlanetName(id){
 }
 console.log(getPlanetName(3));
 
+//Basic Calculator
+//https://www.codewars.com/kata/5296455e4fe0cdf2e000059f/train/javascript
+function calculate(num1, operation, num2) {
+    switch (operation) {
+        case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/': if(num2 !==0) return num1 / num2;
+        default: return null;
+    }
+}
+console.log(calculate(3.2,"/", 0));
+
 
