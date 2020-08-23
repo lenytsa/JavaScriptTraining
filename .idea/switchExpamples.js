@@ -44,3 +44,27 @@ function workdayOrWeekend(day){
 
 console.log(workdayOrWeekend(6));
 console.log('---------------------------------------')
+//Правильные многоугольники
+// /Напишите функцию с именем polygonName, которая принимает целое число n
+// в качестве аргумента (число от 3 до 10 - количество вершин многоугольника) и возвращает название многоугольника.
+// Если аргументом является число, меньшее 3 или большее 10, функция должна вернуть значение undefined. В решении
+// необходимо использовать оператор switch.
+//     Названия многоугольников в зависимости от числа вершин: 3: 'triangle'; 4: 'square'; 5: 'pentagon'; 6:
+//     'hexagon'; 7:
+//     'heptagon'; 8: 'octahedron'; 9: 'nonagon'; 10: 'decagon'.
+//     функция polygonName(3) должна возвратить "triangle";
+//     функция polygonName(2) должна возвратить undefined.
+function polygonName(n){
+switch (n) {
+    case 3: return 'triangle';
+    case 4: return  'square';
+    case 5: return 'pentagon';
+    case 6: return 'hexagon';
+    case 7: return 'heptagon';
+    case 8: return 'octahedron';
+    case 9: return 'nonagon';
+    case 10: return 'decagon';
+    default: return  undefined;
+    }
+}
+console.log(polygonName(8));
