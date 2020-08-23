@@ -189,3 +189,25 @@ switch (day) {
     }
 }
 console.log(dayOfWeek(9));
+console.log('---------------------------------------')
+
+//Экзаменационная отметка
+// Создайте функцию с именем examinationMark, которая принимает значение mark (число от 1 до 5)
+// в качестве аргумента (экзаменационная отметка) и возвращает соответствующее название отметки:
+//     1 - 'bad', 2 - 'unsatisfactory', 3 - 'mediocre', 4 - 'good', 5 - 'excellent'.
+//         Если аргументом является число, меньшее 1 или большее 5, функция должна вернуть строку "wrong data".
+//     В решении необходимо использовать оператор switch.
+//         функция examinationMark(4) должна возвратить "good";
+//     функция examinationMark(13) должна возвратить "wrong data".
+//         Write your solution here
+function examinationMark(mark){
+    switch (mark) {
+        case 1: return 'bad';
+        case 2: return 'unsatisfactory';
+        case 3: return 'mediocre';
+        case 4: return 'good';
+        case 5: return 'excellent';
+        default: return 'wrong data';
+    }
+}
+console.log(examinationMark(5));
