@@ -114,4 +114,30 @@ for(let i =0; i<words.length; i++){
     words[i] = s;
 }
 console.log(words);
+console.log('-----------------------')
+
+//Given 2 dimentional array. Find sum of elements inside each array and display sum in new array
+let myArray = [[1,2,3], [2,2,2], [0,1,1]];
+let sum = [];
+for(let i=0; i < myArray.length; i++){
+    let s = 0;
+    for(let j=0; j < myArray[i].length; j++){
+        s += myArray[i][j];
+    }
+    sum.push(s);
+}
+console.log(myArray);
+console.log(sum);
+console.log('-----------------------')
+
+//Given 2 dimentional array. Find sum of elements inside each array and display sum in original array
+let myArrayK = [[1,2,3], [2,2,2], [0,1,1]];
+for(let i=0; i < myArrayK.length; i++){
+    let s = 0;
+    for(let j=0; j < myArrayK[i].length; j++){
+        s += myArrayK[i][j];
+    }
+    myArrayK[i]=s;
+}
+console.log(myArrayK);
 
