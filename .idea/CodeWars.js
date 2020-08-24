@@ -302,7 +302,6 @@ function calculator(a,b,sign) {
             default:
                 return 'unknown value';
         }
-
 }
 console.log(calculator(12,23,'-'));
 
