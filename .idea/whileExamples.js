@@ -247,6 +247,26 @@ function factorial(n){
 }
 console.log(factorial(8));
 console.log(`Factorials of numbers from 1 to ${n} is ${factorial(n)}`);
+//Сумма нечетных чисел от 1 до n.
+// Найдите сумму нечетных чисел от 1 до n, т.е. 1 + 3 + 5 + ...
+// Напишите функцию с именем sumOfOdd, которая принимает число n в качестве аргумента и возвращает
+// cумму нечетных чисел от 1 до n. При решении используйте цикл while.
+//     функция sumOfOdd(1) должна возвратить 1;
+// функция sumOfOdd(3) должна возвратить 4;
+// функция sumOfOdd(20) должна возвратить 100.
+function sumOfOdd(n){
+let sum =0;
+let i = 1
+    while(i<=n){
+    if(i%2===1){
+        sum = sum + i;
+        }
+    i++
+    }
+    return sum;
+}
+console.log(sumOfOdd(3));
+console.log(sumOfOdd(20));
 
 
 
