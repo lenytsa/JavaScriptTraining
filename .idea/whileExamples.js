@@ -226,6 +226,8 @@ function findSumWithFormula(n) {
 }
 let n = 3;
 console.log(`Sum of numbers from 1 to ${n} is ${findSumWithFormula(n)}`);
+console.log('-----------------------')
+
 //Факториал числа
 // Дано целое положительное число n. Найдите факториал числа n (n! = 1 * 2 * 3 *... * n)
 //
@@ -246,7 +248,9 @@ function factorial(n){
     return fact;
 }
 console.log(factorial(8));
-console.log(`Factorials of numbers from 1 to ${n} is ${factorial(n)}`);
+console.log(`Factorials of numbers from 1 to ${n} is ${factorial(8)}`);
+console.log('-----------------------')
+
 //Сумма нечетных чисел от 1 до n.
 // Найдите сумму нечетных чисел от 1 до n, т.е. 1 + 3 + 5 + ...
 // Напишите функцию с именем sumOfOdd, которая принимает число n в качестве аргумента и возвращает
@@ -267,6 +271,32 @@ let i = 1
 }
 console.log(sumOfOdd(3));
 console.log(sumOfOdd(20));
+console.log(`Sum of odd numbers from 1 to ${n} is ${sumOfOdd(3)}`);
+
+console.log('-----------------------')
+
+//Произведение четных чисел от 1 до n.
+// Найдите произведение четных чисел от 2 до n, т.е. 2 * 4 * 6 * ...
+//
+// Напишите функцию с именем multOfEven, которая принимает число n в качестве аргумента и возвращает
+// произведение четных чисел от 2 до n. При решении используйте цикл while.
+//
+//     функция multOfEven(2) должна возвратить 2;
+// функция multOfEven(6) должна возвратить 48;
+// функция multOfEven(10) должна возвратить 3840.
+function multOfEven(n){
+let mult= 1;
+let i= 1;
+    while(i<=n){
+        if(i%2 === 0){
+            mult = mult * i;
+        }
+        i++
+    }
+return mult;
+}
+console.log(multOfEven(6));
+console.log(`multiplication of even numbers from 1 to ${n} is ${multOfEven(6)}`);
 
 
 
