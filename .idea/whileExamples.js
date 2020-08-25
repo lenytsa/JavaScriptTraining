@@ -226,6 +226,28 @@ function findSumWithFormula(n) {
 }
 let n = 3;
 console.log(`Sum of numbers from 1 to ${n} is ${findSumWithFormula(n)}`);
+//Факториал числа
+// Дано целое положительное число n. Найдите факториал числа n (n! = 1 * 2 * 3 *... * n)
+//
+// Напишите функцию с именем factorial, которая принимает число n в качестве аргумента и возвращает
+// факториал числа n,
+//     т.е. произведение чисел от 1 до n. При решении используйте цикл while.
+//     функция factorial(2) должна возвратить 2;
+// функция factorial(3) должна возвратить 6;
+// функция factorial(8) должна возвратить 40320.
+
+function factorial(n){
+    let i = 1;
+    let fact = 1;
+    while(i<=n){
+        fact = fact * i;
+        i++
+    }
+    return fact;
+}
+console.log(factorial(8));
+console.log(`Factorials of numbers from 1 to ${n} is ${factorial(n)}`);
+
 
 
 
