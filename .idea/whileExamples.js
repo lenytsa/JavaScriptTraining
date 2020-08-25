@@ -316,6 +316,26 @@ console.log(sumOfDigits(12));
 console.log(sumOfDigits(25));
 console.log(sumOfDigits(658));
 console.log(sumOfDigits(13881));
+console.log('-----------------------')
+
+//Сколько цифр содержит число?
+// Напишите функцию с именем numberOfDigits, которая принимает неотрицательное число n (n>=0)
+// в качестве аргумента и возвращает количество цифр этого числа. При решении используйте цикл while.
+// Запрещено использовать методы и свойства строк и массивов.
+//
+// функция numberOfDigits(2) должна возвратить 1;
+// функция numberOfDigits(63) должна возвратить 2;
+// функция numberOfDigits(10123) должна возвратить 5.
+function numberOfDigits(n){
+    let count = 0;
+while(n>0){
+    let lastDigit= n%10;
+    count++
+    n= Math.floor(n/10);
+}
+return count;
+}
+console.log(numberOfDigits(3163));
 
 
 
