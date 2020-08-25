@@ -212,6 +212,12 @@ function sumOfIntegers(n){
 }
 console.log(sumOfIntegers(3));
 console.log('-----------------------')
+//Sum all numbers till the given one using function .
+function sumTo(n) {
+    if (n == 1) return 1;
+    return n + sumTo(n - 1);
+}
+console.log( sumTo(3) );
 
 
 
