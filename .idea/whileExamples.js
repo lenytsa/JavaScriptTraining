@@ -297,6 +297,25 @@ return mult;
 }
 console.log(multOfEven(6));
 console.log(`multiplication of even numbers from 1 to ${n} is ${multOfEven(6)}`);
+console.log('-----------------------')
+
+// Сумма цифр числа
+// Напишите функцию с именем sumOfDigits, которая принимает неотрицательное число n (n>=0) в качестве
+// аргумента и возвращает cумму цифр этого числа.
+//     При решении используйте цикл while. Запрещено использовать методы строк и массивов
+function sumOfDigits(n){
+let sum = 0;
+while(n>0){
+    let lastDigit = n%10;
+    sum = sum + lastDigit;
+    n= Math.floor(n/10);
+}
+return sum;
+}
+console.log(sumOfDigits(12));
+console.log(sumOfDigits(25));
+console.log(sumOfDigits(658));
+console.log(sumOfDigits(13881));
 
 
 
