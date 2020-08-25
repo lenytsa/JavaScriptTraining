@@ -42,7 +42,7 @@ for(let i =0; i<array.length; i++)
 console.log(negative,index);
 console.log('-----------------------')
 
-//find Last negative element in array and his index
+//find LAST negative element in array and his index
 //Note, no break needed in this case
 let array1 = [2,9, -3, 8, -8, 0, 5, -6];
 let negative1;
@@ -56,10 +56,10 @@ for(let i =0; i<array1.length; i++)
 }
 console.log(negative1,index1);
 //
-console.log('-----------------------')
+console.log('**-----------------------')
 //find first negative element in array and his index using function
 function findFirstNegativeElement(arr) {
-    let array = [0,-1,-2, 9, -3, 8, -8, 0, 5, -6];
+    let array = [0,2, -9, -3, 8, -8, 0, 5, -6];
     let negative;
     let index;
     for(let i =0; i<array.length; i++)
@@ -107,7 +107,7 @@ console.log('-----------------------')
 //in given array, reverse each string in array
 let words = ['Noon', 'sun', 'day', 'dad', 'happy'];
 for(let i =0; i<words.length; i++){
-    let s= '';
+    let s = '';
     for(let letter of words[i]){
         s = letter + s;
     }
@@ -140,4 +140,26 @@ for(let i=0; i < myArrayK.length; i++){
     myArrayK[i]=s;
 }
 console.log(myArrayK);
+//Дано целое положительное число n. Является ли это число степенью числа 3?
+//
+// Напишите функцию с именем powerOf3, которая принимает число n в качестве аргумента и возвращает true, если число является степенью числа 3, и false - в противном случае.
+//
+// При решении используйте цикл while и операции деления или умножения. Запрещается использовать методы объекта Math.
+//
+// Примеры:
+//
+// функция powerOf3(1) должна возвратить true; // так как 1 = 3 ** 0
+// функция powerOf3(3) должна возвратить true; // так как 3 = 3 ** 1
+// функция powerOf3(9) должна возвратить true; // так как 9 = 3 ** 2
+// функция powerOf3(27) должна возвратить true. // так как 27 = 3 ** 3
+// функция powerOf3(12) должна возвратить false. // так как 12 не является степенью числа 3
+function powerOf3(n) {
+    while (n > 1) {
+        n = n/3;
+    }
+    return (n === 1)? true: false;
+}
+console.log(powerOf3(1));
+console.log(powerOf3(3));
+console.log(powerOf3(12));
 
