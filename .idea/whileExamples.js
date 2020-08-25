@@ -218,6 +218,14 @@ function sumTo(n) {
     return n + sumTo(n - 1);
 }
 console.log( sumTo(3) );
+console.log('-----------------------')
+
+//Sum all numbers till the given one using function, solution 2
+function findSumWithFormula(n) {
+    return (n * (n + 1)) / 2
+}
+let n = 3;
+console.log(`Sum of numbers from 1 to ${n} is ${findSumWithFormula(n)}`);
 
 
 
