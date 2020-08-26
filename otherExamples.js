@@ -43,3 +43,29 @@ function countOfPrimeNumbers(n, m){
     return count;
 }
 console.log(countOfPrimeNumbers(1, 10));
+console.log("----------------------------------")
+
+// Задача 2. Имеется массив слов. Найти количество слов в массиве,
+// которые не содержат гласных букв
+
+//a) определяем, является ли буква гласной
+
+function isVowel(c){
+    c = c.toLowerCase();
+    let vowels = 'auioe';
+    return vowels.includes(c);
+}
+console.log(isVowel("U"));
+console.log("----------------------------------")
+
+//b) определяем, содержит ли строка гласные буквы
+function containsVowels(str){
+    for(let letter of str){
+        if(isVowel(letter)){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(containsVowels("ysb"));//it doesnt' contain - returns false
+console.log("----------------------------------")
