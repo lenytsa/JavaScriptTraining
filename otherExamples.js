@@ -31,3 +31,15 @@ function isPrime2(n){
 console.log(isPrime2(5)); //prime number
 console.log(isPrime2(6)); //not prime number
 console.log("----------------------------------");
+
+//this function  will call another function named isPrime2
+function countOfPrimeNumbers(n, m){
+    let count=0;
+    for(let i = n; i<= m; i++){
+        if(isPrime2(i)){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countOfPrimeNumbers(1, 10));
