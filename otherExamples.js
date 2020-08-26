@@ -81,5 +81,4 @@ function countOfStingsWithoutVowels(arr){
     return count;
 }
 console.log(countOfStingsWithoutVowels(["js", "sql", "Abc", "java", "pl1", "python"]));
-
 console.log("----------------------------------")
