@@ -86,3 +86,43 @@ console.log(countOfStingsWithoutVowels(["js", "sql", "Abc", "java", "pl1", "pyth
 console.log(res);
 
 console.log("----------------------------------")
+/// Задача 3. Дан двухмерный массив (массив, элементами которого
+//   являются массивы чисел).
+//   Вернуть массив, содержащий разность максимального и минимального элемента
+//   в каждом из вложенных массивов
+
+//а) функция, находящая минимальное значение в массиве
+
+function min(arr){
+    let mi = arr[0];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < mi){
+            mi = arr[i];
+        }
+    }
+    return mi;
+}
+//b) функция, находящая максимальное значение в массиве
+
+function max(arr){
+    let ma = arr[0];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > ma){
+            ma = arr[i];
+        }
+    }
+    return ma;
+}
+
+// c) функция, находящая разность максимального и минимального элемента
+// в каждом из вложенных массивов исходного двухмерного массива
+
+function diffInArray(arr){
+  let result = [];
+  for (let elm of arr){
+    result.push(max(elm) - min(elm));
+  }
+  return result;
+}
+
+console.log(diffInArray([[1,2,3,4], [5,1,8,9], [7,0,4], [41,2,11]]));
