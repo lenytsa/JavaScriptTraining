@@ -17,3 +17,17 @@ return true;
 console.log(isPrime(5)); //prime number
 console.log(isPrime(6)); //not prime number
 console.log("----------------------------------")
+
+//Find prime number, faster method is to divide  n/2
+
+function isPrime2(n){
+    if(n < 2) return false;
+    for(let i=2; i<=n/2; i++){
+        if(n % i === 0)
+            return false;
+    }
+    return true;
+}
+console.log(isPrime2(5)); //prime number
+console.log(isPrime2(6)); //not prime number
+console.log("----------------------------------");
