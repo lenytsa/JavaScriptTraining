@@ -71,14 +71,18 @@ console.log(containsVowels("ysb"));//it doesnt' contain - returns false
 console.log("----------------------------------")
 
 //3с) Находим количество элементов массива, которые не содержат гласных букв
+let res= [];
 function countOfStingsWithoutVowels(arr){
     let count = 0;
     for(let elm of arr){
         if(!containsVowels(elm)){
             count++
+            res.push(elm);
         }
     }
     return count;
 }
 console.log(countOfStingsWithoutVowels(["js", "sql", "Abc", "java", "pl1", "python"]));
+console.log(res);
+
 console.log("----------------------------------")
