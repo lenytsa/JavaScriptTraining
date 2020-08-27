@@ -103,6 +103,7 @@ function min(arr){
     return mi;
 }
 //b) функция, находящая максимальное значение в массиве
+console.log("----------------------------------")
 
 function max(arr){
     let ma = arr[0];
@@ -113,6 +114,8 @@ function max(arr){
     }
     return ma;
 }
+console.log("----------------------------------")
+
 
 // c) функция, находящая разность максимального и минимального элемента
 // в каждом из вложенных массивов исходного двухмерного массива
@@ -124,5 +127,29 @@ function diffInArray(arr){
   }
   return result;
 }
-
 console.log(diffInArray([[1,2,3,4], [5,1,8,9], [7,0,4], [41,2,11]]));
+console.log("----------------------------------")
+
+
+//Задача 4. Найти самое длинное слово в массиве слов (в предложении).
+//  Если слова имеют одинаковую длину, вернуть слово, первое по алфавиту
+function longestWord(text){
+    text = text.toLowerCase();
+    let arr = text.split(' ');//Split a string into an array of substrings
+    let long = [];
+    let len = [];
+    for (let elm of arr){
+        len.push(elm.length);
+    }
+    console.log(len);
+    let max = Math.max(...len); // 7
+    console.log(max);
+    for (let elm of arr){ //find all elements that are equal 7 and push them into new array named long
+        if (elm.length === max){
+            long.push(elm);
+        }
+    }
+    return min(long);
+}
+console.log(longestWord('Violets are purple and leaves are emerald and roses are perfect'));
+
