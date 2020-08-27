@@ -316,6 +316,25 @@ function isPowerOfTwo(n){
 }
 console.log(isPowerOfTwo(333));
 
+console.log('-------------------------------------')
+
+//Difference Of Squares
+//https://www.codewars.com/kata/558f9f51e85b46e9fa000025/train/javascript
+function differenceOfSquares(n){
+    let squareOftheSum= 1;
+    let sumOfTheSquares = 1;
+    while(n>1){
+        squareOftheSum = squareOftheSum + n;
+        sumOfTheSquares = sumOfTheSquares + Math.pow(n,2);
+        n--
+   }
+    console.log('Sq:' + squareOftheSum);
+    console.log('Sum:' + sumOfTheSquares);
+   return squareOftheSum**2 - sumOfTheSquares;
+}
+console.log(differenceOfSquares(10)); //2640
+
+
 
 
 
