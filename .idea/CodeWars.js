@@ -333,6 +333,22 @@ function differenceOfSquares(n){
    return squareOftheSum**2 - sumOfTheSquares;
 }
 console.log(differenceOfSquares(10)); //2640
+console.log('-------------------------------------')
+
+//Going to the cinema
+//https://www.codewars.com/kata/562f91ff6a8b77dfe900006e/train/javascript
+function movie(card, ticket, perc) {
+    let systemAprice = 0;
+    let systemBprice = 0;
+    let count = 0;
+   while(Math.ceil(systemBprice + card )>= systemAprice){
+       systemAprice = systemAprice + ticket;
+       systemBprice = (systemBprice + ticket) * perc;
+       count++
+   }
+   return count;
+};
+console.log(movie(500, 15, 0.9));
 
 
 
