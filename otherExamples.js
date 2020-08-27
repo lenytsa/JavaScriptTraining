@@ -149,6 +149,7 @@ function longestWord(text){
             long.push(elm);
         }
     }
+
     return min(long);
 }
 console.log(longestWord('Violets are purple and leaves are emerald and roses are perfect'));

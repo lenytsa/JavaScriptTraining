@@ -304,6 +304,17 @@ function calculator(a,b,sign) {
         }
 }
 console.log(calculator(12,23,'-'));
+console.log('-------------------------------------')
+
+//Power of two
+//https://www.codewars.com/kata/534d0a229345375d520006a0/train/javascript
+function isPowerOfTwo(n){
+    while(n>1){
+        n = n/2;
+    }
+    return (n === 1)? true: false;
+}
+console.log(isPowerOfTwo(333));
 
 
 
