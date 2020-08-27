@@ -92,3 +92,29 @@ function fractional(n){
     return +res.toFixed(3);
 }
 console.log(fractional(7));
+console.log('-----------------------------------------------')
+
+//Количество делителей числа.
+//Дано число n > 0. Найдите количество делителей этого числа. Делитель - это число, на которое данное
+// число делится без остатка.
+
+// Напишите функцию с именем numberOfDividers, которая принимает число n и возвращает количество делителей этого числа.
+// функция numberOfDividers(1) должна возвратить 1; // один делитель - число 1
+// функция numberOfDividers(2) должна возвратить 2; // 2 делителя - числа 1 и 2
+// функция numberOfDividers(3) должна возвратить 2; // 2 делителя - числа 1 и 3
+// функция numberOfDividers(4) должна возвратить 3; // 3 делителя - числа 1, 2, 4
+// функция numberOfDividers(12) должна возвратить 6. // 6 делителей - числа 1, 2, 3, 4, 6, 12
+
+function numberOfDividers(n){
+    let count =0;
+    for(let i=0; i<=n; i++){
+        if(n%i === 0){
+            count++
+        }
+    }
+    return count;
+}
+console.log(numberOfDividers(12));
+console.log(numberOfDividers(3));//2
+console.log(numberOfDividers(4));//3
+
