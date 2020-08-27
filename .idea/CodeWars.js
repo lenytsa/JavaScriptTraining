@@ -349,6 +349,17 @@ function movie(card, ticket, perc) {
    return count;
 };
 console.log(movie(500, 15, 0.9));
+console.log('++-------------------------------------')
+
+//No zeros for heros
+//https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/javascript
+function noBoringZeros(n) {
+   while(n%10 === 0 && n!==0){
+           n = n/10;
+       }
+       return n;
+}
+console.log(noBoringZeros(10500));
 
 
 
