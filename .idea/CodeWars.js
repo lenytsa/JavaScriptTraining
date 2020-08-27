@@ -392,11 +392,32 @@ function factorial2(n){
 }
 console.log(factorial2(4));//24
 
+//
+// let i = 3;
+// while (i <= 10){
+//     z = i++;
+//     i += 2;
+// }
+console.log('++++++++')
+//console.log(i)
+// let x = 1;
+// while (x <= 10){
+//     console.log(x, x*x);
+//     x = x + 2;
+// }
+console.log('2++++++++')
 
-
-
-
-
-
+// let i = 3;
+// while (i <= 10){
+//     z = i++;
+//     i += 2;
+//
+// }
+// console.log(i);
+let x = 10;
+while (x < 0){
+    y = x + 1;
+    x++;
+}
 
 
