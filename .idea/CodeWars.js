@@ -349,7 +349,7 @@ function movie(card, ticket, perc) {
    return count;
 };
 console.log(movie(500, 15, 0.9));
-console.log('++-------------------------------------')
+console.log('-------------------------------------')
 
 //No zeros for heros
 //https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/javascript
@@ -360,6 +360,39 @@ function noBoringZeros(n) {
        return n;
 }
 console.log(noBoringZeros(10500));
+console.log('-------------------------------------')
+
+//Powers of 3
+//https://www.codewars.com/kata/57be674b93687de78c0001d9/train/javascript
+function largestPower(n){
+    let k = 0;
+    while(3**k < n) {
+        k++
+    }
+    return k-1;
+}
+console.log(largestPower(3));
+console.log(largestPower(8));
+console.log('-------------------------------------')
+//Factorial with while loop
+function factorial(n){
+    let fac = 1;
+    while(n>=1){
+        fac = fac * n;
+        console.log( `${fac} * ${n}`);
+        n--
+    }
+    return fac;
+}
+console.log(factorial(4));//24
+//Factorial without using while loop
+function factorial2(n){
+
+    return n>1?  n * factorial2(n-1): 1;
+}
+console.log(factorial2(4));//24
+
+
 
 
 
