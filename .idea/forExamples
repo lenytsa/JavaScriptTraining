@@ -117,4 +117,15 @@ function numberOfDividers(n){
 console.log(numberOfDividers(12));
 console.log(numberOfDividers(3));//2
 console.log(numberOfDividers(4));//3
-
+function dividers(n){
+    let arrDiv = [];
+    let count =0;
+    for(let i=0; i<=n; i++){
+        if(n%i === 0){
+            count++
+            arrDiv.push(i);
+        }
+    }
+    return arrDiv;
+}
+console.log(dividers(4));
