@@ -89,7 +89,7 @@ function fractional(n){
         d = d * i;
         res = s/d
     }
-    return +res.toFixed(3);
+    return + res.toFixed(3);
 }
 console.log(fractional(7));
 console.log('-----------------------------------------------')
@@ -114,6 +114,8 @@ function numberOfDividers(n){
     }
     return count;
 }
+console.log('-----------------------------------------------')
+
 console.log(numberOfDividers(12));
 console.log(numberOfDividers(3));//2
 console.log(numberOfDividers(4));//3
@@ -129,3 +131,59 @@ function dividers(n){
     return arrDiv;
 }
 console.log(dividers(4));
+console.log('-----------------------------------------------')
+
+//Возведение в степень путем многократного умножения
+// Не пользуясь операцией возведения в степень, возвести число a в степень n.
+//
+//     power
+//
+// Напишите функцию с именем power, которая принимает числa a и n в качестве
+// аргументов и возвращает значение a в степени n (a и n - целые неотрицательные числа).
+// В решении используйте цикл for. В этом задании нельзя использовать операцию возведения в степень
+// и методы объекта Math.
+// функция power(3, 3) должна возвратить 27;
+// функция power(3, 0) должна возвратить 1;
+// функция power(0, 0) должна возвратить 1;
+// функция power(2, 5) должна возвратить 32.
+// function power(a, n){
+//     let res=1;
+//     for(let i=1; i<=n; i++){
+//         res =a**n;
+//     }
+//     return res;
+// }
+// console.log( power(3, 3));
+//
+//Same function as about but without using (**)
+function power2(a, n){
+    let res = 1;
+    for(let i=0; i<n; i++){
+            res = res * a;
+            console.log(` ${res} * ${a} =${res*a}`)
+    }
+    return res;
+}
+console.log( power2(3, 5));//243
+console.log('-----------------------------------------------')
+
+//Последовательность Фибоначчи
+// Числа Фибоначчи - последовательность, в которой первые два числа равны 0 и 1,
+// а каждое последующее число равно сумме двух предыдущих чисел: 0, 1, 1, 2, 3, 5, ...
+//
+// Напишите функцию с именем fibonacciNumbers, которая принимает число n (n >= 2)
+// в качестве аргумента и возвращает массив из n чисел Фибоначчи.
+//
+// функция fibonacciNumbers(2) должна возвратить [0, 1];
+// функция fibonacciNumbers(5) должна возвратить [0, 1, 1, 2, 3];
+// функция fibonacciNumbers(7) должна возвратить [0, 1, 1, 2, 3, 5, 8].
+function fibonacciNumbers(n){
+    let arr = [0,1];
+    for(let i = 2; i < n; i++){
+       arr[i] = arr[i-1]+ arr[i-2];
+    }
+    return arr;
+}
+console.log(fibonacciNumbers(5));
+console.log(fibonacciNumbers(7));
+console.log(fibonacciNumbers(2));
