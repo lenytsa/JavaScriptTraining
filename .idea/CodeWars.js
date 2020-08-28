@@ -540,3 +540,60 @@ console.log(getSum(1, 2));
 console.log(getSum(2, 2));
 console.log(getSum(-1, 0));
 console.log(getSum(0, -1));//-1
+console.log('-----------------------------------------')
+
+//Training JS #10: loop statement --for
+// Task
+// Coding in function pickIt, function accept 1 parameter:arr, it's a number array,
+// we need traverse arr by using for loop, if element is odd number, push it to array odd,
+// if it's a even number, push it to array even.
+//
+//     I've defined two array odd and even in the function, and also wrote the return statement.
+//     your work is write a for loop.
+//
+// If you forgot how to push an element to array, please refer to lesson 4.
+function pickIt(arr){
+    var odd=[],even=[];
+  for(let i=0; i< arr.length; i++){
+      if(arr[i]% 2 === 0){
+          even.push(arr[i]);
+      }
+      else if(arr[i]% 2 === 1){
+          odd.push(arr[i]);
+      }
+  }
+    return [odd,even];
+}
+console.log(pickIt([8,1,5,4,6,1,1]));
+//console.log(pickIt([1,2]));
+//short solution
+function pickIt1 (arr) {
+
+    let odd = []
+    let even =[]
+
+    for (var x of arr) {
+        ((x % 2) ? odd : even).push(x)
+    }
+
+    return [odd, even]
+}
+console.log(pickIt1([8,1,5,4,6,1,1]));
+//Sum of Multiples
+//Find the sum of all multiples of n below m
+// Keep in Mind
+// n and m are natural numbers (positive integers)
+// m is excluded from the multiples
+//sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+//sumMul(4, -7)  ==> "INVALID"
+function sumMul(n,m){
+let sum = 0;
+if(n>=m) return 'INVALID';
+    for(let i = n; i < m; i+=n){
+
+        sum = sum + i;
+    }
+    return sum;
+}
+console.log(sumMul(2,9));
+console.log(sumMul(4,-7));
