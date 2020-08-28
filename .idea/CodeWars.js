@@ -405,8 +405,7 @@ console.log('++++++++')
 //     console.log(x, x*x);
 //     x = x + 2;
 // }
-console.log('2++++++++')
-
+console.log('-----------------------------------------')
 // let i = 3;
 // while (i <= 10){
 //     z = i++;
@@ -419,5 +418,23 @@ while (x < 0){
     y = x + 1;
     x++;
 }
+console.log('-----------------------------------------')
+//Count the divisors of a number
+//https://www.codewars.com/kata/542c0f198e077084c0000c2e/train/javascript
+// Count the number of divisors of a positive integer n.
+//
+//     Random tests go up to n = 500000.
+// divisors(4)  = 3  // 1, 2, 4
+// divisors(5)  = 2  // 1, 5
+// divisors(12) = 6  // 1, 2, 3, 4, 6, 12
 
+function getDivisorsCnt(n){
+    let count = 0;
+    for(let i=0; i<=n; i++){
+        if(n%i === 0){
+            count++
+        }
+    }
+    return count;
+}
 
