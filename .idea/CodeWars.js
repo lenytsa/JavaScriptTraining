@@ -487,3 +487,20 @@ console.log(SeriesSum(2));//1.25
 console.log(SeriesSum(3));//1.39
 console.log(SeriesSum(4));//1.49
 console.log(SeriesSum(5));//1.57
+
+console.log('-----------------------------------------')
+
+//https://www.codewars.com/kata/grasshopper-summation
+//Write a program that finds the summation of every number from 1
+// to num. The number will always be a positive integer greater than 0.
+var summation = function (num) {
+    let sum =0
+    for(let i= 1; i<=num; i++){
+        sum = sum + i;
+    }
+    return sum;
+}
+console.log(summation(2));
+console.log(summation(8));
+//// Short Solution
+// const summation = n => n * (n + 1) / 2
