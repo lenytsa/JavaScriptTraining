@@ -565,6 +565,8 @@ function pickIt(arr){
     return [odd,even];
 }
 console.log(pickIt([8,1,5,4,6,1,1]));
+console.log('-----------------------------------------')
+
 //console.log(pickIt([1,2]));
 //short solution
 function pickIt1 (arr) {
@@ -579,6 +581,8 @@ function pickIt1 (arr) {
     return [odd, even]
 }
 console.log(pickIt1([8,1,5,4,6,1,1]));
+console.log('-----------------------------------------')
+
 //Sum of Multiples
 //Find the sum of all multiples of n below m
 // Keep in Mind
@@ -597,3 +601,4 @@ if(n>=m) return 'INVALID';
 }
 console.log(sumMul(2,9));
 console.log(sumMul(4,-7));
+console.log('-----------------------------------------')
