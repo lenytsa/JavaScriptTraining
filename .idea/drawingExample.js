@@ -57,3 +57,16 @@ function drawTriangleUpSideDown(n) {
     return str;
 }
 console.log(drawTriangleUpSideDown(5));
+console.log('-----------------------------')
+
+function drawPattern2(n) {
+    let str = '';
+    for (let i = 0; i < n; i++) {
+          str = str + '_'.repeat(i) + '#';
+          if(i < n-1){
+              str = str +'\n';
+      }
+           }
+    return str;
+}
+console.log(drawPattern2(5));
