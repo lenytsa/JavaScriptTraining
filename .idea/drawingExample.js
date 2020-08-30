@@ -21,3 +21,24 @@ for(let j=1; j<=m; j++){
 return stars;
 }
 console.log(pattern(3,5));
+console.log('-----------------------------')
+
+//Draw triangles
+// *
+// **
+// ***
+// ****
+// *****
+function drawTriangle(n) {
+    let str = '';
+    for(let i=1; i<=n; i++){
+        for(let j = 1; j<=i; j++){
+            str = str + '*';
+    }
+        if(i < n){
+            str = str + '\n';
+        }
+    }
+    return str;
+}
+console.log(drawTriangle(5));
