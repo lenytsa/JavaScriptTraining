@@ -70,3 +70,17 @@ function drawPattern2(n) {
     return str;
 }
 console.log(drawPattern2(5));
+console.log('---------------------')
+function drawPattern3(n) {
+    let space;
+    let str = '';
+    for (let i = 1; i <=n; i+=2) { //i is numbers of stars and rows
+        space= (n-i) / 2; //numbers of emply spaces before stars
+        str =  str + ' '.repeat(space) + '*'.repeat(i);
+        if(i < n){
+            str = str +'\n';
+        }
+    }
+    return str;
+}
+console.log(drawPattern3(5));
