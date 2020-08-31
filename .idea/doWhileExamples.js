@@ -152,3 +152,23 @@ function invertNumber(n){
 console.log(invertNumber(123));
 console.log(invertNumber(1000));
 console.log(invertNumber(15670));
+console.log('-----------------------------')
+// Дано целое положительное число. Получите массив его цифр, записанных в обратном порядке (от последней цифры к первой).
+//
+// Напишите функцию с именем arrayOfDigits, которая принимает в качестве аргумента число n и возвращает массив его цифр в обратном порядке.
+//     Запрещено использование методов split, reverse. В решении используйте цикл do while.
+// функция arrayOfDigits(123456) должна возвратить [6, 5, 4, 3, 2, 1];
+// функция arrayOfDigits(1000) должна возвратить [0, 0, 0, 1];
+// функция arrayOfDigits(1) должна возвратить [1].
+// Массив из цифр числа, записанных в обратном порядке.
+function arrayOfDigits(n){
+let arr = [];
+do{
+    arr.push(n%10)
+    n = Math.floor(n/10)
+
+}while(n>0)
+    return arr;
+}
+console.log(arrayOfDigits(123456));
+console.log(arrayOfDigits(1000));
