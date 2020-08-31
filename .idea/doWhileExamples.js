@@ -148,6 +148,7 @@ function invertNumber(n){
         n = Math.floor(n/10);
     }while(n>0)
     return rev ;
+    console.log(typeof rev);
 }
 console.log(invertNumber(123));
 console.log(invertNumber(1000));
@@ -166,9 +167,47 @@ let arr = [];
 do{
     arr.push(n%10)
     n = Math.floor(n/10)
-
 }while(n>0)
     return arr;
 }
 console.log(arrayOfDigits(123456));
 console.log(arrayOfDigits(1000));
+
+console.log('-----------------------------')
+//Содержит ли число цифру "2"?
+// Дано целое положительное число. Определите, содержит ли данное число цифру "2".
+//
+//     Напишите функцию с именем doesNumberContain2, которая принимает в
+//     качестве аргумента число n и возвращает true, если число содержит цифру 2, и false
+//     - в противном случае. Запрещено использование методов строк и массивов. В решении используйте цикл do while.
+// функция doesNumberContain2(1520) должна возвратить true;
+// функция doesNumberContain2(114876) должна возвратить false;
+// функция doesNumberContain2(22222) должна возвратить true.
+//     Write your solution here
+// OR ANOTHER SOLUTION
+// function arrayOfDigits (n) {
+//     let str = n + ''
+//     let arr = []
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         arr.push(+str[i])
+//     }
+//     return arr
+// }
+console.log('-----------------------------')
+//Содержит ли число цифру "2"?
+function doesNumberContain2(n){
+    let arr = []
+do{
+    arr.push(n%10)
+    n = Math.floor(n/10)
+    for(let i =0; i<arr.length; i++){
+        if (arr[i]===2){
+            return true
+        }
+    }
+}while(n>0)
+    return false;
+}
+console.log(doesNumberContain2(22222))
+console.log(doesNumberContain2(333))
+console.log(doesNumberContain2(93750))
