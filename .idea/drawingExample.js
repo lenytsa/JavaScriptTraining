@@ -71,6 +71,7 @@ function drawPattern2(n) {
 }
 console.log(drawPattern2(5));
 console.log('---------------------')
+
 function drawPattern3(n) {
     let space;
     let str = '';
@@ -84,3 +85,6 @@ function drawPattern3(n) {
     return str;
 }
 console.log(drawPattern3(5));
+for (let i = 0; i > 10; i++) {
+    console.log (i);
+}
