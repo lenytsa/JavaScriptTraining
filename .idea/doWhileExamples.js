@@ -172,6 +172,15 @@ do{
 }
 console.log(arrayOfDigits(123456));
 console.log(arrayOfDigits(1000));
+// OR ANOTHER SOLUTION
+// function arrayOfDigits (n) {
+//     let str = n + ''
+//     let arr = []
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         arr.push(+str[i])
+//     }
+//     return arr
+// }
 
 console.log('-----------------------------')
 //Содержит ли число цифру "2"?
@@ -184,15 +193,7 @@ console.log('-----------------------------')
 // функция doesNumberContain2(114876) должна возвратить false;
 // функция doesNumberContain2(22222) должна возвратить true.
 //     Write your solution here
-// OR ANOTHER SOLUTION
-// function arrayOfDigits (n) {
-//     let str = n + ''
-//     let arr = []
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         arr.push(+str[i])
-//     }
-//     return arr
-// }
+
 console.log('-----------------------------')
 //Содержит ли число цифру "2"?
 function doesNumberContain2(n){
@@ -211,3 +212,42 @@ do{
 console.log(doesNumberContain2(22222))
 console.log(doesNumberContain2(333))
 console.log(doesNumberContain2(93750))
+//Четные цифры числа.
+// Дано целое положительное число. Получите массив, состоящий из четных цифр этого числа.
+//
+//     Напишите функцию с именем evenDigits, которая принимает в качестве аргумента число n и возвращает массив четных цифр. Если таких цифр в числе нет, возвратить пустой массив. Запрещено использование методов строк и массивов. В решении используйте цикл do while. Порядок цифр в массиве должен совпадать с порядком цифр в исходном числе.
+//
+//     Примеры:
+//
+// функция evenDigits(12345) должна возвратить [2, 4];
+// функция evenDigits(110325) должна возвратить [0, 2];
+// функция evenDigits(22222) должна возвратить [2, 2, 2, 2, 2];
+// функция evenDigits(131) должна возвратить [].
+//UING FOR LOOP
+function evenDigits(n) {
+    let str = n + ''
+    let arr = []
+    for (let i=0; i<str.length;  i++) {
+        if (str[i] % 2 === 0) {
+        arr.push(+str[i])
+        }
+    }
+    return arr
+ }
+console.log(evenDigits(345));
+console.log('**------------')
+//USING WHILE LOOP
+function evenDigitsW(n){
+    let str = n.toString();
+    let arr = [];
+    do{
+        for (let i = 0; i<str.length; i++) {
+            if (str[i] % 2 ===0) {
+            arr.push(+str[i])
+        }
+    }
+    return arr
+    }while(n>0)
+}
+console.log(evenDigitsW(345));
+console.log(evenDigitsW(2345));
