@@ -660,3 +660,26 @@ function numberToPower(number, power){
 console.log(numberToPower(4, 2));
 console.log(numberToPower(10, 6));
 console.log(numberToPower(10, 0));
+console.log('++-----------------------------------------')
+
+//Training JS #9: loop statement --while and do..while
+// Task
+// Coding in function padIt, function accept 2 parameters:
+//
+//     str, it's a string representing the string to pad, we need pad some "*" at leftside or rightside of str
+// n, it's a number, how many times to pad the string.
+
+function padIt(str,n){
+    let i = 0;
+   do{
+       if(i%2===0){
+           str = `*${str}`;
+       }else{
+           str = `${str}*`;
+       }
+       i++
+   }while(i<n)
+    return str;
+}
+console.log(padIt("a",4));
+console.log(padIt("a",5));
