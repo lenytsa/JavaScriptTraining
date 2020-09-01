@@ -683,3 +683,4 @@ function padIt(str,n){
 }
 console.log(padIt("a",4));
 console.log(padIt("a",5));
+

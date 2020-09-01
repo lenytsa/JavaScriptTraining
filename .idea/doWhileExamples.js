@@ -251,3 +251,5 @@ function evenDigitsW(n){
 }
 console.log(evenDigitsW(345));
 console.log(evenDigitsW(2345));
+console.log('--------------------------------------')
+
