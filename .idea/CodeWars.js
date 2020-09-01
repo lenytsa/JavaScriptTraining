@@ -622,3 +622,21 @@ function drawStairs(n) {
     return str;
 }
 console.log(drawStairs(3));
+//Round up to the next multiple of 5
+//Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
+// input:    output:
+//     0    ->   0
+// 2    ->   5
+// 3    ->   5
+// 12   ->   15
+// 21   ->   25
+// 30   ->   30
+// -2   ->   0
+// -5   ->   -5
+
+function roundToNext5(n){
+ while(n%5 !==0){
+   n++
+ }
+  return n;
+}
