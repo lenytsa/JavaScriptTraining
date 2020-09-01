@@ -134,3 +134,27 @@ function isElementIncluded(arr, x){
 }
 console.log(isElementIncluded([10, 0, 4, 5, 9, 30], 0));
 console.log(isElementIncluded([2, 1, -3, 1, 4, 3], 0));
+console.log('--------------------------------------')
+
+//Содержит ли строка данный символ?
+// Напишите функцию с именем iSymbInString, которая принимает строку str и символ symb в качестве аргументов
+// и возвращает true, если в строке встречается хотя бы один символ symb, и false в противном случае.
+//
+// В решении необходимо использовать оператор break. Запрещено использование методов строк.
+//
+// Указание. Пройдите циклом по строке, и если встретится искомый символ, присвойте некоторой переменной
+// значение true и выполните прерывание цикла.
+
+// функция iSymbInString("abcd", "b") должна возвратить true;
+// функция iSymbInString("abcd", "f") должна возвратить false.
+function iSymbInString(str, symb){
+    for(let i=0; i<str.length; i++){
+        if(str[i]===symb){
+            return true;
+            break;
+        }
+    }
+    return false;
+}
+console.log(iSymbInString("abcd", "b"));
+console.log(iSymbInString("abcd", "f"));
