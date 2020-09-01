@@ -113,3 +113,24 @@ console.log(firstEvenElement([1, 2, 3, 4, 9, 0]));
 console.log(firstEvenElement([2, 1, -3, 4, 3]));
 console.log(firstEvenElement([9, 1, -3, 3, 11]));
 console.log(firstEvenElement([9, 1, -3, -4, 12, 6]));
+console.log('--------------------------------------')
+
+//
+//Определите, содержит ли массив заданное значение.
+// Напишите функцию с именем isElementIncluded, которая принимает числовой массив arr и
+// число x в качестве аргументов и возвращает true, если в массиве есть элемент x, и false в противном случае.
+//     В решении необходимо использовать оператор break.
+//     функция isElementIncluded([10, 0, 4, 5, 9, 30], 0) должна возвратить true;
+// функция isElementIncluded([2, 1, -3, 1, 4, 3], 1) должна возвратить true;
+// функция isElementIncluded([2, 1, -3, -4, 3], 0) должна возвратить false.
+function isElementIncluded(arr, x){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]===x){
+           return true;
+           break;
+        }
+    }
+    return false;
+}
+console.log(isElementIncluded([10, 0, 4, 5, 9, 30], 0));
+console.log(isElementIncluded([2, 1, -3, 1, 4, 3], 0));
