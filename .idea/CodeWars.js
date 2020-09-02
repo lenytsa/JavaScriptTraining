@@ -705,3 +705,97 @@ function grabDoll(dolls){
 console.log(grabDoll(["Mickey Mouse","Hello Kitty","Snow white"]));
 console.log(grabDoll(["Mickey Mouse","Hello Kitty","Hello Kitty","Snow white"]));
 console.log(grabDoll(["Mickey Mouse","Barbie doll","Hello Kitty","Hello Kitty","Hello Kitty","Snow white"]));
+//https://www.codewars.com/kata/56f69d9f9400f508fb000ba7/solutions/javascript/me/best_practice
+//Count the Monkeys!
+function monkeyCount(n) {
+  let arr = [];
+  for(let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+//another solution
+function monkeyCount1(n) {
+    let arr =[];
+    for (let i=0; i<n; i++){
+        arr[i] = i + 1;
+    }
+    return arr;
+}
+//https://www.codewars.com/kata/571d42206414b103dc0006a1/train/javascript
+//Filling an array (part 1)
+function arr(n){
+    let arr =[];
+    for(let i = n-1; i>=0; i--){
+        arr.unshift(i)
+    }
+    return arr;
+}
+//https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/javascript
+//To square(root) or not to square(root)
+function squareOrSquareRoot(array) {
+    let arr = [];
+    for(let elm of array) {
+        if(Math.sqrt(elm) % 1 === 0){
+            arr.push(Math.sqrt(elm))
+        }else{
+            arr.push(Math.pow(elm,2));
+        }
+    }
+    return arr;
+}
+//https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/train/javascript
+//Find the first non-consecutive number
+function firstNonConsecutive (arr) {
+    function firstNonConsecutive (arr) {
+        for(let i = 1; i<arr.length; i++){
+            if(arr[i] !== arr[i - 1] +1){
+                return arr[i];
+            }
+        }
+        return null;
+    }
+}
+//https://www.codewars.com/kata/5b097da6c3323ac067000036/train/javascript
+// /Rock Off!
+function solve(a, b) {
+    let countA = 0;
+    let countB = 0;
+    for (let i = 0; i <3; i++){
+        if(a[i] > b[i]){
+            countA++
+        }else if(a[i]< b[i]){
+            countB++
+        }
+    }
+    return (countA>countB)? `${countA},${countB} Alice made "Kurt" proud!`:
+           (countA<countB)?  `${countA},${countB} Bob made "Jeff" proud!`:
+         `${countA}, ${countB}: that looks like a "draw"! Rock on!`;
+}
+//https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+//Total amount of points
+function points(games) {
+    let point = 0;
+    for(let elm of games){
+        if(elm[0] > elm[2]){
+            point += 3;
+        }else if(elm[0] === elm[2])
+            point +=1;
+    }
+    return point;
+}
+//
+function points(games) {   let point = 0;   games.forEach(el=> el[0] > el[2] ? point += 3 : (el[0] === el[2]) ? point += 1 : point);   return point; } 
+
+//https://www.codewars.com/kata/53dc54212259ed3d4f00071c/train/javascript
+//Sum Arrays
+// Sum Numbers
+function sum (numbers) {
+    let s = 0;
+    for( let el of numbers){
+        s = s + el;
+    }
+    return s;
+
+};
+

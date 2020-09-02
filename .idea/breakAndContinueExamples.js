@@ -209,3 +209,23 @@ function fillArray(n){
 }
 console.log(fillArray(20));
 console.log(fillArray(7));
+console.log('--------------------------------------')
+
+for (let x = 0; x <= 10; x++) {
+    if (x % 5 === 0) {
+        continue;
+    }
+    console.log(x);
+}
+console.log('--------------------------------------')
+
+//нахождение суммы числовых значений массива, предшествующих первому нечисловому значению
+let arr5 = [1, 3, -2, -1, '4', 7,9];
+let sum5 = 0;
+for (i = 0; i < arr5.length; i++) {
+    if (typeof arr5[i] !== 'number') {
+        break;
+    }
+    sum5 += arr5[i];
+}
+console.log(sum5)
