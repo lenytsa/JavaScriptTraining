@@ -188,3 +188,16 @@ return sum;
 console.log(calcSum([1,2, 3]));
 console.log('---------------------------------------')
 
+function upsideDown(n){
+    let str = '';
+    for(let i= n; i>=1; i--){
+        for(let j = 1; j<=i; j++){
+            str = str + '*';
+        }
+        if(i > 1){
+            str = str + '\n';
+        }
+    }
+    return str;
+}
+console.log(upsideDown(3))
