@@ -203,7 +203,7 @@ function upsideDown(n){
 console.log(upsideDown(3))
 console.log('------------------')
 
-///IT COUNT ALL NEGATIVE ELEMENTS INSIDE EACH
+///IT COUNTs ALL NEGATIVE ELEMENTS INSIDE EACH
 function countLinesWithNegativeElements(arr){
     let count=0;
     for(let i=0; i<arr.length; i++){
@@ -215,6 +215,22 @@ function countLinesWithNegativeElements(arr){
     }
     return count;
 }
-console.log(countLinesWithNegativeElements([[1, -2], [2, -2, -3], [3, 5], [3, -4, 5, -1, 8], [-3, -1]]));
+console.log(countLinesWithNegativeElements([[1, -2], [2, -2, -3], [3, 5], [3, -4, 5, -1, 8], [-3, -1]]));//should return 7
 console.log(countLinesWithNegativeElements([[1, 3], [2, 7, 8], [3, 5]]));
 console.log(countLinesWithNegativeElements([[1, -2], [2, -2, -3], [3, 5], [3, 4, 5, -1, 8], [-3, -1]]))
+console.log('----------------------------------')
+///IT COUNTs NEGATIVE ELEMENTS INSIDE one group of arrays
+
+function countLinesWithNegativeElements1(arr){
+    let count=0;
+    for(let i=0; i<arr.length; i++){
+        for(let j=0; j<arr[i].length; j++){
+            if(arr[i][j]<0){
+                count += 1;
+                break;
+            }
+        }
+    }
+    return count;
+}
+console.log(countLinesWithNegativeElements1([[1, -2], [2, -2, -3], [3, 5], [3, -4, 5, -1, 8], [-3, -1]]));//should return 4
