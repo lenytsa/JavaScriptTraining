@@ -6,7 +6,7 @@ for(let j= 1; j<=20; j++){
     }
     console.log(stars);
 }
-console.log('-----------------------------')
+console.log('1-----------------------------')
 //Create function pattern (n,m) that returns patern with stars (m: rows, n number of stars in row)
 function pattern(n, m) {
     let stars = '';
@@ -21,7 +21,7 @@ for(let j=1; j<=m; j++){
 return stars;
 }
 console.log(pattern(3,5));
-console.log('-----------------------------')
+console.log('2-----------------------------')
 
 //Draw triangles
 // *
@@ -42,7 +42,7 @@ function drawTriangle(n) {
     return str;
 }
 console.log(drawTriangle(5));
-console.log('-----------------------------')
+console.log('3-----------------------------')
 
 function drawTriangleUpSideDown(n) {
     let str = '';
@@ -57,7 +57,7 @@ function drawTriangleUpSideDown(n) {
     return str;
 }
 console.log(drawTriangleUpSideDown(5));
-console.log('-----------------------------')
+console.log('4----------------------------')
 
 function drawPattern2(n) {
     let str = '';
@@ -70,7 +70,7 @@ function drawPattern2(n) {
     return str;
 }
 console.log(drawPattern2(5));
-console.log('---------------------')
+console.log('5--------------------')
 
 function drawPattern3(n) {
     let space;
@@ -88,3 +88,47 @@ console.log(drawPattern3(5));
 for (let i = 0; i > 10; i++) {
     console.log (i);
 }
+console.log('6------------------')
+
+//
+function recursiveStar(n){
+    if(n === 0) return 0;
+    recursiveStar(n - 1);
+        return console.log('*'.repeat(n));
+}
+console.log('7------------------')
+
+recursiveStar(5)
+function numericalTable(n, m){
+    let str = '';
+    for (let i = 1; i <= n; i++){
+        str += i+(' '+i).repeat(m-1);
+        if (i<n){
+            str+='\n';
+        }
+    }
+    return str;
+}
+console.log(numericalTable(1,6));
+console.log(numericalTable(3,5));
+console.log('8------------------')
+
+//Числовой треугольник
+function numericalTriangle(n){
+    let str = '';
+    for(let i=1; i<=n; i++){
+        for(let j = 1; j<=i; j++){
+            if(j<i){
+                str = str  + i + ' ';
+            }
+            else{
+                str = str  + i;
+            }
+        }
+        if(i < n){
+            str = str +'\n' ;
+        }
+    }
+    return str;
+}
+console.log(numericalTriangle(5))
