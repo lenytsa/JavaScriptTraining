@@ -813,5 +813,5 @@ function solve(n) {
    }
    return count;
 }
-console.log(solve(770));
+console.log(solve(770));//4
 
