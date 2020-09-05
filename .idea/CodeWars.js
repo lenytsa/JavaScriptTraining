@@ -814,4 +814,15 @@ function solve(n) {
    return count;
 }
 console.log(solve(770));//4
-
+//Filter the number
+//https://www.codewars.com/kata/55b051fac50a3292a9000025/train/javascript
+var FilterString = function(value) {
+    let str ='';
+    for(let elm of value ){
+        if(isNaN(elm) === false){
+            str = str + elm;
+        }
+    }
+    return parseInt(str);
+}
+ console.log(FilterString("a1b2c3"))
