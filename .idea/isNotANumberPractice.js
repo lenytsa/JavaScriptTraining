@@ -129,3 +129,18 @@ function checkingForFinite(a, b){
 }
 console.log(checkingForFinite(4, 2)); //true
 console.log(checkingForFinite(3, 0)); //false
+console.log('-------------------------------')
+
+
+//Является ли целое число безопасным числом для вычислений?
+//Напишите функцию safeNumber, которая принимает целое число x, и возвращает true,
+// если переменная x содержит безопасное целочисленное значение, и false - в противном случае.
+// функция safeNumber(20000) должна возвратить true;
+// функция safeNumber(9007199254740991) должна возвратить true;
+// функция safeNumber(9007199254740992) должна возвратить false.
+function safeNumber(x){
+    if(Number.isSafeInteger(x)) return true;
+    return false;
+}
+console.log(safeNumber(20000)); //true
+console.log(safeNumber(9007199254740992)) //false
