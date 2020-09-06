@@ -180,3 +180,19 @@ function checkingForfSafe(a, b){
 }
 console.log(checkingForfSafe(Infinity, 2)); //false
 console.log(checkingForfSafe(4000, 2000)); //true
+console.log('-------------------------------')
+
+//Верно ли, что 0.1 + 0.2 === 0.3? Все не так просто!
+//Напишите функцию isSumEqualsNumber, которая принимает три дробных числа a, b, c в качестве аргументов,
+// и проверяет, верно ли, что сумма двух дробных чисел равна
+// третьему дробному числу, т.е. равна ли сумма чисел a и b числу c.
+// Функци должна возвратить true (если сумма чисел после округления равна третьему числу) или false - в противном случае.
+// Замечание. Выполните округление суммы чисел и третьего числа до двух знаков в дробной части с помощью метода toFixed(n).
+// функция isSumEqualsNumber(0.1, 0.2, 0.3) должна возвратить true.
+
+function isSumEqualsNumber(a, b, c){
+    let sum = (a + b).toFixed(2); //it returns string
+    if(+sum === c) return true;
+    return false;
+}
+console.log(isSumEqualsNumber(0.1, 0.2, 0.3));
