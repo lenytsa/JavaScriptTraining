@@ -46,6 +46,7 @@ console.log(isArgNaN(NaN));
 console.log(isArgNaN('hello' * 2));
 console.log(isArgNaN(25));
 console.log(isArgNaN(true));
+console.log('-------------------------------')
 //Подсчитайте количество значений NaN в массиве
 // Напишите функцию countNaN, которая принимает массив arr в качестве аргумента и
 // возвращает количество элементов массива, имеющих значение NaN.
@@ -67,3 +68,27 @@ function countNaN(arr){
 console.log(countNaN([1, 2])); //0
 console.log(countNaN(['hello', 'Hello' * 5])); //1
 console.log(countNaN([NaN + 1])); //1
+console.log('-------------------------------')
+
+//Если аргумент функции - NaN
+// Напишите функцию multBy5, которая принимает величину value в качестве аргумента, и если это NaN, возвращает строку "Value is NaN", иначе умножает величину на 5.
+//
+// Примеры:
+//
+//     функция multBy5(3) должна возвратить 15;
+// функция multBy5(0) должна возвратить 0;
+// функция multBy5(true) должна возвратить 5;
+// функция multBy5(false) должна возвратить 0;
+// функция multBy5(null) должна возвратить 0;
+// функция multBy5('a') должна возвратить NaN;
+// функция multBy5(undefined) должна возвратить NaN.
+//     функция multBy5('a' * 5) должна возвратить "Value is NaN";
+// функция multBy5(NaN) должна возвратить "Value is NaN";
+// функция multBy5(+'hello') должна возвратить "Value is NaN".
+
+function multBy5(value){
+    if(Number.isNaN(value)) return 'Value is NaN';
+    else return value * 5;
+}
+console.log(multBy5(+'hello')); //Value is NaN
+console.log(multBy5(true)); //5
