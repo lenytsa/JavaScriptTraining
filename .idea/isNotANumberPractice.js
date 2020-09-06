@@ -113,3 +113,19 @@ function countInfinity(arr){
 console.log(countInfinity([Infinity, 1/0, -10/0, 12])); //3
 console.log(countInfinity([1, 100, 10, -10])); //0
 console.log(countInfinity([Infinity, NaN])); //0
+console.log('-------------------------------')
+
+//Является ли результат операции деления двух чисел конечным числом?
+// Напишите функцию checkingForFinite, которая принимает две числа
+// a и b в качестве аргументов, выполняет деление числа a на число b и проверяет
+// результат деления (частное чисел) на конечность. Функция должна возвратить true, если результат -
+// конечное число, и false - в противном случае.
+// функция checkingForFinite(4, 2) должна возвратить true;
+// функция checkingForFinite(3, 0) должна возвратить false;
+// функция checkingForFinite(-1, 0) должна возвратить false
+function checkingForFinite(a, b){
+    if(isFinite(a/b) ) return true;
+    return false
+}
+console.log(checkingForFinite(4, 2)); //true
+console.log(checkingForFinite(3, 0)); //false
