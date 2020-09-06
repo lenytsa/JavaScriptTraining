@@ -46,3 +46,24 @@ console.log(isArgNaN(NaN));
 console.log(isArgNaN('hello' * 2));
 console.log(isArgNaN(25));
 console.log(isArgNaN(true));
+//Подсчитайте количество значений NaN в массиве
+// Напишите функцию countNaN, которая принимает массив arr в качестве аргумента и
+// возвращает количество элементов массива, имеющих значение NaN.
+// функция countNaN([NaN, 1, NaN + 1, "a" * 2]) должна возвратить 3, так как данный массив содержит три элемента,
+// имеющих значение NaN;
+// функция countNaN(['hello', 'Hello' * 5) должна возвратить 1;
+// функция countNaN([NaN + 1]) должна возвратить 1;
+// функция countNaN([1, 2]) должна возвратить 0;
+// функция countNaN([]) должна возвратить 0.
+function countNaN(arr){
+    let count = 0
+    for(let elm of arr){
+        if(Number.isNaN(elm)){
+            count = count + 1;
+        }
+    }
+    return count;
+}
+console.log(countNaN([1, 2])); //0
+console.log(countNaN(['hello', 'Hello' * 5])); //1
+console.log(countNaN([NaN + 1])); //1
