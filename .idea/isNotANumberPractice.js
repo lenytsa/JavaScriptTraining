@@ -131,7 +131,6 @@ console.log(checkingForFinite(4, 2)); //true
 console.log(checkingForFinite(3, 0)); //false
 console.log('-------------------------------')
 
-
 //Является ли целое число безопасным числом для вычислений?
 //Напишите функцию safeNumber, которая принимает целое число x, и возвращает true,
 // если переменная x содержит безопасное целочисленное значение, и false - в противном случае.
@@ -144,3 +143,22 @@ function safeNumber(x){
 }
 console.log(safeNumber(20000)); //true
 console.log(safeNumber(9007199254740992)) //false
+console.log('-------------------------------')
+
+//Подсчитайте количество безопасных значений в массиве
+//Напишите функцию countOfSafeNumbers, которая принимает массив arr в качестве аргумента и возвращает
+// количество элементов массива, являющихся числами, безопасными для вычислений.
+// функция countOfSafeNumbers([Infinity, 9007199254740991, -Infinity, 0]) должна возвратить 2;
+// функция countOfSafeNumbers([1, 3, 10, -10, NaN) должна возвратить 4;
+// функция countOfSafeNumbers([Infinity, NaN]) должна возвратить 0.
+function countOfSafeNumbers(arr){
+    let count = 0;
+    for(let elm of arr){
+        if(Number.isSafeInteger(elm)){
+           count++
+        }
+    }
+    return count;
+}
+console.log(countOfSafeNumbers([Infinity, NaN])); //0
+console.log(countOfSafeNumbers([1, 3, 10, -10, NaN]));
