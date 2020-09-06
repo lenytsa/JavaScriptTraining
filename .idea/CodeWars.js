@@ -814,6 +814,8 @@ function solve(n) {
    return count;
 }
 console.log(solve(770));//4
+console.log('-------------------')
+
 //Filter the number
 //https://www.codewars.com/kata/55b051fac50a3292a9000025/train/javascript
 var FilterString = function(value) {
@@ -826,6 +828,8 @@ var FilterString = function(value) {
     return parseInt(str);
 }
  console.log(FilterString("a1b2c3"))
+console.log('-------------------')
+
 //isReallyNaN
 //https://www.codewars.com/kata/56c24c58e0c0f741d4001aef/solutions/javascript/me/best_practice
 // I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. I had expected it to be more discerning, but it's returning true for undefined right now.
@@ -835,6 +839,8 @@ var FilterString = function(value) {
  const isReallyNaN = (val) => {
     return Number.isNaN(val)  ?  true : false;
 };
+console.log('-------------------')
+
 //Find variable which breaks strict comparison!
  //https://www.codewars.com/kata/560f8d41cf6e1fe5c900002e/train/javascript
 // In JavaScript, there is a special case where strict comparison of the same variable
@@ -842,4 +848,20 @@ var FilterString = function(value) {
 function findStrangeValue() {
     return NaN;
 }
+console.log('-------------------')
+
+//https://www.codewars.com/kata/55a4f9afeffe4231090000d6/train/javascript
+// Not all integers can be represented by JavaScript/TypeScript. It has space to to represent
+// 53bit signed integers. In this Kata, we've to determine if it is' +
+// ' safe to use the integer or not. Make use of the latest ES6 features to find this.
+// SafeInteger(9007199254740990) //true
+// SafeInteger(-90) //true
+// SafeInteger(9007199254740992) //false
+function SafeInteger(n) {
+    if(Number.isSafeInteger(n)) return true;
+    return false;
+}
+
+
+console.log('-------------------')
 
