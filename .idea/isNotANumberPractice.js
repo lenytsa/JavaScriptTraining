@@ -92,3 +92,24 @@ function multBy5(value){
 }
 console.log(multBy5(+'hello')); //Value is NaN
 console.log(multBy5(true)); //5
+console.log('-------------------------------')
+
+//Подсчитайте количество бесконечных значений в массиве
+// Напишите функцию countInfinity, которая принимает массив arr в качестве аргумента и возвращает
+// количество элементов массива, не являющихся конечными.
+// функция countInfinity([Infinity, 1/0, -10/0, 12]) должна возвратить 3, так как данный массив
+// содержит три элемента, имеющих не конечные значения: это Infinity, 1/0, -10/0 ;
+// функция countInfinity([1, 100, 10, -10]) должна возвратить 0 (все значения в массиве являются конечными);
+// функция countInfinity([Infinity, NaN]) должна возвратить 2 (оба значения Infinity, NaN не конечны).
+function countInfinity(arr){
+    let count = 0;
+    for(let elm of arr){
+        if(!isFinite(elm)){
+            count +=1;
+        }
+    }
+    return count;
+}
+console.log(countInfinity([Infinity, 1/0, -10/0, 12])); //3
+console.log(countInfinity([1, 100, 10, -10])); //0
+console.log(countInfinity([Infinity, NaN])); //0

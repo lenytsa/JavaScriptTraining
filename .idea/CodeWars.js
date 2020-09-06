@@ -842,3 +842,4 @@ var FilterString = function(value) {
 function findStrangeValue() {
     return NaN;
 }
+
