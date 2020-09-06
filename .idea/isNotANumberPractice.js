@@ -162,3 +162,21 @@ function countOfSafeNumbers(arr){
 }
 console.log(countOfSafeNumbers([Infinity, NaN])); //0
 console.log(countOfSafeNumbers([1, 3, 10, -10, NaN]));
+
+console.log('-------------------------------')
+
+//Является ли произведение двух чисел безопасным числом?
+// Напишите функцию checkingForfSafe, которая принимает две величины a и b
+// в качестве аргументов, выполняет умножение числа a на число b, и проверяет, является ли произведение
+// безопасным числом. Функция должна возвратить true, если произведение чисел - безопасное число, и false -
+// в противном случае.
+// функция checkingForfSafe(4000, 2000) должна возвратить true;
+// функция checkingForfSafe(9007199254740991, 10) должна возвратить false;
+// функция checkingForfSafe(Infinity, 2) должна возвратить false.
+function checkingForfSafe(a, b){
+    let res = a * b;
+    if(Number.isSafeInteger(res)) return true;
+    return false;
+}
+console.log(checkingForfSafe(Infinity, 2)); //false
+console.log(checkingForfSafe(4000, 2000)); //true
