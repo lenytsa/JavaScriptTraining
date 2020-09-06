@@ -835,3 +835,10 @@ var FilterString = function(value) {
  const isReallyNaN = (val) => {
     return Number.isNaN(val)  ?  true : false;
 };
+//Find variable which breaks strict comparison!
+ //https://www.codewars.com/kata/560f8d41cf6e1fe5c900002e/train/javascript
+// In JavaScript, there is a special case where strict comparison of the same variable
+// returns false! Try to find out what must be done to get such result!
+function findStrangeValue() {
+    return NaN;
+}
