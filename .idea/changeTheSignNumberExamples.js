@@ -41,3 +41,18 @@ function changeNumber(num){
     if(num===0) return 0;
 }
 console.log(changeNumber(10));
+console.log('------------------------------------')
+
+//Изменение знака суммы чисел
+// Напишите функцию с именем oppositeSum, которая принимает три числа a, b, c в качестве
+// аргументов и и возвращает сумму этих чисел с обратным знаком.
+// функция oppositeSum(1, 2, 3) должна возвратить -6;
+// функция oppositeSum(-1, -2, -3) должна возвратить 6;
+// функция oppositeSum(0, 1, -1) должна возвратить 0.
+function oppositeSum(a, b, c){
+    let sum = a + b+ c;
+    if(sum>0) return -sum;
+    if(sum<0) return -sum;
+    if(sum===0) return 0;
+}
+console.log(oppositeSum(0, 1, -1));
