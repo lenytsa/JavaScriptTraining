@@ -882,3 +882,13 @@ function makeNegative(num) {
     if(num===0) return 0;
 }
 
+//Opposite number
+//Very simple, given a number, find its opposite.
+// 1: -1
+// 14: -14
+// -34: 34
+function opposite(number) {
+    if(number<0) return -number;
+    if(number>0) return -number;
+}
+console.log(opposite(12525220.3325))
