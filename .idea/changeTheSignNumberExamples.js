@@ -26,3 +26,18 @@ function changeMax(a, b){
 }
 console.log( changeMax(1, 6));
 console.log( changeMax(1, 1));
+console.log('------------------------------------')
+
+// Изменение числа в зависимости от его знака
+// Напишите функцию с именем changeNumber, которая принимает
+// число num в качестве аргумента и увеличивает это число в два раза, если число положительное
+//     , или меняет знак этого числа на противоположный, если число отрицательное.
+// функция changeNumber(9) должна возвратить 18;
+// функция changeNumber(-7) должна возвратить 7;
+// функция changeNumber(0) должна возвратить 0.
+function changeNumber(num){
+    if(num<0) return (-num);
+    if(num>0) return num *2;
+    if(num===0) return 0;
+}
+console.log(changeNumber(10));
