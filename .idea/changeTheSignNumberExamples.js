@@ -56,3 +56,24 @@ function oppositeSum(a, b, c){
     if(sum===0) return 0;
 }
 console.log(oppositeSum(0, 1, -1));
+
+//Изменение знака каждого элемента массива
+// Напишите функцию с именем oppositeArray, которая принимает массив arr в
+// качестве аргумента и и возвращает массив, в котором каждый элемент заменен на противоположный по знаку элемент.
+// функция oppositeArray([1, -2, 3]) должна возвратить [-1, 2, -3].
+
+function oppositeArray(arr){
+    let otherArr =[];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]<= 0){
+            otherArr.push(arr[i] *(-1));
+
+        }
+        else if(arr[i]>=0){
+            otherArr.push(arr[i] *(-1));
+        }
+    }
+    return otherArr;
+}
+console.log(oppositeArray([1, -2, 3]));
+console.log(oppositeArray([0, -3, -9]));
