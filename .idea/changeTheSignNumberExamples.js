@@ -56,6 +56,7 @@ function oppositeSum(a, b, c){
     if(sum===0) return 0;
 }
 console.log(oppositeSum(0, 1, -1));
+console.log('------------------------------------')
 
 //Изменение знака каждого элемента массива
 // Напишите функцию с именем oppositeArray, которая принимает массив arr в
@@ -77,3 +78,17 @@ function oppositeArray(arr){
 }
 console.log(oppositeArray([1, -2, 3]));
 console.log(oppositeArray([0, -3, -9]));
+console.log('------------------------------------')
+
+//Симметричная точка на числовой оси
+// Напишите функцию с именем oppositePoint, которая принимает число x (координата точки M)
+// в качестве аргумента и возвращает координату точки N в виде строки "N(x)".
+// функция oppositePoint(4) должна возвратить "N(-4)";
+// функция oppositePoint(-4) должна возвратить "N(4)";
+// функция oppositePoint(0) должна возвратить "N(0)".
+function oppositePoint(x){
+    if(x>0) return `N(${x*-1})`;
+    if(x<0) return `N(${x*-1})`;
+    if(x===0) return `N(0)`;
+}
+console.log( oppositePoint(-10));
