@@ -54,3 +54,22 @@ console.log(expressionValue(-1, 2, -2));
 console.log(expressionValue(3, 5, -3));
 console.log(expressionValue(0, 9, 8));
 console.log('-----------------------------------')
+//Завтрак в кафетерии
+// В здании высотой 30 этажей есть два кафетерия, расположенные на n и m этажах.
+//     Кафетерий на этаже n называется "Nonstop", кафетерий на этаже m называется "Merci".
+//     Вы работаете на этаже x, и хотите позавтракать в ближайшем кафетерии. В какой кафетерий вы отправитесь?
+//     Напишите функцию с именем nearestCafe, которая в качестве аргументов принимает три различные числа x, n, m
+//     (x - этаж, где вы находитесь; n, m - этажи, где расположены кафетерии) и возвращает название ближайшего кафетерия.
+//     В случае,
+//     если количество этажей до кафетериев одинаковое, вы предпочитаете завтракать в кафе "Merci".
+//     Примеры:
+// функция nearestCafe(5, 6, 14) должна возвратить "Nonstop";
+// функция nearestCafe(10, 1, 15) должна возвратить "Merci".
+function nearestCafe(x, n, m){
+    if((Math.abs(x -n))< (Math.abs(x-m))) return 'Nonstop';
+    else if((Math.abs(x -n))> (Math.abs(x-m))) return 'Merci';
+    else if(((Math.abs(x -n))== (Math.abs(x-m))))
+        return 'Merci';
+}
+console.log(nearestCafe(5, 6, 14)); //"Nonstop"
+console.log(nearestCafe(10, 1, 15)); //"Merci"
