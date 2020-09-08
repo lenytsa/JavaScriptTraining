@@ -51,3 +51,17 @@ function powersOfTwo(n){
 return res;
 }
 console.log(powersOfTwo(4));
+console.log('----------------------------------')
+
+//Теорема Пифагора
+// Квадрат гипотенузы равен сумме квадратов катетов (теорема Пифагора).
+//
+// Напишите функцию с именем squareOfHypotenuse, которая принимает два числа a, b
+// (значения длин катетов) в качестве аргументов и возвращает квадрат гипотенузы.
+// функция squareOfHypotenuse(5, 3) должна возвратить 34;
+// функция squareOfHypotenuse(3, 4) должна возвратить 25.
+// функция squareOfHypotenuse(8, 4) должна возвратить 80.
+function squareOfHypotenuse(a, b){
+    return Math.pow(a,2) + Math.pow(b,2);
+}
+console.log(squareOfHypotenuse(5, 3))
