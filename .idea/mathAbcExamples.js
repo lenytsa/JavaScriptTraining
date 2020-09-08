@@ -21,3 +21,18 @@ function nearestPoint(a, b, c){
 console.log( nearestPoint(9, 6, 14)); //b
 console.log( nearestPoint(3, 0, 4));
 console.log( nearestPoint(0, 2, -4));
+
+//Найдите модуль числа без использования метода Math.abs(x).
+// Найдите модуль числа x без использования метода Math.abs(x).
+//     Напишите функцию с именем absValue, которая принимает число x в качестве аргумента и возвращает модуль
+// этого числа. Решите эту задачу без использования метода Math.abs(x).
+//     Примеры:
+// функция absValue(-1) должна возвратить 1;
+// функция absValue(5) должна возвратить 5;
+// функция absValue(0) должна возвратить 0.
+function absValue(x){
+    if(x<0) return -x;
+    if(x>0) return x;
+    if(x===0)return 0;
+}
+console.log()
