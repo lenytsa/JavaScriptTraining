@@ -32,3 +32,22 @@ function powerArray(arr){
 //console.log(powerArray([1,3,-1,2]));
 console.log(powerArray([2,-2,2]));
 console.log(powerArray([-2,0,1,0,-1,2])); //[4,0,1,0,-1,4]
+console.log('--------------')
+//Степени числа 2
+// Получите массив степеней числа 2: [1, 2, 4, 8, 16 ... ]
+// powers
+// Напишите функцию с именем powersOfTwo, которая принимает число n в качестве аргумента, и возвращает массив степеней числа 2 (степени от 0 до n).
+//
+// Пример:
+//
+//     функция powersOfTwo(2) должна возвратить [1, 2, 4];
+// функция powersOfTwo(4) должна возвратить [1, 2, 4, 8, 16] .
+
+function powersOfTwo(n){
+    let res=[];
+    for(let i=0; i<=n; i++){
+    res.push( Math.pow(2, i));
+}
+return res;
+}
+console.log(powersOfTwo(4));
