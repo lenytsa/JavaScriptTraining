@@ -863,7 +863,7 @@ function SafeInteger(n) {
 }
 
 
-console.log('++-------------------')
+console.log('-------------------------------------')
 console.log(Number.isSafeInteger(-156576576576));
 console.log(Number.isSafeInteger(676876360));
 console.log(Number.isSafeInteger(-1308e+500));
@@ -881,6 +881,7 @@ function makeNegative(num) {
     if(num>0) return -num;
     if(num===0) return 0;
 }
+console.log('-------------------------------------')
 
 //Opposite number
 //Very simple, given a number, find its opposite.
@@ -892,6 +893,7 @@ function opposite(number) {
     if(number>0) return -number;
 }
 console.log(opposite(12525220.3325))
+console.log('-------------------------------------')
 
 //Invert values
 // Given a set of numbers, return the additive inverse of each.
@@ -915,6 +917,7 @@ console.log(invert([1,2,3,4,5]));
 console.log(invert([-4,-5]));
 let num = -3; num = -num;
 console.log(num);
+console.log('-------------------------------------')
 
 //BASIC: Making Six Toast.
 // Story:
@@ -932,4 +935,26 @@ function sixToast(num) {
     let ps =6;
     return Math.abs(ps - num);
 }
+console.log('-------------------------------------')
 
+//Closest elevator
+// Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write
+// a function elevator accepting 3 arguments (in order):
+// left - The current floor of the left elevator
+// right - The current floor of the right elevator
+// call - The floor that called an elevator
+// It should return the name of the elevator closest to the called floor ("left"/"right").
+//
+//     In the case where both elevators are equally distant from the called floor, choose the elevator to the right.
+//
+//     You can assume that the inputs will always be valid integers between 0-2.
+function elevator(left, right, call){
+    if(Math.abs(call - left)< Math.abs(call - right)) return 'left';
+    else if(Math.abs(call - left)> Math.abs(call - right)) return 'right';
+    else if(Math.abs(call - left)=== Math.abs(call - left)) return 'right'
+}
+console.log(elevator(0, 1, 0));
+console.log(elevator(0, 1, 1));
+
+
+console.log('-------------------------------------')
