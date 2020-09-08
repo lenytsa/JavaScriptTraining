@@ -958,3 +958,5 @@ console.log(elevator(0, 1, 1));
 
 
 console.log('-------------------------------------')
+let num1 = -(Math.abs(-10))
+console.log(num1)
