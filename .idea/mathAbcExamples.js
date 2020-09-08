@@ -21,6 +21,7 @@ function nearestPoint(a, b, c){
 console.log( nearestPoint(9, 6, 14)); //b
 console.log( nearestPoint(3, 0, 4));
 console.log( nearestPoint(0, 2, -4));
+console.log('-----------------------------------')
 
 //Найдите модуль числа без использования метода Math.abs(x).
 // Найдите модуль числа x без использования метода Math.abs(x).
@@ -35,4 +36,21 @@ function absValue(x){
     if(x>0) return x;
     if(x===0)return 0;
 }
-console.log()
+
+console.log('-----------------------------------')
+// Выражение с модулем
+// Напишите функцию с именем expressionValue, которая принимает три
+// числа a, b, c в качестве аргументов и возвращает значение выражения:
+//     expressionValue
+// Результат округлите до двух десятичных знаков.
+// функция expressionValue(-1, 2, -2) должна возвратить 5;
+// функция expressionValue(3, 5, -3) должна возвратить 2.8;
+// функция expressionValue(0, 9, 8) должна возвратить 0.53.
+function expressionValue(a, b, c){
+    let res = (Math.abs(a-c) + Math.abs(b-c))/Math.abs(a + b + c);
+    return +res.toFixed(2)
+}
+console.log(expressionValue(-1, 2, -2));
+console.log(expressionValue(3, 5, -3));
+console.log(expressionValue(0, 9, 8));
+console.log('-----------------------------------')
