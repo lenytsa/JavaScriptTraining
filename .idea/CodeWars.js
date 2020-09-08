@@ -913,3 +913,5 @@ function invert(array) {
 }
 console.log(invert([1,2,3,4,5]));
 console.log(invert([-4,-5]));
+let num = -3; num = -num;
+console.log(num);
