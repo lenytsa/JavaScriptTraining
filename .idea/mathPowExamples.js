@@ -65,3 +65,23 @@ function squareOfHypotenuse(a, b){
     return Math.pow(a,2) + Math.pow(b,2);
 }
 console.log(squareOfHypotenuse(5, 3))
+console.log('----------------------')
+//question
+// Найдите сумму квадратов чисел от 1 до n:
+// sumOfsquares
+// Напишите функцию с именем sumOfSquares, которая принимает
+// число n в качестве аргумента, и возвращает сумму квадратов чисел от 1 до n.
+// Пример:
+//
+// функция sumOfSquares(3) должна возвратить 14;
+// функция sumOfSquares(4) должна возвратить 30.
+function sumOfSquares(n){
+    let sum =0;
+    for(let i=1; i<=n; i++)
+    {
+        sum = sum + Math.pow(i,2)
+    }
+    return sum
+}
+console.log(sumOfSquares(3)); //14
+console.log(sumOfSquares(4)) //30
