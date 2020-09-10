@@ -35,3 +35,21 @@ function isSquare(x){
 }
 console.log(isSquare(9));
 console.log(isSquare(7));
+
+console.log('---------------')
+// Вычислите значение выражения.
+//     Даны значения переменных a, b, c. Вычислите значение выражения:
+//
+//     expression
+//
+// Напишите функцию с именем expression, которая принимает значения переменных a, b, c в качестве
+// аргументов и возвращает значение выражения, округленное до двух десятичных знаков.
+//
+// функция expression(1, 1, 1) должна возвратить 1;
+// функция expression(6, 1, 7) должна возвратить 2.45.
+
+function expression(a, b, c){
+    return +(Math.sqrt(a) + (Math.sqrt(Math.abs(b-c))/(Math.pow(a,3) + Math.pow(b,2) + Math.pow(c,4)))).toFixed(2);
+}
+console.log(expression(1, 1, 1)); //1
+console.log(expression(6, 1, 7))
