@@ -1059,4 +1059,7 @@ function apple(x){
 }
 console.log(apple(3000));
 
+console.log(Math.pow(9, 1/2 ) );
+console.log(Math.pow(2, 3 ) );
 
+//console.log(9**0.5);
