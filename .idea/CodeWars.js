@@ -977,4 +977,24 @@ function squareDigits(num) {
 console.log(squareDigits(9119));
 console.log(squareDigits(123));
 
+//Squares sequence
+// Complete the function that returns an array of length n, starting with the given number x and the squares
+// of the previous number. If n is negative or zero, return an empty array/list.
+// Examples
+// 2, 5  -->  [2, 4, 16, 256, 65536]
+// 3, 3  -->  [3, 9, 81]
+function squares(x, n) {
+    let res =[x];
+    if (n <= 0) {return [];}
+    for(let i=1; i<n; i++){
+        x = Math.pow(x,2);
+        res.push(x);
+    }
+    return res;
+}
+console.log(squares(2,5));
+console.log(squares(3,3));
+
+//const squares = (x, n) => Array.from({ length: n }, (_, index) => x ** (2 ** index))
+
 
