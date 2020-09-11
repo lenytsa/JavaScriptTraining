@@ -1109,3 +1109,23 @@ function findNextSquare1(sq) {
     var root = Math.sqrt(sq);
     return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
 }
+console.log('---------------------')
+// //Training JS #34: methods of Math---pow() sqrt() and cbrt()
+// In this lesson we learn three methods of Math: pow() sqrt() and cbrt(). Their usage is very simple: sqrt() returns the square root of a number; cbrt() returns the cube root of a number; pow() returns the base to the exponent power.
+//
+//     Their definitions and detailed information:
+//
+//     Math.pow()
+// Math.sqrt()
+// Math.cbrt()
+// Task
+// Coding in function cutCube. function accept 2 parameter: volume and n. volume is the volume of a cube. If we cut the cube into n block. please determine whether the length of the cube is an integer. return true or false.
+//
+//     For exmaple:
+//
+//     volume=27, it can be divided into 27 blocks, each small cube side length is 1
+function cutCube(volume,n){
+
+    return Math.cbrt(volume / n) % 1 === 0 && Math.cbrt(n) % 1 === 0 ? true : false;
+}
+console.log(cutCube(27,27))
