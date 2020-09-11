@@ -75,3 +75,16 @@ console.log('-----------------------')
     }
 console.log(countPowersInArray([10, 100, 0.1, 4, 8])); //должна возвратить 5, так как 10, 100, 0.1 - являются степенью числа 10, а числа 4 и 8 являются степенью числа 2.
 console.log(countPowersInArray([1, -10, 0]));
+
+console.log('-----------------------')
+
+//easy logs
+//Add two logs with base X, with the value of A and B. Example log A + log B where the base is X.
+function logs(x , a, b){
+    return Math.log(a * b) / Math.log(x);
+}
+console.log(logs(10, 2, 3));
+//Another solution: const logs = (x , a, b) => (Math.log(a) + Math.log(b)) / Math.log(x);
+console.log('-----------------------')
+
+console.log(Math.log2(1));
