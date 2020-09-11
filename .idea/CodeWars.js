@@ -1129,5 +1129,17 @@ function cutCube(volume,n){
     return Math.cbrt(volume / n) % 1 === 0 && Math.cbrt(n) % 1 === 0 ? true : false;
 }
 console.log(cutCube(27,27))
-console.log('=======')
-console.log(Math.sqrt('-81'))
+console.log('------------------------')
+
+//Beginner Series #4 Cockroach
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per
+// hour and returns it in cm per second, rounded down to the integer (= floored).
+//
+//     For example:
+//
+//     cockroachSpeed(1.08) == 30
+function cockroachSpeed(s) {
+    return Math.floor(s*100000/3600);
+}
+console.log(cockroachSpeed(1.08))
+
