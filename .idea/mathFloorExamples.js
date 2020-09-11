@@ -11,3 +11,17 @@ function distanceInMeters(length){
     return Math.floor(length/100);
 }
 console.log(distanceInMeters(4814));
+
+// Вес в тоннах
+// Дан вес m в килограммах. Найдите количество полных тонн в этом весе. (1 т = 1000 кг).
+//
+// Напишите функцию с именем weightInTons, которая принимает число m
+// (вес в килограммах) в качестве аргумента и возвращает количество полных тонн в этом весе. Используйте
+// метод Math.floor().
+// функция weightInTons(4163) должна возвратить 4;
+// функция weightInTons(23789) должна возвратить 23;
+// функция weightInTons(899) должна возвратить 0.
+function weightInTons(m){
+    return Math.floor(m/1000);
+}
+console.log(weightInTons(4163));
