@@ -1103,3 +1103,9 @@ function findNextSquare(sq) {
     return res*res;
 }
 console.log(findNextSquare(121));
+
+//other solutions for same task
+function findNextSquare1(sq) {
+    var root = Math.sqrt(sq);
+    return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
+}
