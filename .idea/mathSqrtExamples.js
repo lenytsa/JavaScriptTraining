@@ -53,3 +53,39 @@ function expression(a, b, c){
 }
 console.log(expression(1, 1, 1)); //1
 console.log(expression(6, 1, 7))
+console.log('--------------------------------------')
+
+//Решение квадратного уравнения
+//Solving a quadratic equation
+// Даны значения коэффициентов квадратного уравнения a, b, c. Найдите корни уравнения, или верните сообщение "There are no roots".
+//     sqEquation
+// Напомним, что для нахождения корней квадратного уравнения надо найти дискриминант по формуле:
+//     d.
+//
+//         Если D < 0, уравнение корней не имеет. В противном случае корни уравнения можно найти по формулам:
+//
+//     roots
+//
+// Напишите функцию с именем quadraticEquation, которая принимает значения переменных a,
+//     b, c в качестве аргументов и возвращает корни уравнения в виде массива [x1, x2], или сообщение "There are no roots".
+//
+// функция quadraticEquation(1, 2, 1) должна возвратить [-1, -1];
+// функция quadraticEquation(5, 6, 1) должна возвратить [-0.2, -1];
+// функция quadraticEquation(1, 1, 1) должна возвратить "There are no roots".
+function quadraticEquation(a, b, c){
+    let d = b * b - 4 * a * c;
+    let x1= (-b + Math.sqrt(d))/(2*a);
+    let x2 =(-b - Math.sqrt(d))/(2*a);
+        if(d>0){
+            return [x1, x2]
+        }
+         else if(d==0){
+            x1=x2= -b / (2 * a);
+            return [x1,x2]
+        }
+        else if(d<0){ return 'There are no roots';
+    }
+ }
+console.log(quadraticEquation(1, 2, 1)); //[-1, -1];
+console.log(quadraticEquation(1, 1, 1));
+console.log(quadraticEquation(5, 6, 1)); //[ -0.2, -1 ]
