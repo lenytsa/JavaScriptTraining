@@ -74,3 +74,16 @@ function changeMoney(x, amount){
 }
 console.log(changeMoney(50, 1549));
 
+console.log('-----------------------')
+
+//Сколько минут прошло с начала дня?
+// С начала дня прошло n секунд. Найдите полное количество минут, которые прошли с начала дня.
+//     Напишите функцию с именем amountOfMinutes, которая принимает число n
+// (количество секунд) в качестве аргумента и возвращает полное количество минут.
+// функция amountOfMinutes(7804) должна возвратить 130;
+// функция amountOfMinutes(3630) должна возвратить 60.
+function amountOfMinutes(n){
+    return Math.floor(n/60);
+}
+console.log(amountOfMinutes(7804))
+
