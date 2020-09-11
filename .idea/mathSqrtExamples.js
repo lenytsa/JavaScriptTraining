@@ -102,6 +102,6 @@ function perimeter(x1, y1, x2, y2, x3, y3){
 let ab = Math.sqrt((x3-x1)**2 + (y3-y1)**2);
 let ac = Math.sqrt((x2-x1)**2 + (y2-y1)**2);
 let bc = Math.sqrt((x3-x2)**2 + (y3-y2)**2);
-return ab + ac + bc;
+return +(ab + ac + bc).toFixed(2);
 }
 console.log(perimeter(1, 1, 4, 1, 1, 5))

@@ -1062,4 +1062,44 @@ console.log(apple(3000));
 console.log(Math.pow(9, 1/2 ) );
 console.log(Math.pow(2, 3 ) );
 
-//console.log(9**0.5);
+
+//CodeWars: You're a square!
+// Given an integral number, determine if it's a square number:
+//
+// In mathematics, a square number or perfect square is an integer that is the square of an integer;
+// in other words, it is the product of some integer with itself.
+//
+//     The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+//
+// Examples
+// -1  =>  false
+// 0  =>  true
+// 3  =>  false
+// 4  =>  true
+// 25  =>  true
+// 26  =>  false
+var isSquare = function(n){
+  return Math.sqrt(n)%1===0 ? true: false ;
+}
+console.log('-----------------------')
+// //Find the next perfect square!
+// You might know some pretty large perfect squares. But what about the NEXT one?
+//
+//     Complete the findNextSquare method that finds the next integral perfect square after
+//
+// the one passed as a parameter. Recall that an integral perfect square is an integer n such
+// that sqrt(n) is also an integer.
+//findNextSquare(121) --> returns 144
+// findNextSquare(625) --> returns 676
+// findNextSquare(114) --> returns -1 since 114 is not a perfect
+//If the parameter is itself not a perfect square then -1 should be returned.
+// You may assume the parameter is positive.
+function findNextSquare(sq) {
+    if(sq != Math.floor(Math.sqrt(sq)) * Math.floor(Math.sqrt(sq))){
+        return -1;
+    }
+    let res = Math.sqrt(sq);
+    res++
+    return res*res;
+}
+console.log(findNextSquare(121));
