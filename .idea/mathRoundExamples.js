@@ -63,3 +63,11 @@ console.log(roundElementsOfArray([10.23, 34.89, 0.1, 4.45, 8.5]))
 
 console.log('-------------------------------')
 
+//Return the closest number multiple of 10
+const closestMultiple10 = num => {
+    let a= Math.round(num/10);
+        console.log(a);
+     return a * 10;
+};
+console.log(closestMultiple10(25))
+
