@@ -1157,3 +1157,53 @@ function mango(quantity, price){
     return (quantity -q) * price;
 }
 console.log(mango(3, 3));
+
+console.log('------------------------')
+
+//Holiday VIII - Duty Free
+// The purpose of this kata is to work out just how many bottles of duty free whiskey
+// you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
+//
+//     You will be given the high street price (normPrice), the duty free discount (discount)
+//     and the cost of the holiday.
+//
+//     For example, if a bottle cost £10 normally and the discount in duty free was 10%,
+//     you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
+//
+// All inputs will be integers. Please return an integer. Round down.
+function dutyFree(normPrice, discount, hol){
+let norm = normPrice * discount/100;
+    return Math.floor(hol/norm);
+}
+console.log(dutyFree(12, 50, 1000));
+
+
+console.log('------------------------')
+
+//All Star Code Challenge #22
+// This Kata is intended as a small challenge for my students
+//
+// All Star Code Challenge #22
+//
+// Create a function called toTime() that takes an integer argument of seconds and converts the value into a string describing how many hours and minutes comprise that many seconds.
+//
+//     Any remaining seconds left over are ignored.
+//
+//     Note:
+// The string output needs to be in the specific form - "X hour(s) and X minute(s)"
+// toTime(3600); // => '1 hour(s) and 0 minute(s)'
+// toTime(3601); // => '1 hour(s) and 0 minute(s)'
+// toTime(3500); // => '0 hour(s) and 58 minute(s)'
+// toTime(323500); // => '89 hour(s) and 51 minute(s)'
+
+function toTime(seconds) {
+    let hours =0;
+    while(seconds>=3600){
+        hours++
+        seconds = seconds-3600;
+    }
+    let minutes = Math.floor(seconds/60);
+    return `${hours} hour(s) and ${minutes} minute(s)`
+}
+console.log(toTime(3600))
+console.log(toTime(3500))
