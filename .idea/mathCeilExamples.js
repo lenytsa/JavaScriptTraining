@@ -72,3 +72,20 @@ function century(year) {
     return Math.ceil(year/100)
 }
 console.log(century(1901))
+
+//Робот Кузя
+// Научим говорить робота Кузю. Пусть он округляет точные значения так, как это делают люди.
+//
+//     Точное значение — дробное число — хранится в переменной temperatureExact.
+//
+//     Получите строку вида "Outside the window is 32.3 degrees Celsius. That is almost 33"
+//
+// Напишите функцию с именем temperatureOutside, которая принимает целое положительное число temperatureExact (точное значение температуры) в качестве аргумента и возвращает строку, как указано выше.
+//
+//     Пример:
+//
+// функция temperatureOutside(35.6) должна возвратить "Outside the window is 35.6 degrees Celsius. That is almost 36";
+function temperatureOutside(temperatureExact) {
+    return `Outside the window is ${temperatureExact} degrees Celsius. That is almost ${Math.ceil(temperatureExact)}`;
+}
+console.log( temperatureOutside(35.6))
