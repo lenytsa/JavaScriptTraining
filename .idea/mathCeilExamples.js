@@ -89,3 +89,5 @@ function temperatureOutside(temperatureExact) {
     return `Outside the window is ${temperatureExact} degrees Celsius. That is almost ${Math.ceil(temperatureExact)}`;
 }
 console.log( temperatureOutside(35.6))
+
+console.log(Math.ceil('100.1'));
