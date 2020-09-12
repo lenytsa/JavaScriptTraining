@@ -1207,3 +1207,5 @@ function toTime(seconds) {
 }
 console.log(toTime(3600))
 console.log(toTime(3500))
+
+console.log(Math.floor(3.8)); // 4)
