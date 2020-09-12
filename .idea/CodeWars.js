@@ -1207,5 +1207,21 @@ function toTime(seconds) {
 }
 console.log(toTime(3600))
 console.log(toTime(3500))
+console.log('------------------------')
 
-console.log(Math.floor(3.8)); // 4)
+
+
+//CodeWars: Improving Math.round(x)
+//https://www.codewars.com/kata/56be025f9347a066c7000e4f/solutions/javascript
+// Your task is to create a method, Math.roundTo(number, precision) which rounds a given number to precision decimal places.
+//
+//     You may find the following Math methods useful:
+//
+//     Math.round(x) (of course)
+// Math.pow(x,y) (returns x to the power of y - e.g. Math.pow(3,4) == 81)
+Math.roundTo = function (number, precision) {
+    let a = number.toFixed(precision)
+    return +a;
+
+}
+console.log(Math.roundTo(3.1415926535, 4));
