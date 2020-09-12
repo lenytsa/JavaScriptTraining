@@ -42,3 +42,24 @@ function forceOfGravity(m){
     return Math.round(m*9.81);
 }
 console.log(forceOfGravity(10))
+console.log('-------------------------------')
+
+
+//Округление значений элементов массива.
+// Напишите функцию roundElementsOfArray, которая принимает массив arr в качестве аргумента и
+// возвращает массив, в котором все элементы округлены до ближайшего целого числа.
+//
+//     Примеры:
+//
+// функция roundElementsOfArray([10.23, 34.89, 0.1, 4.45, 8.5]) должна возвратить [10, 35, 0, 4, 9].
+function roundElementsOfArray(arr){
+    let resArr = [];
+    for(let elm of arr){
+        resArr.push(Math.round(elm))
+    }
+    return resArr;
+}
+console.log(roundElementsOfArray([10.23, 34.89, 0.1, 4.45, 8.5]))
+
+console.log('-------------------------------')
+
