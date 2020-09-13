@@ -80,3 +80,26 @@ function minSquareSide(a, b, c, d){
 }
 console.log('---------------------')
 
+/*
+Минимальный положительный элемент в массиве
+Напишите функцию minPositive, которая принимает массив arr в качестве аргумента и возвращает минимальный
+положительный элемент в массиве. Если массив arr не содержит положительных элементов, вернуть null.
+
+    Пример:
+
+функция minPositive([3, 6, 8, -4, -3, 2, 16]) должна возвратить 2;
+функция minPositive([7, 5]) должна возвратить 5;
+функция minPositive([-7, -5]) должна возвратить null;
+функция minPositive([]) должна возвратить null.*/
+function minPositive(arr){
+    let positive =[];
+    for(let elm of arr){
+        if(elm > 0){
+            positive.push(elm)
+        }
+    }
+    return positive.length>0?  Math.min(...positive) : null;
+}
+console.log(minPositive([3, 6, 8, -4, -3, 2, 16]));
+console.log(minPositive([7,5]));
+console.log(minPositive([-7,-3]));
