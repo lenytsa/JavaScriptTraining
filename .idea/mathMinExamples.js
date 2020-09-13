@@ -39,3 +39,25 @@ function min(arr){
     return Math.min(...arr);
 }
 console.log(min([7, 23, 34, 9, 4, 45]));
+console.log('---------------------')
+
+/*Кто получит приз?
+    В заплыве участвовало 3 спортсмена. Результаты соревнований хранятся в виде массива:
+
+    [[name1, time1], [name2, time2], [name3, time3]].
+
+        Определите время победителя.
+
+    Напишите функцию с именем victoryInSwim, которая принимает массив arr, хранящий результаты соревнований, в качестве аргумента и возвращает наименьшее время. Во всех тестах количество спорсменов всегда равно 3.
+
+Пример:
+
+    функция victoryInSwim([['Nick',8], ['Bob', 10], ['Kim', 6]]) должна возвратить 6.*/
+
+
+function victoryInSwim(arr){
+    let min = Math.min(arr[0][1],arr[1][1],arr[2][1]);
+   return min;
+}
+console.log(victoryInSwim([['Nick',8], ['Bob', 10], ['Kim', 6]]));
+console.log(victoryInSwim([['Nick',12], ['Aidan', 23], ['Kim', 23]]));
