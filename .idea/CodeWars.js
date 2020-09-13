@@ -1225,6 +1225,7 @@ Math.roundTo = function (number, precision) {
 
 }
 console.log(Math.roundTo(3.1415926535, 4));
+console.log('------------------------')
 
 /*
 Two tortoises named A and B must run a race. A starts with an average speed of
@@ -1258,6 +1259,8 @@ function race(v1, v2, g) {
 }
 console.log(race(720, 850, 72));
 
+console.log('------------------------')
+
 //Formatting decimal places #1
 //Each floating-point number should be formatted that only the first two decimal places are returned. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
 //
@@ -1274,7 +1277,25 @@ function twoDecimalPlaces(number) {
     return Math.trunc(number * 100) / 100;
 }
 console.log(twoDecimalPlaces(10.1289767789));
+console.log('------------------------')
 
+/*
+//The highest profit wins!
+Story
+Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
 
-console.log(Math.trunc(5.34) === Math.round(5.34))
-console.log(Math.trunc('-35' + '1'));
+    Task
+Write a function that returns both the minimum and maximum number of the given list/array.
+
+    Examples
+minMax([1,2,3,4,5])   == [1,5]
+minMax([2334454,5])   == [5, 2334454]
+minMax([1])           == [1, 1] */
+
+function minMax(arr){
+    let min = Math.min(...arr);
+    let max = Math.max(...arr);
+    return [min,max];
+}
+console.log('------------------------')
+
