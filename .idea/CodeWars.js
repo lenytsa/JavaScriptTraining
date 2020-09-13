@@ -1326,6 +1326,7 @@ console.log(sumOfMinimums([
     [5, 6, 7, 8, 9],       // minimum value of row is 5
     [20, 21, 34, 56, 100]  // minimum value of row is 20
 ]));
+//or const sumOfMinimums = arr => arr.reduce((a, v) => a + Math.min(...v), 0);
 
 
 
