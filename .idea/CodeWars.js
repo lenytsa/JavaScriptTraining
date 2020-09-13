@@ -1274,3 +1274,7 @@ function twoDecimalPlaces(number) {
     return Math.trunc(number * 100) / 100;
 }
 console.log(twoDecimalPlaces(10.1289767789));
+
+
+console.log(Math.trunc(5.34) === Math.round(5.34))
+console.log(Math.trunc('-35' + '1'));
