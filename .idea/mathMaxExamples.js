@@ -68,3 +68,38 @@ function differenceMaxMin(arr){
     return Math.max(...arr)-Math.min(...arr) ;
 }
 console.log(differenceMaxMin([3, 4, 8, 1]));
+
+console.log('---------------------')
+
+/*
+Максимальный отрицательный элемент в массиве
+question
+Напишите функцию maxNegative, которая принимает массив arr в
+качестве аргумента и возвращает максимальный отрицательный элемент в массиве.
+Если массив arr не содержит отрицательных элементов, вернуть null.
+
+Пример:
+
+функция maxNegative([3, -54, 8, -21, 0]) должна возвратить -21;
+функция maxNegative([7, 5]) должна возвратить null;
+функция maxNegative([]) должна возвратить null.
+*/
+function maxNegative(arr) {
+    let neg = [];
+    for (let elm of arr) {
+        if (elm < 0) {
+            neg.push(elm)
+        }
+    }
+    return neg.length > 0 ? Math.max(...neg) : null;
+}
+console.log(maxNegative([3, -54, 8, -21, 0]));
+console.log(maxNegative([7, 5]));
+//console.log('---------------------');
+//SAME TASK USING FILTERS
+function maxNegative1(arr) {
+    let neg = arr.filter(elm => elm < 0);
+    return neg.length > 0 ? Math.max(...neg) : null;
+}
+console.log(maxNegative1([3, -54, 8, -21, 0]));
+console.log(maxNegative1([7, 5]));
