@@ -186,6 +186,5 @@ function createPhoneNumber(){
         str = str + Math.floor(Math.random() * 10) + 1;
     }
     return str;
-    console.log(str.length);
 }
 console.log( createPhoneNumber());
