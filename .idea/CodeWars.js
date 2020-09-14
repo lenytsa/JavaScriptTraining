@@ -1382,4 +1382,8 @@ function expressionMatter(a, b, c) {
         return Math.max(a*(b+c), (a*b*c), (a+b+c), (a+b)*c);
 }
 console.log(expressionMatter(1, 2, 3));
-console.log('------------------------')
+
+console.log('==')
+console.log(Math.max(null, 0, 1));
+console.log(Math.max([100, 90, 80]));
+console.log(Math.max('2', 3, 5));
