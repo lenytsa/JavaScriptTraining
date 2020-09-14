@@ -11,10 +11,10 @@ question
 функция max(1, 5) должна возвратить 5;
 функция max(7, 7) должна возвратить 7;
 функция max(20, 6) должна возвратить 20.*/
-function max(a, b){
+function maxTwoN(a, b){
     return Math.max(a,b)
 }
-console.log(max(20, 6));
+console.log(maxTwoN(20, 6));
 
 /*
 //Максимальное значение в массиве
@@ -24,7 +24,26 @@ console.log(max(20, 6));
 
 функция max([7, 88, 34, 9, 4, 45]) должна возвратить 88.
 функция max([]) должна возвратить [].*/
-function max(arr){
+function maxMin(arr){
     if(arr.length===0) return [];
     return Math.max(...arr);
 }
+console.log(maxMin([7, 88, 34, 9, 4, 45]));
+
+
+/*//Максимальное и минимальное значение в массиве
+Напишите функцию maxMin, которая принимает массив arr в качестве аргументов и возвращает массив, содержащий максимальное и минимальное значение: [max, min]. Если массив пустой, вернуть [].
+
+    Пример:
+
+функция maxMin([3, 4, 8, 1]) должна возвратить [8, 1];
+функция maxMin([7, 7]) должна возвратить [7, 7];
+функция maxMin([2]) должна возвратить [2, 2];
+функция maxMin([]) должна возвратить [];*/
+function maxAndMin(arr){
+    if(arr.length===0) return [];
+    return [Math.max(...arr),Math.min(...arr)] ;
+}
+console.log(maxAndMin([3, 4, 8, 1]));
+console.log(maxAndMin([7, 7]))
+console.log(maxAndMin([]))
