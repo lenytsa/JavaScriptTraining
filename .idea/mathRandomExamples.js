@@ -129,6 +129,7 @@ function integerFrom100To999(){
     return Math.floor(Math.random() *((999-100)+1) + 100);
 }
 console.log(integerFrom100To999());
+console.log('---------------')
 
 
 /*Случайное целое число от 0 до n
@@ -144,5 +145,19 @@ Math.random() возвращает случайное число в диапаз
 функция integerFrom0ToN(1000) возвращает любое целое число от 0 до 1000.*/
 function integerFrom0ToN(n){
     return Math.floor(Math.random() *((n-0)+1) + 0);
+}
+console.log('---------------')
 
+/*
+
+Случайное целое число от min до max
+Напишите функцию с именем integerFromMinToMax, которая принимает два целых положительных
+числа min, max (min < max) в качестве аргументов и возвращает случайное число от min (включительно) до
+max (включительно).
+
+    Пример:
+
+функция integerFromMinToMax(50, 100) возвращает любое целое число от 50 до 100.*/
+function integerFromMinToMax(min, max){
+    Math.floor(Math.random() * ((max-min)+1) + min);
 }
