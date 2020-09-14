@@ -103,3 +103,14 @@ function minPositive(arr){
 console.log(minPositive([3, 6, 8, -4, -3, 2, 16]));
 console.log(minPositive([7,5]));
 console.log(minPositive([-7,-3]));
+
+console.log('======')
+
+
+console.log('222---------------------')
+console.log(Math.min(undefined));
+console.log(Math.min('2', 1.99, 4));
+let a = 25;
+let b = -25;
+let res = Math.min(a, b); // ?
+console.log(res)
