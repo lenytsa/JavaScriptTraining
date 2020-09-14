@@ -1328,6 +1328,9 @@ console.log(sumOfMinimums([
 ]));
 //or const sumOfMinimums = arr => arr.reduce((a, v) => a + Math.min(...v), 0);
 
+
+console.log('------------------------')
+
 /*//Lario and Muigi Pipe Problem
 #Issue Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
     The pipes connecting your level's stages together need to be fixed before you
@@ -1354,10 +1357,29 @@ function pipeFix(numbers){
     return res;
 }
 
+console.log('------------------------')
+
 //Find min and max
 //Implement a function that returns the minimal and the maximal value of a list (in this order).
 function getMinMax(arr){
    return [Math.min(...arr), Math.max(...arr)];
 };
 
+console.log('-----------------------')
+/*Expressions Matter
+Given three integers a ,b ,c, return the largest number obtained after inserting the following
+operators and brackets: +, *, ()
+In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+Consider an Example :
+    With the numbers are 1, 2 and 3 , here are some ways of placing signs and brackets:
 
+    1 * (2 + 3) = 5
+1 * 2 * 3 = 6
+1 + 2 * 3 = 7
+(1 + 2) * 3 = 9
+So the maximum value that you can obtain is 9.*/
+function expressionMatter(a, b, c) {
+        return Math.max(a*(b+c), (a*b*c), (a+b+c), (a+b)*c);
+}
+console.log(expressionMatter(1, 2, 3));
+console.log('------------------------')
