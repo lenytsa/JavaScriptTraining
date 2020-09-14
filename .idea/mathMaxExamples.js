@@ -47,3 +47,24 @@ function maxAndMin(arr){
 console.log(maxAndMin([3, 4, 8, 1]));
 console.log(maxAndMin([7, 7]))
 console.log(maxAndMin([]))
+
+console.log('---------------------')
+/*
+/Разность между максимальным и минимальным значением в массиве
+question
+Напишите функцию differenceMaxMin, которая принимает массив arr в качестве аргумента и
+возвращает разность между максимальным и минимальным значением. Если массив пустой, вернуть null.
+
+    Пример:
+
+функция differenceMaxMin([3, 4, 8, 1]) должна возвратить 7;
+функция differenceMaxMin([7, 7]) должна возвратить 0;
+функция differenceMaxMin([2]) должна возвратить 0;
+функция differenceMaxMin([]) должна возвратить null;
+*/
+function differenceMaxMin(arr){
+    if(arr.length===0) return null;
+    if(Math.min(...arr)===Math.max(...arr)) return 0;
+    return Math.max(...arr)-Math.min(...arr) ;
+}
+console.log(differenceMaxMin([3, 4, 8, 1]));
