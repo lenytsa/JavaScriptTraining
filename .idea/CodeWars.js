@@ -1417,5 +1417,8 @@ function yourFutureCareer() {
         return 'Full-Stack Developer';
     }
 }
-
 yourFutureCareer();
+console.log('--')
+let numx1 = 10;
+let res = Math.floor(Math.random() * numx1);
+console.log(res)
