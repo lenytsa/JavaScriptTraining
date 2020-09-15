@@ -79,3 +79,20 @@ function convertNumber(num){
     return [+num.toString(10), +num.toString(2), +num.toString(8), num.toString(16) ];
 }
 console.log(convertNumber(32));
+
+
+/*
+Можно ли число перевести в систему счисления с основанием n?
+    Напишите функцию с именем convertNumber, которая принимает целое положительное десятичное
+    число num и число n (основание системы счисления) в качестве аргументов и возвращает число,
+    записанное в системе счисления с основанием n или undefined, если перевод в такую систему невозможен.
+
+    to Примеры:
+
+    функция convertNumber(9, 2) должна возвратить "1001";
+функция convertNumber(135, 40) должна возвратить undefined.*/
+function convertNumber(num, n){
+    return n>=2&&n<=36? num.toString(n):undefined;
+}
+console.log(convertNumber(9, 2));
+console.log(convertNumber(135, 40));
