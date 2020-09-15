@@ -1418,7 +1418,14 @@ function yourFutureCareer() {
     }
 }
 yourFutureCareer();
-console.log('--')
-let numx1 = 10;
-let res = Math.floor(Math.random() * numx1);
-console.log(res)
+console.log('--------------------')
+
+/*CodeWars: Binary Addition
+Implement a function that adds two numbers together and returns their sum in binary.
+ The conversion can be done before, or after the addition.
+
+    The binary number returned should be a string.*/
+function addBinary(a,b) {
+    return (a+b).toString(2);
+}
+//OR const addBinary = (a, b) => (a + b).toString(2);
