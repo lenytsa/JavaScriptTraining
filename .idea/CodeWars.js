@@ -1442,3 +1442,4 @@ to_binary(11) /!* should return 1011 *!/*/
 function toBinary(n){
     return +n.toString(2);
 }
+//OR let toBinary = n => +n.toString(2)
