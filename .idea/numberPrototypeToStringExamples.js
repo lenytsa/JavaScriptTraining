@@ -78,3 +78,4 @@ console.log('----------------------')
 function convertNumber(num){
     return [+num.toString(10), +num.toString(2), +num.toString(8), num.toString(16) ];
 }
+console.log(convertNumber(32));
