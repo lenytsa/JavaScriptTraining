@@ -1429,3 +1429,16 @@ function addBinary(a,b) {
     return (a+b).toString(2);
 }
 //OR const addBinary = (a, b) => (a + b).toString(2);
+
+
+/*
+CodeWars:Convert to Binary
+Task Overview
+Given a non-negative integer n, write a function toBinary/ToBinary which returns that number in a binary format.
+
+to_binary(1)  /!* should return 1 *!/
+to_binary(5)  /!* should return 101 *!/
+to_binary(11) /!* should return 1011 *!/*/
+function toBinary(n){
+    return +n.toString(2);
+}
