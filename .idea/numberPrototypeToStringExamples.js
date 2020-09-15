@@ -43,3 +43,21 @@ function numToOctal(num){
     return +num.toString(8);
 }
 console.log(numToOctal(15));
+
+console.log('----------------------')
+
+/*Преобразуйте число из десятичной системы счисления в шестнадцатеричную систему счисления
+Напишите функцию с именем numToHexadecimal, которая принимает целое положительное
+десятичное число num в качестве аргумента и возвращает это число, записанное в
+шестнадцатеричной системе счисления, в виде строки.
+
+    Примеры:
+
+функция numToHexadecimal(9) должна возвратить "9";
+функция numToHexadecimal(10) должна возвратить "a";
+функция numToHexadecimal(12) должна возвратить "c";
+функция numToHexadecimal(16) должна возвратить "10"*/
+function numToHexadecimal(num){
+    return num.toString(16);
+}
+console.log(numToHexadecimal(16));
