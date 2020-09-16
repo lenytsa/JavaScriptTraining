@@ -1476,3 +1476,25 @@ The given points form a real or a degenerate triangle but in each case the above
 function barTriang(p1, p2, p3){
     return [+(((p1[0] +p2[0] + p3[0])/3).toFixed(4)),(+((p1[1] +p2[1] +p3[1])/3).toFixed(4))];
 }
+
+console.log('--------------------')
+
+/*
+Calculate Price Excluding VAT
+Write a function that calculates the original product price, without VAT.
+
+    Example
+If a product price is 200.00 and VAT is 15%, then the final product price (with VAT) is: 200.00 + 15% = 230.00
+
+Thus, if your function receives 230.00 as input, it should return 200.00
+
+Notes:
+
+    VAT is always 15% for the purposes of this Kata.
+    Round the result to 2 decimal places.
+    If null value given then return -1*/
+//return price without vat
+function excludingVatPrice(price){
+    if(price===null) return -1;
+    return +(price/(1.15)).toFixed(2);
+}
