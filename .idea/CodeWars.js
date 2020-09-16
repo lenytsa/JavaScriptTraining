@@ -1443,3 +1443,10 @@ function toBinary(n){
     return +n.toString(2);
 }
 //OR let toBinary = n => +n.toString(2)
+
+let num3 = '1100100';
+num3 = parseInt(num3, 2);
+num = num3.toString(2);
+let type = typeof num3;
+//console.log(type);
+//console.log((1234567890).toString(10));
