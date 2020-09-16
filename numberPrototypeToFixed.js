@@ -77,8 +77,24 @@ function formatArray(arr){
 }
 console.log(formatArray([1.345, 2.234, 3.1234, 4.56789]));
 
+console.log('-------------------------------------')
 
+/*Радианы в градусы
+Углы в математике измеряют в градусах или радианах. Формула перевода из радиан в градусы:
 
+    degrees
 
+Напишите функцию convertRadiansToDegrees, которая принимает значение n (угол в радианах) в
+ качестве аргумента и возвращает значение угла в градусах. Результат округлите до 2 знаков
+ после запятой и возвратите в виде числа.
+
+    Примеры:
+
+функция convertRadiansToDegrees(1) должна возвратить 57.30.
+    функция convertRadiansToDegrees(2) должна возвратить 114.59.*/
+function convertRadiansToDegrees(n){
+    return +((180 * n)/ Math.PI).toFixed(2);
+}
+console.log(convertRadiansToDegrees(2));
 
 console.log('-------------------------------------')
