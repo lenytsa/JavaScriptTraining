@@ -36,3 +36,18 @@ function average(marks){
     return (average/marks.length).toFixed(1);
 }
 console.log(average([4, 5, 4, 5]));
+
+/*
+//Площадь кольца
+Напишите функцию ringSquare, которая принимает 2 числа r1, r2 (внешний и внутренний радиусы кольца)
+ (r1 > r2) в качестве аргументов и возвращает площадь кольца.
+Результат округлите до 2 знаков после запятой и возвратите в виде числа.
+    ring
+Примеры:
+    функция ringSquare(2, 1) должна возвратить 9.42.
+    функция ringSquare(5, 4) должна возвратить 28.27.*/
+//S=π  (R2−r2)
+function ringSquare(r1, r2){
+    return +((Math.pow(r1,2) - Math.pow(r2,2))* Math.PI).toFixed(2);
+}
+console.log(ringSquare(2, 1));
