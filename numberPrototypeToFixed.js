@@ -19,3 +19,20 @@ function averageSpeed(s1, t1, s2, t2){
 }
 console.log(averageSpeed(17, 5, 20, 4));
 console.log(averageSpeed(14, 3, 6, 2));
+
+/*
+//Средний балл успеваемости в классе
+Напишите функцию average, которая принимает массив marks (массив отметок учеников) в качестве аргумента и возвращает средний балл успеваемости в классе. Результат округлите до 1 знака после запятой и возвратите в виде строки.
+
+    Пример:
+
+функция average([4, 5, 4, 5]) должна возвратить "4.5".
+    функция average([5, 3]) должна возвратить "4.0".*/
+function average(marks){
+    let average = 0;
+    for (let i=0; i<marks.length; i++){
+        average = average  + marks[i];
+    }
+    return (average/marks.length).toFixed(1);
+}
+console.log(average([4, 5, 4, 5]));
