@@ -43,3 +43,24 @@ function createReverseArray(n){
     return res;
 }
 console.log(createReverseArray(5));
+
+console.log('----------------')
+
+/*
+Создайте массив из чисел, кратных 10
+Напишите функцию createArray, которая принимает целое неотрицательное число n в качестве аргумента и возвращает массив, содержащий n чисел, кратных 10.
+
+Пример:
+
+    функция createArray(5) должна возвратить [10, 20, 30, 40, 50];
+функция createArray(2) должна возвратить [10, 20];
+функция createArray(1) должна возвратить [10];
+функция createArray(0) должна возвратить [].*/
+function createArray(n){
+    let arr=[];
+    for(let i=1; i<=n; i++){
+            arr.push(i*10);
+    }
+    return arr;
+}
+console.log(createArray(2));
