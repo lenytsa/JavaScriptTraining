@@ -40,3 +40,37 @@ function isStringContainsNumber(str){
 console.log(isStringContainsNumber("123"));
 console.log(isStringContainsNumber("-34"));
 console.log(isStringContainsNumber("s12"));
+
+
+console.log('---------------')
+
+/*Сколько жидкости выпила Клавдия за день?
+Клавдия пьет в течение дня разные напитки. Информацию о том, что она выпивает, Клавдия записывает в массив, например,
+
+    ["3 glasses of water", "1 glass of milk", "2 glasses of juice", "1 glass of wine"]
+
+Какой объем жидкости выпила Клавдия за день?
+
+    Напишите функцию hydrate, которая принимает массив arr, содержащий строки с названием и количеством стаканов выпитого напитка, и возвращает общее количество выпитой жидкости в мл.
+
+1 стакан = 200 мл
+
+Примеры:
+
+    функция hydrate(["3 glasses of water", "1 glass of milk", "2 glasses of juice", "1 glass of wine"]) должна возвратить "1400 ml".
+    функция hydrate(["1 glass of water"]) должна возвратить "200 ml".*/
+function hydrate(arr){
+    let sum = 0;
+    for(let i=0; i<arr.length; i++){
+        sum = sum + Number.parseInt(arr[i]);
+    }
+    return `${sum * 200} ml`;
+}
+console.log(hydrate(["1 glass of water"]));
+console.log(hydrate(["1 glass of water","2 glasses of juice" ]));
+
+
+
+
+
+console.log('---------------')
