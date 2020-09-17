@@ -1529,3 +1529,6 @@ Complete the function which converts a binary number (given as a string) to a de
 function binToDec(bin){
     return Number.parseInt(bin ,2);
 }
+
+console.log(parseInt(15.5))
+console.log(parseInt(89898989, 2))

@@ -68,9 +68,23 @@ function hydrate(arr){
 }
 console.log(hydrate(["1 glass of water"]));
 console.log(hydrate(["1 glass of water","2 glasses of juice" ]));
-
-
-
-
-
 console.log('---------------')
+
+//Number.parseFloat() и parseFloat() – Преобразование строки к числу с плавающей запятой (точкой)
+/*
+Цена товара на чеке
+question
+На чеке магазина напечатана цена товара и название товара в виде: "2.59 milk". Получить цену товара в виде числа.
+
+    Напишите функцию priceOfItem, которая принимает строку receipt (описание покупки в виде строки: "цена название товара") в качестве аргумента и возвращает число - цену товара.
+
+    Примеры:
+
+функция priceOfItem("2.59 milk") должна возвратить 2.59.
+    функция priceOfItem("4.55 bread") должна возвратить 4.55.
+    функция priceOfItem("2 cake") должна возвратить 2.
+функция priceOfItem(".4 water") должна возвратить 0.4.*/
+function priceOfItem(receipt){
+    return parseFloat(receipt);
+}
+console.log(priceOfItem(".4 water"));
