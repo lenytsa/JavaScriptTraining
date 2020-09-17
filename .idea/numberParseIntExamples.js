@@ -88,3 +88,62 @@ function priceOfItem(receipt){
     return parseFloat(receipt);
 }
 console.log(priceOfItem(".4 water"));
+
+
+/*
+
+Содержит ли строка число?
+    Напишите функцию isStringContainsNumber, которая принимает строку str в качестве аргумента и возвращает true, если строка содержит число, и false, в противном случае.
+
+    Указание: строка содержит число, если результат нестрогого сравнения исходной строки и преобразования строки к числу с плавающей точкой равен true.
+
+    Например,
+
+'45' == Number.parseFloat('12.34'); (результат сравнения '12.34' == 12.34 равен true)
+
+'1z2' == Number.parseFloat('12,23'); (результат сравнения '12,23' == 12 равен false)
+
+Примеры:
+
+    функция isStringContainsNumber("123") должна возвратить true.
+    функция isStringContainsNumber("12.345") должна возвратить true.
+    функция isStringContainsNumber("-12.3") должна возвратить true.
+    функция isStringContainsNumber("s12") должна возвратить false.
+    функция isStringContainsNumber("12,3") должна возвратить false.*/
+function isStringContainsNumber(str){
+    return str == Number.parseFloat(str);
+}
+console.log('--------------------')
+
+/*
+Стоимость покупки
+Рассчитываясь в кассе за купленные товары, вы получили чек, в котором напечатаны цены и название товаров в виде:
+
+    ["18.7 salmon", "9.35 cheese", "2.99 milk", "9.99 chocolate bars"].
+
+        Какую сумму денег вы должны заплатить за все покупки?
+
+    Напишите функцию purchaseValue, которая принимает массив values, содержащий цены и название каждого купленного товара в качестве аргумента и возвращает общую стоимость покупки.
+
+    Примеры:
+
+функция purchaseValue(['1.31 bread', '7.96 cabbage', '2.10 candies', '0.84 salad']) должна возвратить 12.21.
+    функция purchaseValue(['1.50 onion') должна возвратить 1.5.
+*/
+function purchaseValue(values){
+    let sum =0;
+    for(let i=0; i<values.length; i++){
+        sum = sum + Number.parseFloat(values[i]);
+    }
+    return sum;
+}
+console.log(purchaseValue(['1.31 bread', '7.96 cabbage', '2.10 candies', '0.84 salad']));
+
+
+
+
+
+
+
+
+console.log('--------------------')

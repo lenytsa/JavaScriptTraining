@@ -1529,26 +1529,4 @@ Complete the function which converts a binary number (given as a string) to a de
 function binToDec(bin){
     return Number.parseInt(bin ,2);
 }
-/*
-
-Содержит ли строка число?
-    Напишите функцию isStringContainsNumber, которая принимает строку str в качестве аргумента и возвращает true, если строка содержит число, и false, в противном случае.
-
-    Указание: строка содержит число, если результат нестрогого сравнения исходной строки и преобразования строки к числу с плавающей точкой равен true.
-
-    Например,
-
-'45' == Number.parseFloat('12.34'); (результат сравнения '12.34' == 12.34 равен true)
-
-'1z2' == Number.parseFloat('12,23'); (результат сравнения '12,23' == 12 равен false)
-
-Примеры:
-
-    функция isStringContainsNumber("123") должна возвратить true.
-    функция isStringContainsNumber("12.345") должна возвратить true.
-    функция isStringContainsNumber("-12.3") должна возвратить true.
-    функция isStringContainsNumber("s12") должна возвратить false.
-    функция isStringContainsNumber("12,3") должна возвратить false.*/
-function isStringContainsNumber(str){
-    return str == Number.parseFloat(str);
-}
+console.log('--------------------')
