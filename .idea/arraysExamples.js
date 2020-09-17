@@ -65,7 +65,7 @@ function createArray(n){
 }
 console.log(createArray(2));
 
-console.log('++-+---------------')
+console.log('------------------------------')
 
 /*
 Создайте массив из n четных чисел
@@ -92,6 +92,7 @@ function createEvenArray(n){
 console.log(createEvenArray(5));
 console.log(createEvenArray(8));
 console.log(createEvenArray(2));
+console.log('------------------------------')
 
 /*
 Создайте массив из n нечетных чисел
@@ -114,3 +115,29 @@ function createOddArray(n){
     return newArr
 }
 console.log(createOddArray(5))
+console.log(createOddArray(0))
+console.log('++------------------------------')
+
+/*
+Добавьте элемент в конец массива
+Напишите функцию pushElement, которая принимает массив arr и величину value в качестве аргументов,
+добавляет величину value в конец массива и возвращает полученный массив.
+
+    Пример:
+
+функция pushElement([1, 2, 3], "a") должна возвратить [1, 2, 3, "a"];
+функция pushElement([0, 0, 0], 5) должна возвратить [0, 0, 0, 5];
+функция pushElement([], 1) должна возвратить [1].*/
+function pushElement(arr, value){
+    arr.push(value);
+    return arr;
+}
+console.log(pushElement([1, 2, 3], "a"))
+
+
+
+
+
+
+
+console.log('------------------------------')
