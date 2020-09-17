@@ -1514,3 +1514,10 @@ Assume test input string always valid and may look like "1 year old" or "5 years
 function getAge(inputString){
     return Number.parseInt(inputString);
 }
+console.log('--------------------')
+
+/*CodeWars: Hex to Decimal
+Complete the function which converts hex number (given as a string) to a decimal number.*/
+    function hexToDec(hexString){
+        return Number.parseInt(hexString, 16);
+}
