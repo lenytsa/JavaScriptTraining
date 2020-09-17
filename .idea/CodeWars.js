@@ -1521,3 +1521,11 @@ Complete the function which converts hex number (given as a string) to a decimal
     function hexToDec(hexString){
         return Number.parseInt(hexString, 16);
 }
+console.log('--------------------')
+
+/*
+Bin to Decimal
+Complete the function which converts a binary number (given as a string) to a decimal number.*/
+function binToDec(bin){
+    return Number.parseInt(bin ,2);
+}
