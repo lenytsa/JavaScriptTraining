@@ -64,3 +64,31 @@ function createArray(n){
     return arr;
 }
 console.log(createArray(2));
+
+console.log('++-+---------------')
+
+/*
+Создайте массив из n четных чисел
+Напишите функцию createEvenArray, которая принимает целое неотрицательное число n в качестве аргумента
+ и возвращает массив, содержащий n четных чисел.
+
+    Пример:
+
+функция createEvenArray(5) должна возвратить [0, 2, 4, 6, 8];
+функция createEvenArray(2) должна возвратить [0, 2];
+функция createEvenArray(1) должна возвратить [0];
+функция createEvenArray(0) должна возвратить [].*/
+
+function createEvenArray(n){
+    let newArr = [];
+    let i=0;
+    while(newArr.length!==n){
+        if(i%2===0)
+            newArr.push(i);
+        i++
+    }
+    return newArr
+}
+console.log(createEvenArray(5));
+console.log(createEvenArray(8));
+console.log(createEvenArray(2));
