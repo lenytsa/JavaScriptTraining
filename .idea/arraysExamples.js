@@ -23,3 +23,23 @@ function createArray(n){
 }
 console.log(createArray(3));
 console.log(createArray(7));
+
+console.log('----------------')
+/*
+Создайте массив чисел в обратном порядке - от n до 0.
+Напишите функцию createReverseArray, которая принимает целое неотрицательное число n в качестве аргумента и возвращает массив, содержащий целые числа от n до 0: [n, n-1, ..., 3, 2, 1, 0].
+
+Пример:
+
+    функция createReverseArray(5) должна возвратить [5, 4, 3, 2, 1, 0];
+функция createReverseArray(2) должна возвратить [2, 1, 0];
+функция createReverseArray(1) должна возвратить [1, 0];
+функция createReverseArray(0) должна возвратить [0].*/
+function createReverseArray(n){
+    let res=[];
+    for(let i=n; i>=0; i--){
+        res.push(i);
+    }
+    return res;
+}
+console.log(createReverseArray(5));

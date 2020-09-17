@@ -1538,3 +1538,4 @@ Write function parseF which takes an input and returns a number or null if
 function parseF(s) {
     return (Number.isNaN(parseFloat(s)) ? null : parseFloat(s));
 }
+
