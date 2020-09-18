@@ -201,3 +201,25 @@ function createArrayFromNToM(n, m){
     return res;
 }
 console.log(createArrayFromNToM(5, 10));
+console.log('-==-----------------------------')
+
+/*Создайте массив из n одинаковых элементов m
+Напишите функцию createArray, которая принимает число n и величину m в
+качестве аргументов и возвращает массив, содержащий n элементов, равных m.
+
+    Пример:
+
+функция createArray(5, 1) должна возвратить [1, 1, 1, 1, 1].
+    функция createArray(3, 10) должна возвратить [10, 10, 10].
+    функция createArray(4, 'a') должна возвратить ['a', 'a', 'a', 'a']*/
+function createArray(n, m){
+    let res = [];
+    let i = m;
+    while(res.length !==n){
+        res.push(m);
+    }
+    return res;
+}
+console.log(createArray(5, 1));
+console.log(createArray(3, 10));
+console.log(createArray(4, 'a'));
