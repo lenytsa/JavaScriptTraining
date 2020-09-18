@@ -133,11 +133,25 @@ function pushElement(arr, value){
     return arr;
 }
 console.log(pushElement([1, 2, 3], "a"))
-
-
-
-
-
-
-
 console.log('------------------------------')
+
+/*Создайте массив из отрицательных чисел
+Напишите функцию createNegativeArray, которая принимает целое неотрицательное
+число n в качестве аргумента и возвращает массив, содержащий n отрицательных чисел от -1 до -n.
+
+    Пример:
+
+функция createNegativeArray(5) должна возвратить [-1, -2, -3, -4, -5];
+функция createNegativeArray(2) должна возвратить [-1, -2];
+функция createNegativeArray(1) должна возвратить [-1];
+функция createNegativeArray(0) должна возвратить [].*/
+function createNegativeArray(n){
+    let newArr = [];
+    let i=1;
+    while(newArr.length!==n){
+            newArr.push(-i);
+        i++
+    }
+    return newArr;
+}
+console.log(createNegativeArray(5))
