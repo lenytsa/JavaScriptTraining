@@ -181,3 +181,23 @@ function alternationAtrray(n){
     return res;
 }
 console.log(alternationAtrray(5));
+
+console.log('------------------------------')
+
+/*
+Создайте массив из целых чисел от n до m
+Напишите функцию createArrayFromNToM, которая принимает целые неотрицательные числа n,
+m (n < m) в качестве аргументов и возвращает массив, содержащий числа от n до m. Во всех
+тестах гарантируется, что n < m, вам не надо проверять это условие в функции.
+
+    Пример:
+
+функция createArrayFromNToM(5, 10) должна возвратить [5, 6, 7, 8, 9, 10].*/
+function createArrayFromNToM(n, m){
+    let res= [];
+    for(let i=n; i<=m; i++){
+        res.push(i);
+    }
+    return res;
+}
+console.log(createArrayFromNToM(5, 10));
