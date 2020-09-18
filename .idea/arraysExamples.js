@@ -155,3 +155,29 @@ function createNegativeArray(n){
     return newArr;
 }
 console.log(createNegativeArray(5))
+console.log('------------------------------')
+
+/*
+Создайте массив из чисел с чередованием знаков
+Напишите функцию alternationAtrray, которая принимает целое неотрицательное число n в качестве аргумента и возвращает массив, содержащий числа от 0 до n, в котором четные числа положительны, а нечетные отрицательны.
+
+    Пример:
+
+функция alternationAtrray(5) должна возвратить [0, -1, 2, -3, 4, -5];
+функция alternationAtrray(2) должна возвратить [0, -1, 2];
+функция alternationAtrray(1) должна возвратить [0, -1];
+функция alternationAtrray(0) должна возвратить [0].*/
+function alternationAtrray(n){
+    let res=[];
+    let i = 0;
+    while(res.length <= n){
+        if(i%2===0){
+            res.push(i)
+        }else if(i%2!==0){
+            res.push(-i)
+        }
+        i++
+    }
+    return res;
+}
+console.log(alternationAtrray(5));
