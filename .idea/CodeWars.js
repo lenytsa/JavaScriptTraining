@@ -1621,3 +1621,23 @@ function quadratic(x1, x2){
     let c = -x1 * -x2;
     return [1, b, c];
 }
+
+/*
+
+What is type of variable? https://www.codewars.com/kata/57293671c98f77e84b000065/train/javascript
+    Create a function to return true type of variable, i.e.
+
+type([]) == 'array'
+type({}) == 'object'
+type('') == 'string'
+type(NaN) == 'number'*/
+function type(value) {
+    if ({}.toString.call(value)==="[object Array]"){return 'array'}
+    if ({}.toString.call(value)==="[object Object]"){return 'object'}
+    if ({}.toString.call(value)==="[object String]"){return 'string'}
+    if ({}.toString.call(value)==="[object Date]"){return 'date'};
+    if ({}.toString.call(value)==="[object Number]"){return 'number'};
+    if ({}.toString.call(value)==="[object Undefined]"){return 'undefined'};
+    if (value === null) {return 'null'}
+}
+//type = (value) => value === undefined ? 'undefined' : value === null ? 'null' : Array.isArray( value ) ? 'array' : value.getDate != undefined ? 'date' : typeof ( value );
