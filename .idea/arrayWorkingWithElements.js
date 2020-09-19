@@ -96,3 +96,24 @@ function countEvenPositive(arr){
     return count;
 }
 console.log(countEvenPositive([0, -2, -6, 8, 1, 5]));
+console.log('------------------')
+
+/*
+Количество чисел в массиве
+Напишите функцию countNumbers, которая принимает массив arr в качестве аргумента, и возвращает количество элементов, имеющих тип "number".
+
+    Пример:
+
+функция countNumbers([0, 4.1, 'Alice', true, 1, false, 'hohoho']) должна возвратить 3.
+функция countNumbers([]) должна возвратить 0.
+функция countNumbers(['a', 'b']) должна возвратить 0.*/
+function countNumbers(arr){
+    let count =0;
+    for(let i=0; i<arr.length; i++){
+        if(typeof (arr[i]) === 'number'){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countNumbers([0, 4.1, 'Alice', true, 1, false, 'hohoho']));
