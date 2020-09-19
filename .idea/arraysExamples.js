@@ -201,7 +201,7 @@ function createArrayFromNToM(n, m){
     return res;
 }
 console.log(createArrayFromNToM(5, 10));
-console.log('-==-----------------------------')
+console.log('-----------------------------')
 
 /*Создайте массив из n одинаковых элементов m
 Напишите функцию createArray, которая принимает число n и величину m в
@@ -223,6 +223,7 @@ function createArray(n, m){
 console.log(createArray(5, 1));
 console.log(createArray(3, 10));
 console.log(createArray(4, 'a'));
+console.log('-----------------------------')
 
 //возводит в квадрат каждый элемент массива
 let arr = [2,3,5]
@@ -233,3 +234,24 @@ function array (arr){
     return arr;
 }
 console.log(array(arr)); //[ 4, 9, 25 ]
+console.log('-----------------------------')
+
+//Как проверить, что это массив
+/*
+question
+Напишите функцию typeOfArg, которая принимает величину value в качестве аргумента и возвращает тип величины value. При решении задачи используйте метод {}.toString.call().
+
+    Пример:
+
+функция typeOfArg(3) должна возвратить "[object Number]";
+функция typeOfArg("Hello") должна возвратить "[object String]";
+функция typeOfArg(true) должна возвратить "[object Boolean]";
+функция typeOfArg([0]) должна возвратить "[object Array]";
+функция typeOfArg({name: 'Bob'}) должна возвратить "[object Object]";
+функция typeOfArg(null) должна возвратить "[object Null]";
+функция typeOfArg(undefined) должна возвратить "[object Undefined]".*/
+function typeOfArg(value){
+    return {}.toString.call(value);
+}
+console.log(typeOfArg(3))
+console.log(typeOfArg(null))
