@@ -294,3 +294,27 @@ function isArrayInArg(value1, value2) {
     return Array.isArray(value1) || Array.isArray(value2) ? true : false;
 }
 console.log(isArrayInArg({name: 'Alice'}, "Bob"));
+
+
+console.log('-----------------------------')
+
+/*
+Содержит ли массив хотя бы один вложенный массив?
+    Напишите функцию isArrayContainsArray, которая принимает массив arr в качестве аргумент и возвращает true, если хотя бы один из элементов массива является массивом, и false - в противном случае.
+
+    Пример:
+
+функция isArrayContainsArray(['a", [1], 123]) должна возвратить true;
+    функция isArrayContainsArray([[], true, false, [12]]) должна возвратить true;
+функция isArrayContainsArray([[1], [1, 2], [1,2,3]]) должна возвратить true;
+функция isArrayContainsArray(["a", "b", "c"]) должна возвратить false;
+функция isArrayContainsArray([{}, 12, "qwerty", null, undefined]) должна возвратить false.*/
+function isArrayContainsArray(arr){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]==Array.isArray(i)){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isArrayContainsArray(["a", "b", "c"]))
