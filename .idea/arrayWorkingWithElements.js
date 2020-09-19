@@ -59,3 +59,20 @@ function countZeros(arr){
 }
 console.log(countZeros([0, 2, -7, 8, 0]));
 console.log('------------------')
+/*Количество четных элементов массива
+Напишите функцию countEven, которая принимает массив arr в качестве аргумента, и возвращает количество четных элементов массива.
+
+    Пример:
+
+функция countEven([0, 2, 6, 8, 0, 5]) должна возвратить 5;
+функция countEven([0, -1, 12]) должна возвратить 2;
+функция countEven([]) должна возвратить 0.*/
+function countEven(arr){
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 === 0){
+            count++
+        }
+    }
+    return count;
+}
