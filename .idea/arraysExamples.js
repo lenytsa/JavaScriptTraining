@@ -223,3 +223,13 @@ function createArray(n, m){
 console.log(createArray(5, 1));
 console.log(createArray(3, 10));
 console.log(createArray(4, 'a'));
+
+//возводит в квадрат каждый элемент массива
+let arr = [2,3,5]
+function array (arr){
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = arr[i] * arr[i];
+    }
+    return arr;
+}
+console.log(array(arr)); //[ 4, 9, 25 ]
