@@ -253,5 +253,26 @@ question
 function typeOfArg(value){
     return {}.toString.call(value);
 }
-console.log(typeOfArg(3))
-console.log(typeOfArg(null))
+console.log(typeOfArg(3));
+console.log(typeOfArg(null));
+
+/*
+Является ли аргумент функции массивом?
+    Напишите функцию isArgArray, которая принимает величину value в качестве аргумента и возвращает true, если value является массивом, и false - в обратном случае. При решении используйте метод Array.isArray().
+
+    Пример:
+
+функция isArgArray(123) должна возвратить false;
+функция isArgArray("Welcome") должна возвратить false;
+функция isArgArray(true) должна возвратить false;
+функция isArgArray([]) должна возвратить true;
+функция isArgArray({name: 'Alice'}) должна возвратить false;
+функция isArgArray(null) должна возвратить false;
+функция isArgArray(undefined) должна возвратить false;
+функция isArgArray([1,2,3,4]) должна возвратить true.
+*/
+function isArgArray(value){
+    return Array.isArray(value)? true: false;
+}
+console.log(isArgArray(123));
+console.log(isArgArray([1,2,3,4]))
