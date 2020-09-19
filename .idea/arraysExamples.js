@@ -255,6 +255,7 @@ function typeOfArg(value){
 }
 console.log(typeOfArg(3));
 console.log(typeOfArg(null));
+console.log('-----------------------------')
 
 /*
 Является ли аргумент функции массивом?
@@ -275,4 +276,21 @@ function isArgArray(value){
     return Array.isArray(value)? true: false;
 }
 console.log(isArgArray(123));
-console.log(isArgArray([1,2,3,4]))
+console.log(isArgArray([1,2,3,4]));
+
+console.log('-----------------------------')
+
+/*Является ли хотя бы один из двух аргументов функции массивом?
+    Напишите функцию isArrayInArg, которая принимает две величины value1 и value2 в качестве аргументов и возвращает true, если хотя бы один из аргументов является массивом, и false - в противном случае.
+
+    Пример:
+
+функция isArrayInArg(12, [1]) должна возвратить true;
+функция isArrayInArg([], "Welcome") должна возвратить true;
+функция isArrayInArg([1], [0]) должна возвратить true;
+функция isArrayInArg(15, 0) должна возвратить false;
+функция isArrayInArg({name: 'Alice'}, "Bob") должна возвратить false.*/
+function isArrayInArg(value1, value2) {
+    return Array.isArray(value1) || Array.isArray(value2) ? true : false;
+}
+console.log(isArrayInArg({name: 'Alice'}, "Bob"));
