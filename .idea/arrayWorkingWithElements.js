@@ -37,3 +37,25 @@ function countPositive(arr){
 }
 console.log(countPositive([10, 2, -3, 8]));
 console.log(countPositive([0, -1, -2]));
+
+console.log('------------------')
+
+/*Количество нулевых элементов массива
+Напишите функцию countZeros, которая принимает массив arr в качестве аргумента, и возвращает количество элементов массива, равных нулю.
+
+    Пример:
+
+функция countZeros([0, 2, -7, 8, 0]) должна возвратить 2;
+функция countZeros([0, -1, -2]) должна возвратить 1;
+функция countZeros([]) должна возвратить 0 */
+function countZeros(arr){
+    let count =0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i]===0){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countZeros([0, 2, -7, 8, 0]));
+console.log('------------------')
