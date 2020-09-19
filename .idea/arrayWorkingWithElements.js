@@ -141,3 +141,27 @@ function countIntegers(arr){
 }
 console.log(countIntegers([0, 4.1, 'f', true, 1, false, 'h']));
 console.log('------------------')
+
+
+/*
+Количество элементов, являющихся квадратами целых чисел
+Напишите функцию counOfSquares, которая принимает массив arr в качестве аргумента, и возвращает количество
+ элементов, являющихся квадратами целых чисел.
+
+    Пример:
+
+функция counOfSquares([0, 25, 'f', true, 9, 7, false, 'h']) должна возвратить 3.
+функция counOfSquares([2, 5]) должна возвратить 0.
+функция counOfSquares([-2, 1, 1.4]) должна возвратить 1.
+функция counOfSquares([false]) должна возвратить 0.*/
+function counOfSquares(arr){
+    let count=0;
+    for(let i=0; i<arr.length; i++) {
+        let root = Math.pow(arr[i], 0.5); //Math.pow(9, 0.5); // 3, то же самое что корень квадратный из 9
+        if(root**2=== arr[i]&&Number.isInteger(root)){
+            count++
+        }
+    }
+    return count;
+}
+console.log(counOfSquares([0, 25, 'f', true, 9, 7, false, 'h']))
