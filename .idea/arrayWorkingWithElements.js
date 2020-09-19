@@ -117,3 +117,27 @@ function countNumbers(arr){
     return count;
 }
 console.log(countNumbers([0, 4.1, 'Alice', true, 1, false, 'hohoho']));
+console.log('------------------')
+
+/*
+Количество целых чисел в массиве
+Напишите функцию countIntegers, которая принимает массив arr в качестве аргумента, и
+возвращает количество элементов, являющихся целыми числами.
+
+    Пример:
+
+функция countIntegers([0, 4.1, 'f', true, 1, false, 'h']) должна возвратить 2.
+функция countIntegers([2.5]) должна возвратить 0.
+функция countIntegers([-2, 1, 1.4]) должна возвратить 2.
+функция countIntegers([true]) должна возвратить 0.*/
+function countIntegers(arr){
+    let count=0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%1 === 0 && typeof arr[i]=== 'number'){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countIntegers([0, 4.1, 'f', true, 1, false, 'h']));
+console.log('------------------')
