@@ -1641,3 +1641,22 @@ function type(value) {
     if (value === null) {return 'null'}
 }
 //type = (value) => value === undefined ? 'undefined' : value === null ? 'null' : Array.isArray( value ) ? 'array' : value.getDate != undefined ? 'date' : typeof ( value );
+
+
+/*
+Is every value in the array an array?
+    is every value in the array an array?
+    This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
+Examples:
+
+    [[1],[2]] => true
+    ['1','2'] => false
+    [{1:1},{2:2}] => false*/
+//const arrCheck = value => Array.isArray(value)? true: false;
+const arrCheck = value =>{
+    for(let el of value)
+    {
+        if(!Array.isArray(el)) return false;
+    }
+    return true;
+}
