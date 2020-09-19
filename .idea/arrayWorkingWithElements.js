@@ -76,3 +76,23 @@ function countEven(arr){
     }
     return count;
 }
+
+console.log('------------------')
+/*
+Количество четных положительных элементов массива
+Напишите функцию countEvenPositive, которая принимает массив arr в качестве аргумента,
+и возвращает количество четных положительных элементов массива.
+    Пример:
+функция countEvenPositive([0, -2, -6, 8, 1, 5]) должна возвратить 1;
+функция countEvenPositive([10, -2, 12]) должна возвратить 2;
+функция countEvenPositive([]) должна возвратить 0.*/
+function countEvenPositive(arr){
+    let count=0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 === 0 && arr[i]>0){
+            count++
+        }
+    }
+    return count;
+}
+console.log(countEvenPositive([0, -2, -6, 8, 1, 5]));
