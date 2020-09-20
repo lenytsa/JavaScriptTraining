@@ -392,3 +392,28 @@ function isZeroInArray(arr){
 }
 console.log(isZeroInArray([20, -26, 0, -12]));
 console.log(isZeroInArray([20, -26, -12]));
+console.log('------------------')
+
+
+/*
+Есть ли в массиве хотя бы один элемент, равный сумме своих соседей слева и справа?
+    Напишите функцию isElementInArray, которая принимает массив arr в качестве аргумента и, если массив содержит хотя бы один элемент, равный сумме своих соседей слева и справа, находит первый такой элемент и возвращает строку вида:
+
+    "true: it is <element>", где <element> - значение элемента.
+    или false, в противном случае.
+    Пример:
+
+функция isElementInArray([1, 5, 4, 1, 0, -1]) должна возвратить "true: it is 5" (первый такой элемент: 5 = 1 + 4);
+функция isElementInArray([2, 9, 0, 0]) должна возвратить false;
+функция isElementInArray([1, 2, 3, 1]) должна возвратить "true: it is 3" (3 = 2 + 1);
+функция isElementInArray([]) должна возвратить false.*/
+function isElementInArray(arr){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] === arr[i-1] + arr[i +1]){
+            return `true: it is ${arr[i]}`
+        }
+    }
+    return false;
+}
+console.log(isElementInArray([1, 5, 4, 1, 0, -1]));
+console.log(isElementInArray([1, 2, 3, 1]));
