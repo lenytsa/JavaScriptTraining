@@ -344,9 +344,29 @@ function changeArray(prices){
     return res;
 }
 console.log(changeArray([20, 26, 12]))
+console.log('------------------')
 
+/*
+Есть ли в массиве хотя бы один отрицательный элемент?
+    Напишите функцию isNegativeInArray, которая принимает массив arr в качестве аргумента и возвращает true, если массив содержит хотя бы один отрицательный элемент, и false, в противном случае.
 
+    Пример:
 
-
+функция isNegativeInArray([20, -26, -12]) должна возвратить true;
+функция isNegativeInArray([2, 9, -10]) должна возвратить true;
+функция isNegativeInArray([1, 2, 3, 4]) должна возвратить false;
+функция isNegativeInArray([1, 0]) должна возвратить false;
+функция isNegativeInArray([]) должна возвратить false.
+*/
+function isNegativeInArray(arr){
+    for(let elm of arr){
+        if(elm<0){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isNegativeInArray([20, -26, -12]));
+console.log(isNegativeInArray([1, 2, 3, 4]));
 
 console.log('------------------')
