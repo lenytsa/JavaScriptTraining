@@ -165,3 +165,27 @@ function counOfSquares(arr){
     return count;
 }
 console.log(counOfSquares([0, 25, 'f', true, 9, 7, false, 'h']))
+
+console.log('------------------')
+
+/*Количество пар положительных элементов
+Напишите функцию counOfPositivePairs, которая принимает массив arr в качестве аргумента, и возвращает количество пар соседних элементов, являющихся положительными числами.
+
+    Пример:
+
+функция counOfPositivePairs([0, 25, 3, -2, 5]) должна возвратить 1 (такая пара только одна: 25 и 3)
+функция counOfPositivePairs([2, -2, 5]) должна возвратить 0.
+функция counOfPositivePairs([]) должна возвратить 0.*/
+function counOfPositivePairs(arr){
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]>0 && arr[i-1]>0){
+            count++
+        }
+    }
+    //count = Math.trunc(count/2)
+    return count;
+}
+console.log(counOfPositivePairs([0, 25, 3, -2, 5]));//1
+console.log(counOfPositivePairs([6,2,2,1,6]));//4
+console.log(counOfPositivePairs([2,0,2]));//0
