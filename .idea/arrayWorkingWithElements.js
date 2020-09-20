@@ -305,6 +305,7 @@ function lastEvenElement(arr){
 console.log(lastEvenElement([0, 8, 4, 1]));
 console.log(lastEvenElement([1, 2, 3, 5, 5, 15]));
 console.log(lastEvenElement([3, 5, 7]));
+console.log('------------------')
 
 /*
 Массив температур в градусах Фаренгейта
@@ -323,4 +324,29 @@ function fahrenheit(t1, t2){
     }
     return res;
 }
+
 console.log(fahrenheit(20, 25));
+
+console.log('------------------')
+/*Новые цены на товары.Массив хранит цены на товары. Цены повысились вдвое. Преобразовать массив так, чтобы элементы массива содержали новые цены.
+
+    Напишите функцию changeArray, которая принимает массив prices в качестве аргумента и возвращает массив, который хранит новые цены.
+
+    Пример:
+
+функция changeArray([20, 26, 12]) должна возвратить [40, 52, 24]*/
+
+function changeArray(prices){
+    let res =[];
+    for(let elm of prices){
+        res.push(elm *2);
+    }
+    return res;
+}
+console.log(changeArray([20, 26, 12]))
+
+
+
+
+
+console.log('------------------')
