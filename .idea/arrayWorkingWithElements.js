@@ -368,5 +368,27 @@ function isNegativeInArray(arr){
 }
 console.log(isNegativeInArray([20, -26, -12]));
 console.log(isNegativeInArray([1, 2, 3, 4]));
-
 console.log('------------------')
+
+/*
+Есть ли в массиве хотя бы один нулевой элемент?
+    Напишите функцию isZeroInArray, которая принимает массив arr в качестве аргумента и возвращает true, если массив содержит хотя бы один нулевой элемент, и false, в противном случае.
+
+    Пример:
+
+функция isZeroInArray([20, -26, 0, -12]) должна возвратить true;
+функция isZeroInArray([2, 9, 0, 0]) должна возвратить true;
+функция isZeroInArray([1, 2, 3, 4]) должна возвратить false;
+функция isZeroInArray([1, -1]) должна возвратить false;
+функция isZeroInArray([]) должна возвратить false.
+*/
+function isZeroInArray(arr){
+    for(let i=0; i<=arr.length; i++){
+        if(arr[i] === 0){
+            return true;
+        }
+    }
+    return false;
+}
+console.log(isZeroInArray([20, -26, 0, -12]));
+console.log(isZeroInArray([20, -26, -12]));
