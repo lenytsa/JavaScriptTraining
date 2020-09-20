@@ -189,3 +189,27 @@ function counOfPositivePairs(arr){
 console.log(counOfPositivePairs([0, 25, 3, -2, 5]));//1
 console.log(counOfPositivePairs([6,2,2,1,6]));//4
 console.log(counOfPositivePairs([2,0,2]));//0
+
+console.log('------------------')
+
+/*
+//Количество пар элементов c разными знаками
+Напишите функцию countOppositeSignsPairs, которая принимает массив arr в качестве аргумента, и возвращает количество пар соседних элементов, которые имеют разные знаки.
+
+    Пример:
+
+функция countOppositeSignsPairs([1, 25, 3, -2, 5]) должна возвратить 2 (таких пар две: 3, -2 и -2, 5)
+функция countOppositeSignsPairs([2, 32, 5]) должна возвратить 0.
+функция countOppositeSignsPairs([]) должна возвратить 0.*/
+function countOppositeSignsPairs(arr){
+    let count =0;
+    for(let i=0; i<arr.length; i++){
+        if((arr[i]>0 && arr[i-1]<0) || (arr[i]<0 && arr[i-1]>0)){
+    count++
+        }
+    }
+    return count;
+}
+console.log(countOppositeSignsPairs([1, 25, 3, -2, 5]));
+console.log(countOppositeSignsPairs([2, 32, 5]));
+console.log('------------------')
