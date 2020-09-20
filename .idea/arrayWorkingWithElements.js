@@ -236,3 +236,23 @@ function numberOfOrderedTriples(arr){
 }
 console.log(numberOfOrderedTriples([1, 2, 3, 3, 15])); //1
 console.log(numberOfOrderedTriples([1, 25, 3, 7, 15, 12]));
+
+console.log('------------------')
+
+/*
+//Первый отрицательный элемент и его индекс
+Напишите функцию firstNegative, которая принимает массив arr в качестве аргумента, и возвращает первый отрицательный элемент массива и его индекс (в виде массива [element, index]), или undefined, если массив не содержит отрицательных элементов.
+
+    Примеры:
+
+функция firstNegative([0, 25, -3, 7, 15, -1, 12]) должна возвратить [-3, 2];
+функция firstNegative([1, 2, 3, 3, 15]) должна возвратить undefined;
+функция firstNegative([]) должна возвратить undefined.*/
+function firstNegative(arr){
+   for(let i=0; i<arr.length; i++){
+       if(arr[i]<0){
+           return [arr[i],i]
+       }
+   }
+}
+console.log(firstNegative([0, 25, -3, 7, 15, -1, 12]))
