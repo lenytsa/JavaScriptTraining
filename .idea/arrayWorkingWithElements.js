@@ -442,3 +442,43 @@ function countOfWords(names){
     return count;
 }
 console.log(countOfWords(['Noah', 'Liam', 'William', 'Mason', 'James']));
+console.log('++------------------')
+
+/*
+Одинаковые элементы в массиве
+Напишите функцию equalElementsInArray, которая принимает массив чисел arr в качестве аргумента, и определяет,
+ есть ли в массиве одинаковые элементы, и если есть, возвращает их в виде массива [element, element].
+  Если таких пар несколько, вернуть первую из них. Если в массиве нет одинаковых элементов, вернуть сообщение
+  "All elements are different". Если исходный массив пустой, вернуть пустой массив.
+
+    Пример:
+
+функция equalElementsInArray([2, 1, 5, 9, 4, 5, 6]) должна возвратить [5, 5].
+    функция equalElementsInArray([2, 1, 5, 9, 6, 4, 1, 5, 6]) должна возвратить [1, 1].
+    функция equalElementsInArray([1, 2, 3]) должна возвратить "All elements are different"*/
+
+function equalElementsInArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j] && j != i) {
+                return [arr[i], arr[j]];
+            }
+        }
+    }
+    return arr.length === 0 ? [] : 'All elements are different';
+}
+//simular code
+function equalElementsInArray1(arr){
+    for (let i = 0; i < arr.length - 1; i++){
+        for (let j = i + 1; j < arr.length; j++){
+            if (arr[i] === arr[j]) {
+                return  [arr[i],arr[j]];
+            }
+        }
+    }
+    return  (arr.length === 0)? [] : "All elements are different";
+}
+console.log(equalElementsInArray([2, 1, 5, 9, 4, 5, 6]));
+console.log(equalElementsInArray([2, 1, 5, 9, 6, 4, 1, 5, 6]));
+console.log(equalElementsInArray([1, 2, 3]));
+
