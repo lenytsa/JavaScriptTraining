@@ -213,3 +213,26 @@ function countOppositeSignsPairs(arr){
 console.log(countOppositeSignsPairs([1, 25, 3, -2, 5]));
 console.log(countOppositeSignsPairs([2, 32, 5]));
 console.log('------------------')
+
+
+/*
+Количество троек элементов, упорядоченных строго по возрастанию
+Напишите функцию numberOfOrderedTriples, которая принимает массив arr в качестве аргумента, и возвращает количество троек соседних элементов, которые строго упорядочены по возрастанию.
+
+    Пример:
+
+функция numberOfOrderedTriples([1, 25, 3, 7, 15, 12]) должна возвратить 1 (такая тройка одна: 3, 7, 15)
+функция numberOfOrderedTriples([1, 2, 3, 3, 15]) должна возвратить 1 (такая тройка одна: 1, 2, 3)
+функция numberOfOrderedTriples([2, 32, 5]) должна возвратить 0.
+функция numberOfOrderedTriples([]) должна возвратить 0.*/
+function numberOfOrderedTriples(arr){
+    let count =0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]>arr[i-1] && arr[i-1]>arr[i-2]){
+            count++
+        }
+    }
+    return count;
+}
+console.log(numberOfOrderedTriples([1, 2, 3, 3, 15])); //1
+console.log(numberOfOrderedTriples([1, 25, 3, 7, 15, 12]));
