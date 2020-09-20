@@ -273,3 +273,35 @@ function firstBigger(arr){
     }
 }
 console.log(firstBigger([0, 8, 4, 1]));
+
+console.log('------------------')
+
+/*
+Последний четный элемент и его индекс
+Напишите функцию lastEvenElement, которая принимает числовой массив arr в качестве аргумента, и возвращает
+последний четный элемент и его индекс в виде массива [element, index], или undefined, если массив не содержит четных элементов.
+
+    Примеры:
+
+функция lastEvenElement([0, 8, 4, 1]) должна возвратить [4, 2];
+функция lastEvenElement([1, 2, 3, 5, 5, 15]) должна возвратить [2, 1];
+функция lastEvenElement([3, 5, 7]) должна возвратить undefined;
+функция lastEvenElement([]) должна возвратить undefined.*/
+
+function lastEvenElement(arr){
+    let index;
+    let el;
+    let count =0;
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]%2 ===0){
+            el = arr[i];
+            index = i;
+            count++
+        }
+    }
+    if(count===0) return undefined;
+    return [el, index];
+}
+console.log(lastEvenElement([0, 8, 4, 1]));
+console.log(lastEvenElement([1, 2, 3, 5, 5, 15]));
+console.log(lastEvenElement([3, 5, 7]));
