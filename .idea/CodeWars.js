@@ -1780,17 +1780,79 @@ The total score should be followed by a colon : and by one of the following quot
 '"Kurt" proud! if Bob's band wins: Bob made "Jeff" proud! if they end up with a draw: that looks like a "draw"! Rock on!
 
     The solution to the example above should therefore appear like '1, 2: Bob made "Jeff" proud!'.*/
-function solve(a, b) {
-    let countA = 0;
-    let countB = 0;
-    for (let i = 0; i < 3; i++){
-        if (a[i] > b[i]){
-            countA++;
-        } else if (a[i] < b[i]){
-            countB++
+// function solve(a, b) {
+//     let countA = 0;
+//     let countB = 0;
+//     for (let i = 0; i < 3; i++){
+//         if (a[i] > b[i]){
+//             countA++;
+//         } else if (a[i] < b[i]){
+//             countB++
+//         }
+//     }
+//     return (countA > countB) ? `${countA}, ${countB}: Alice made "Kurt" proud!`: (countB > countA) ? `${countA}, ${countB}: Bob made "Jeff" proud!` : `${countA}, ${countB}: that looks like a "draw"! Rock on!`;
+// }
+
+console.log('-----------------------')
+/*
+Total amount of points
+Our football team finished the championship. The result of each match look like "x:y". Results of all matches are
+ recorded in the collection.
+
+    For example: ["3:1", "2:2", "0:1", ...]
+
+Write a function that takes such collection and counts the points of our team in the championship. Rules for
+ counting points for each match:
+
+    if x>y - 3 points
+if x<y - 0 point
+if x=y - 1 point
+Notes:
+
+    there are 10 matches in the championship
+0 <= x <= 4
+0 <= y <= 4*/
+function points(games) {
+    let point = 0;
+    for (let elm of games){
+        if (elm[0] > elm[2]){
+            point += 3;
+        } else if (elm[0] === elm[2]){
+            point += 1;
         }
     }
-    return (countA > countB) ? `${countA}, ${countB}: Alice made "Kurt" proud!`:
-        (countB > countA) ? `${countA}, ${countB}: Bob made "Jeff" proud!` :
-            `${countA}, ${countB}: that looks like a "draw"! Rock on!`;
+    return point;
 }
+
+console.log('----------------')
+/*
+Plus - minus - plus - plus - ... - Count
+Count how often sign changes in array.
+
+    result
+number from 0 to ... . Empty array returns 0
+
+example
+const arr = [1, -3, -4, 0, 5];
+
+
+| elem | count |
+|------|-------|
+|  1   |  0    |
+| -3   |  1    |
+| -4   |  1    |
+|  0   |  2    |
+|  5   |  2    |
+
+ */
+
+function catchSignChange(array) {
+    let count = 0;
+    for(let i=0; i<array.length; i++){
+        if((array[i]<0 && array[i+1]>=0 )||(array[i]>=0 && array[i+1]<0)){
+            count++
+        }
+    }
+    return count;
+}
+console.log(catchSignChange([-47,84,-30,-11,-5,74,77]));
