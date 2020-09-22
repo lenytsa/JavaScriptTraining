@@ -177,3 +177,5 @@ function rowWeights(array) {
 console.log(rowWeights([100,50]));
 console.log(rowWeights([50,60,70,80]));
 console.log(rowWeights([0,1,0]));
+
+
