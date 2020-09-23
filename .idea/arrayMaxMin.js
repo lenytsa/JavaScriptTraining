@@ -57,3 +57,27 @@ function minInArray(arr){
 }
 console.log(minInArray([3, 4, 8, 1]));
 console.log(minInArray([]));
+console.log('----------')
+
+/*
+Максимальный элемент массива
+Напишите функцию maxInArray, которая принимает массив arr в качестве аргумента и возвращает максимальный элемент массива.
+
+    Используйте в решении цикл. Не разрешается использование метода Math.max().
+
+    Пример:
+
+функция maxInArray([3, 4, 8, 1]) должна возвратить 8;
+функция maxInArray([11, 12) должна возвратить 12;
+функция maxInArray([1, 1]) должна возвратить 1;
+функция maxInArray([]) должна возвратить undefined.*/
+function maxInArray(arr){
+    let max = arr[0];
+    for(let i=1; i<arr.length; i++){
+        if(arr[i]> max){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(maxInArray([3, 4, 8, 1]));
