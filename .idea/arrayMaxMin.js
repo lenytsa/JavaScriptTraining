@@ -34,3 +34,26 @@ function changeMaxAndMin(arr) {
 }
 console.log(changeMaxAndMin([3, 4, 8, 1]));
 
+
+/*Минимальный элемент массива
+Напишите функцию minInArray, которая принимает массив arr в качестве аргумента и возвращает минимальный элемент массива.
+
+    Используйте в решении цикл. Не разрешается использование метода Math.min().
+
+    Пример:
+
+функция minInArray([3, 4, 8, 1]) должна возвратить 1;
+функция minInArray([11, 12) должна возвратить 11;
+функция minInArray([1, 1]) должна возвратить 1;
+функция minInArray([]) должна возвратить undefined.*/
+function minInArray(arr){
+    let min = arr[0];
+    for(let i=1; i<arr.length; i++){
+        if(arr[i]<min){
+            min = arr[i]
+        }
+    }
+    return min;
+}
+console.log(minInArray([3, 4, 8, 1]));
+console.log(minInArray([]));
