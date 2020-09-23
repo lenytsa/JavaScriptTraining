@@ -81,3 +81,28 @@ function maxInArray(arr){
     return max;
 }
 console.log(maxInArray([3, 4, 8, 1]));
+
+console.log('----------')
+
+/*
+Самое длинное слово в массиве
+Напишите функцию theLongestWord, которая принимает массив строк arr в качестве аргумента и возвращает слово
+максимальной длины. Гарантируется, что во всех тестах массив содержит хотя бы одно слово.
+
+    Используйте в решении цикл. Не разрешается использование метода Math.max().
+
+    Пример:
+
+функция theLongestWord(["a", "big", "elephant"]) должна возвратить "elephant";
+функция theLongestWord(["mouse", "cat") должна возвратить "mouse";
+функция theLongestWord(["test"]) должна возвратить "test".*/
+function theLongestWord(arr){
+    let longest = arr[0];
+    for(let i=0; i < arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+console.log(theLongestWord(["a", "big", "elephant"]));
