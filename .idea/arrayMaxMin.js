@@ -106,3 +106,33 @@ function theLongestWord(arr){
     return longest;
 }
 console.log(theLongestWord(["a", "big", "elephant"]));
+
+console.log('---------------------')
+/*
+Самое короткое и самое длинное слово в массиве
+Напишите функцию words, которая принимает массив строк arr в качестве аргумента и возвращает самое короткое
+и самое длинное слово в виде массива [shortestWord, longestWord]. Гарантируется, что во всех тестах массив содержит
+хотя бы одно слово. Если слова одинаковой длины, то возвращается первое из них в списке.
+
+    Используйте в решении циклы. Не разрешается использование методов Math.min() и Math.max().
+
+    Пример:
+
+функция words(["a", "big", "elephant"]) должна возвратить ["a", "elephant"];
+функция words(["mouse", "cat") должна возвратить ["cat", "mouse"];
+функция words(["mouse", "tiger") должна возвратить ["mouse", "mouse"];
+функция words(["test"]) должна возвратить ["test", "test"].*/
+function words(arr){
+    let min = arr[0];
+    let max = arr[0];
+    for(let i =1; i<arr.length; i++){
+        if(arr[i].length > max.length){
+            max = arr[i];
+        }
+        if(arr[i].length < min.length){
+            min = arr[i];
+        }
+    }
+    return [min,max]
+}
+console.log(words(["a", "big", "elephant"]));
