@@ -136,3 +136,62 @@ function words(arr){
     return [min,max]
 }
 console.log(words(["a", "big", "elephant"]));
+
+console.log('---------------------')
+/*
+Максимальный модуль элемента
+Напишите функцию maxAbsValue, которая принимает массив arr в качестве аргумента и возвращает элемент,
+    который имеет максимальную абсоютную величину (модуль). При равных значениях возвращается первое в списке.
+
+    Используйте в решении цикл. Не разрешается использование метода Math.max().
+
+    Пример:
+
+функция maxAbsValue([3, 7, -8, 1]) должна возвратить -8;
+функция maxAbsValue([-11, 6, 12) должна возвратить 12;
+функция maxAbsValue([1, -2, 2]) должна возвратить -2;
+функция maxAbsValue([]) должна возвратить undefined.*/
+
+function maxAbsValue(arr)
+{
+    if(arr.length===0) return undefined;
+    let max=Math.abs(arr[0]);
+    let maxIndex=0;
+    for (let i=1; i<arr.length;i++)
+    {
+        if (Math.abs(arr[i])>max)
+        {
+            max=Math.abs(arr[i])
+            maxIndex=i;
+        }
+    }
+    return arr[maxIndex]
+}
+
+console.log(maxAbsValue([-8,2,-5,8]));
+console.log(maxAbsValue([1, -2, 2]));
+//OR
+function maxAbsValue1(arr1)
+{
+    if(arr1.length===0) return undefined;
+    let res =[];
+    //create array with using Math.abs
+    for(let i=0; i<arr1.length; i++){
+        res.push(Math.abs(arr1[i]))
+    }
+    //find max and his index
+    let max=Math.abs(arr1[0]);
+    let maxIndex=0;
+    for (let i=1; i<arr1.length;i++)
+    {
+        if (Math.abs(arr1[i])>max)
+        {
+            max=Math.abs(arr1[i])
+            maxIndex=i;
+        }
+    }
+    return arr1[maxIndex]
+}
+console.log(maxAbsValue1([-15,2,-5,8]));
+console.log(maxAbsValue1([1, -2, 2]));
+
