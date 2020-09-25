@@ -195,3 +195,65 @@ function maxAbsValue1(arr1)
 console.log(maxAbsValue1([-15,2,-5,8]));
 console.log(maxAbsValue1([1, -2, 2]));
 
+console.log('---------------------')
+
+/*Максимальный четный элемент массива
+Напишите функцию maxEven, которая принимает массив arr в качестве аргумента и возвращает максимальный
+четный элемент массива. Если массив не содержит четных элементов или массив пустой, вернуть undefined.
+
+    Используйте в решении цикл. Не разрешается использование метода Math.max().
+
+    Пример:
+
+функция maxEven([3, 4, 8, 17]) должна возвратить 8;
+функция maxEven([11, 12, 3, 35) должна возвратить 12;
+функция maxEven([1, 5]) должна возвратить undefined;
+функция maxEven([]) должна возвратить undefined.*/
+function maxEven(arr){
+    let max;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            max = arr[i];
+            for (let j = i+1; j < arr.length; j++) {
+                if (arr[j] % 2 === 0 && arr[j] > max) {
+                    max = arr[j];
+                }
+            }
+            return max;
+        }
+    }
+}
+console.log(maxEven([3, 4, 8, 17]));//8
+console.log(maxEven([11, 12, 3, 35])) //12
+console.log(maxEven([1,5]))
+console.log(maxEven([]))
+
+console.log('====')
+
+//minOdd 1st solution
+function minOdd(arr){
+    let min;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            min = arr[i];
+            for (let j = i+1; j < arr.length; j++) {
+                if (arr[j] % 2 !== 0 && arr[j] < min) {
+                    min = arr[j];
+                }
+            }
+            return min;
+        }
+    }
+}
+//MinOdd Using Math.min
+function minOdd1(arr){
+  let min = [];
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i]%2 !== 0) min.push(arr[i]);
+      }
+    return (min.length > 0)? Math.min(...min) : undefined;
+}
+console.log(minOdd1([2, 3, 4, 8, 17, 18])) //3
+console.log(minOdd([11, 7, 4, 12])) //7
+console.log(minOdd([2, 4])); //undefined
+
