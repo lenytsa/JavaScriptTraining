@@ -337,11 +337,59 @@ console.log('+++--------------------------')
     for(let i=0; i<arr.length; i++){
         if(arr[i][1] >number){
             number= arr[i][1];
-            //console.log(number);
             name = arr[i][0];
-            //console.log(name);
         }
     }
     return `${name}: ${number}`;
 }
 console.log(largestNumberOfMushrooms([["Maria", 15], ["Anna", 21], ["Ivan", 32]]));
+console.log('--------------------------')
+
+/*
+Самый холодный день месяца.
+    Специалисты центра наблюдения за погодой ежедневно фиксируют температуру воздуха и записывают данные в массив.
+
+    Массив из 30 значений хранит данные о температуре воздуха в апреле.
+
+    Например, массив содержит значения [12, 13, 16, 10,..., 20].
+
+Предположим, в этом массиве самая низкая температура 10. Это значит, что самый холодный день был 4 апреля. (Помните,
+ что нумерация дней месяца начинается с 1, а нумерация элементов в массиве начинается с нуля).
+
+Определить, какой день был самым холодным. Если самая низкая температура была несколько дней, вернуть последний день.
+
+    Напишите функцию theColdestDay, которая принимает массив arr, содержащий данные о температуре в апреле, и возвращает
+     информацию о самом холодном дне апреля в виде строки:
+
+    "April 4 was the coldest day of the month: it was 10 degrees."
+
+Во всех тестах входной массив не является пустым.*/
+// function theColdestDay(arr){
+//     let coldestDay = arr[0];
+//     let dayName = 1;
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]<coldestDay){
+//             coldestDay = arr[i];
+//             console.log('coldest:' + arr[i] + 'i:' +i)
+//             dayName = i+1;
+//
+//             console.log(dayName)
+//         }
+//     }
+//     return `April ${dayName} was the coldest day of the month: it was ${coldestDay} degrees`
+// }
+function theColdestDay(arr){
+    let coldestDay = arr[arr.length -1];
+    let dayName = arr.length-1;
+    for(let i=arr.length-1; i>=0; i--){
+        if(arr[i]<coldestDay){
+            coldestDay = arr[i];
+            console.log('coldest:' + arr[i] + 'i:' +i)
+            dayName = i;
+
+            console.log(dayName)
+        }
+    }
+    return `April ${dayName + 1} was the coldest day of the month: it was ${coldestDay} degrees.`
+}
+console.log(theColdestDay([13,17,10,9,16,18,19,19,14,11,8,19,18,12,19,15,17,9,20,11,13,13,18,18,8,10,8,19,12,17]));
