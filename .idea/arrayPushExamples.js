@@ -57,3 +57,29 @@ function arrayOfFirstLetters(names){
     return res;
 }
 console.log(arrayOfFirstLetters(["Alice", "Bob"]));
+console.log('--------------------------------')
+
+/*
+Разделите массив на массив чисел и массив строк
+Дан массив, содержащий числа и строки. Получить два массива: массив чисел и массив строк из значений исходного массива.
+
+    Напишите функцию separateNumsAndStrings, которая принимает смешанный массив arr в качестве аргумента,
+    возвращает массив, содержащий массив чисел и массив строк в виде: [[array of numbers], [array of strings]]
+
+Пример:
+
+    функция separateNumsAndStrings([1, 2, "a", 3, "b"]) должна возвратить [[1, 2, 3],["a", "b"]];
+функция separateNumsAndStrings([1, 1, 1]) должна возвратить [[1, 1, 1], []];
+функция separateNumsAndStrings(["a", "b", "c"]) должна возвратить [[], ["a", "b", "c"]];
+функция separateNumsAndStrings([]) должна возвратить [[], []].
+*/
+function separateNumsAndStrings(arr){
+    let resStrings = [];
+    let resNumbers = [];
+    for(let i=0; i<arr.length; i++){
+        if(typeof arr[i] === 'number') resNumbers.push(arr[i]);
+        if(typeof arr[i] === 'string') resStrings.push(arr[i]);
+    }
+    return [resNumbers, resStrings]
+}
+console.log(separateNumsAndStrings([1, 2, "a", 3, "b"]));
