@@ -83,3 +83,32 @@ function separateNumsAndStrings(arr){
     return [resNumbers, resStrings]
 }
 console.log(separateNumsAndStrings([1, 2, "a", 3, "b"]));
+
+console.log('--------------------------------')
+
+/*
+Разделите массив на два массива: массив положительных чисел и массив отрицательных чисел
+Дан массив, содержащий числа. Получить два массива: массив положительных чисел и массив отрицательных чисел.
+
+    Напишите функцию separatePosAndNeg, которая принимает числовой массив arr в качестве аргумента, возвращает
+массив, содержащий массив положительных чисел и массив отрицательных чисел в виде:
+
+    [[array of positive numbers], [array of negative numbers]].
+
+        Элемент, равный нулю, не должен входить ни в один массив.
+
+    Пример:
+
+функция separatePosAndNeg([-2, 3, 7, -4) должна возвратить [[3, 7],[-2, -4]];
+функция separatePosAndNeg([1, 2]) должна возвратить [[1, 2], []];
+функция separatePosAndNeg([]) должна возвратить [[], []].*/
+function separatePosAndNeg(arr){
+    let pos = [];
+    let neg = [];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] < 0) {neg.push(arr[i])};
+        if(arr[i] > 0) {pos.push(arr[i])};
+    }
+    return [pos, neg];
+}
+console.log(separatePosAndNeg([-2, 3, 7, -4]));
