@@ -364,30 +364,14 @@ console.log('--------------------------')
     "April 4 was the coldest day of the month: it was 10 degrees."
 
 Во всех тестах входной массив не является пустым.*/
-// function theColdestDay(arr){
-//     let coldestDay = arr[0];
-//     let dayName = 1;
-//     for(let i=0; i<arr.length; i++){
-//         if(arr[i]<coldestDay){
-//             coldestDay = arr[i];
-//             console.log('coldest:' + arr[i] + 'i:' +i)
-//             dayName = i+1;
-//
-//             console.log(dayName)
-//         }
-//     }
-//     return `April ${dayName} was the coldest day of the month: it was ${coldestDay} degrees`
-// }
+
 function theColdestDay(arr){
     let coldestDay = arr[arr.length -1];
     let dayName = arr.length-1;
     for(let i=arr.length-1; i>=0; i--){
         if(arr[i]<coldestDay){
             coldestDay = arr[i];
-            console.log('coldest:' + arr[i] + 'i:' +i)
             dayName = i;
-
-            console.log(dayName)
         }
     }
     return `April ${dayName + 1} was the coldest day of the month: it was ${coldestDay} degrees.`
