@@ -35,3 +35,25 @@ function addValue(arr, value){
     return count;
 }
 console.log(addValue([1, 2, 3,5], 10));
+
+console.log('--------------------------------')
+/*
+Получить массив из букв
+Дан массив, содержащий имена. Получить массив, состоящий из первых букв имен, содержащихся в исходном массиве.
+
+    Напишите функцию arrayOfFirstLetters, которая принимает массив строк names в качестве аргумента, и
+возвращает массив, содержащий первые буквы строк исходного массива.
+
+    Пример:
+
+функция arrayOfFirstLetters(["Alice", "Bob"]) должна возвратить ["A", "B"];
+функция arrayOfFirstLetters(["Kate"]) должна возвратить ["K"];
+функция arrayOfFirstLetters([]) должна возвратить []*/
+function arrayOfFirstLetters(names){
+    let res =[];
+    for(let i=0; i<names.length; i++){
+        res.push(names[i][0])
+    }
+    return res;
+}
+console.log(arrayOfFirstLetters(["Alice", "Bob"]));
