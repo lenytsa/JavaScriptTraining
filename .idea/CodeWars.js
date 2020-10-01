@@ -2102,3 +2102,28 @@ var max = function(list){
 }
 console.log(max([4,6,2,1,9,63,-134,566]));
 console.log(min([-52, 56, 30, 29, -54, 0, -110]));
+console.log('---------------------------')
+
+/*
+https://www.codewars.com/kata/588a3c3ef0fbc9c8e1000095
+max diff - easy
+You must implement a function maxDiff that return the difference between the biggest and the smallest value in
+a list(lst) received as parameter.
+
+    The list(lst) contains integers, that means it may contain some negative numbers.
+
+    If the list is empty or contains a single element, return 0.
+
+The list(lst) is not sorted.
+maxDiff([1, 2, 3, 4]); //return 3, because 4 - 1 == 3
+maxDiff([1, 2, 3, -4]); //return 7, because 3 - (-4) == 7*/
+function maxDiff(list) {
+    if(list === null || list.length === 0)return 0;
+    let min = Math.min(...list);
+    let max = Math.max(...list);
+    return max - min;
+};
+//or
+function maxDiff(list) {
+    return list.length > 1 ? Math.max(...list) - Math.min(...list) : 0
+}
