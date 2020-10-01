@@ -112,3 +112,27 @@ function separatePosAndNeg(arr){
     return [pos, neg];
 }
 console.log(separatePosAndNeg([-2, 3, 7, -4]));
+
+console.log('------------------------------');
+/*
+Разделите массив на два массива: массив четных чисел и массив нечетных чисел
+Дан массив, содержащий числа. Получить два массива: массив четных чисел и массив нечетных чисел.
+
+    Напишите функцию separateEvenAndOdd, которая принимает числовой массив arr в качестве аргумента,
+    возвращает массив, содержащий массив четных чисел и массив нечетных чисел в виде: [[array of even numbers],
+    [array of odd numbers]].
+
+    Пример:
+
+функция separateEvenAndOdd([-2, -3, 7, 4) должна возвратить [[-2, 4],[-3, 7]];
+функция separateEvenAndOdd([4, 2]) должна возвратить [[4, 2], []];
+функция separateEvenAndOdd([]) должна возвратить [[], []].*/
+function separateEvenAndOdd(arr){
+    let even =[];
+    let odd = [];
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] %2 === 0){ even.push(arr[i])};
+        if(arr[i] %2 !== 0){ odd.push(arr[i])};
+    }
+    return [even,odd];
+}
