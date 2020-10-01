@@ -136,3 +136,22 @@ function separateEvenAndOdd(arr){
     }
     return [even,odd];
 }
+console.log('---------------------');
+
+/*Разделите строку на отдельные буквы
+Напишите функцию splitString, которая принимает строку str в качестве аргумента, и возвращает массив,
+    содержащий буквы этой строки. В решении используйте цикл по строке и метод push. В этой задаче запрещено
+использование метода split().
+
+    Пример:
+
+функция splitString("Monkey") должна возвратить ["M", "o", "n", "k", "e", "y"];
+функция splitString([]) должна возвратить [].*/
+    function splitString(str){
+    let res =[];
+    for(let i=0; i<str.length; i++){
+        res.push(str[i]);
+    }
+    return res;
+}
+console.log(splitString("Monkey"));
