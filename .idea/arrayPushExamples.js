@@ -155,3 +155,17 @@ console.log('---------------------');
     return res;
 }
 console.log(splitString("Monkey"));
+    console.log('------------------------')
+/*
+Удалите последний элемент массива
+Напишите функцию deleteFromEnd, которая принимает массив arr в качестве аргумента, удаляет последний элемент массива
+и возвращает полученный массив.
+    Пример:
+функция deleteFromEnd([1, 2, 3]) должна возвратить [1, 2];
+функция deleteFromEnd([1]) должна возвратить [];
+функция deleteFromEnd([]) должна возвратить [].*/
+function deleteFromEnd(arr){
+    arr.pop();
+    return arr;
+}
+console.log(deleteFromEnd([1, 2, 3]))
