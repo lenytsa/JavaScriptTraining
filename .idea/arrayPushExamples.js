@@ -185,3 +185,40 @@ function deleteFromEnd(arr){
     return [arr, del]
 }
 console.log(deleteFromEnd([1, 2, 3]));
+
+//remotes last 3 elements from array
+const arrx = [11, 12, 13, 2, 4, 5];
+for (let i = 0; i < 3; i++){
+    arrx.pop();
+}
+console.log(arrx)
+
+/*
+Массив из цифр числа.
+    Дано целое положительное число. Получите массив его цифр.
+
+    Напишите функцию с именем arrayOfDigits, которая принимает в качестве аргумента число n и возвращает массив его
+цифр. Запрещено использование методов. В решении используйте цикл do while.
+
+    Примеры:
+
+функция arrayOfDigits(123456) должна возвратить [1, 2, 3, 4, 5, 6];
+функция arrayOfDigits(1000) должна возвратить [1,0,0,0];
+функция arrayOfDigits(1) должна возвратить [1].
+    функция arrayOfDigits(0) должна возвратить [0].*/
+console.log('---------------')
+
+function arrayOfDigits(n) {
+    let res = [];
+    let i = 0;
+    do {
+        let lastDigit = n % 10;
+        res.unshift(lastDigit)
+        n = Math.floor(n / 10);
+        i++
+    } while (n > 0)
+    return res;
+}
+
+console.log(arrayOfDigits(126));
+console.log(arrayOfDigits(1000));
