@@ -284,10 +284,23 @@ function deleteFiveElements(arr){
     return arr;
 }
 console.log(deleteFiveElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-
-
-
-
-
-
 console.log('-----------------------------------')
+/*Удалите n первых элементов массива
+Напишите функцию deleteNElements, которая принимает массив arr и целое число n в качестве аргументов, удаляет
+первые n элементов массива и возвращает полученный массив.
+
+    Пример:
+
+функция deleteNElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3) должна возвратить [4, 5, 6, 7, 8, 9, 10];
+функция deleteNElements([1, 2, 3, 4, 5, 6], 5) должна возвратить [6];
+функция deleteNElements([1, 2, 3, 4, 5], 5) должна возвратить [];
+функция deleteNElements([1, 2, 3], 5) должна возвратить [];
+функция deleteNElements([1, 2, 3], 0) должна возвратить [1, 2, 3];
+функция deleteNElements([], 10) должна возвратить [].*/
+function deleteNElements(arr, n){
+    for(let i=0; i<n; i++){
+        arr.shift()
+    }
+    return arr;
+}
+console.log(deleteNElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
