@@ -245,3 +245,20 @@ function addValue(arr, value){
 console.log(addValue([1, 2, 3], 10));
 console.log(addValue([1, 2, 3], 'a'));
 console.log(addValue([1], "b"));
+
+//Array.prototype.shift() examples
+/*
+Удалите первый элемент массива
+Напишите функцию deleteFirstElement, которая принимает массив arr в качестве аргумента, удаляет первый элемент
+массива и возвращает полученный массив.
+
+    Пример:
+
+функция deleteFirstElement([10, 1, 2, 3]) должна возвратить [1, 2, 3];
+функция deleteFirstElement([1]) должна возвратить [];
+функция deleteFirstElement([]) должна возвратить [].*/
+function deleteFirstElement(arr){
+    arr.shift();
+    return arr;
+}
+console.log(deleteFirstElement([10, 1, 2, 3]));
