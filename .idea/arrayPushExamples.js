@@ -222,3 +222,26 @@ function arrayOfDigits(n) {
 
 console.log(arrayOfDigits(126));
 console.log(arrayOfDigits(1000));
+console.log('---------------')
+
+/*Добавление величины в начало или конец массива
+Напишите функцию addValue, которая принимает массив arr и величину value в качестве аргументов, добавляет
+величину value в конец массива, если value является числом, или в начало массива, если value является строкой, затем
+возвращает полученный массив.
+
+    Пример:
+
+функция addValue([1, 2, 3], 10) должна возвратить [1, 2, 3, 10];
+функция addValue([1, 1, 1], "a") должна возвратить ["a", 1, 1, 1];
+функция addValue([1], 10) должна возвратить [1, 10];
+функция addValue([1], "b") должна возвратить ["b", 1];
+функция addValue([], 0) должна возвратить [0].*/
+function addValue(arr, value){
+        if(typeof value === 'number') arr.push(value);
+        if(typeof value === 'string') arr.unshift(value)
+
+    return arr;
+}
+console.log(addValue([1, 2, 3], 10));
+console.log(addValue([1, 2, 3], 'a'));
+console.log(addValue([1], "b"));
