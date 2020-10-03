@@ -2371,3 +2371,17 @@ function doubles(s) {
     return cs.join('');
 }
 console.log(doubles('abbbzz'));//ab
+
+/*
+esreveR
+Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+
+(the dedicated builtin(s) functionalities are deactivated)*/
+function reverse(array) {
+    let res =[];
+    for(let elm of array){
+        res.unshift(elm);
+    }
+    return res;
+}
+console.log( reverse([1,2,3]));
