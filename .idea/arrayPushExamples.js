@@ -304,3 +304,33 @@ function deleteNElements(arr, n){
     return arr;
 }
 console.log(deleteNElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+console.log('-----------------------------------')
+
+/*Удалите все нечисловые элементы в начале массива
+Дан массив, в начале которого находится некоторое количество нечисловых элементов, после которых могут
+находиться числа. Напишите функцию deleteNotNumbers, которая принимает смешанный массив arr в качестве аргумента,
+    удаляет все нечисловые элементы массива, находящиеся до первого числа, и возвращает полученный массив.
+
+    Пример:
+
+функция deleteNotNumbers(['a', 'b', 1, 2, 3]) должна возвратить [1, 2, 3];
+функция deleteNotNumbers([true, false, "a", 1, 2, 3]) должна возвратить [1, 2, 3];
+функция deleteNotNumbers([1, 2, 3]) должна возвратить [1, 2, 3];
+функция deleteNotNumbers(['a', 'b']) должна возвратить [];
+функция deleteNotNumbers(['a', 'b', 2, 'a']) должна возвратить [2, 'a'];
+функция deleteNotNumbers([]) должна возвратить [].*/
+function deleteNotNumbers(arr) {
+    let count = 0;
+    if(arr.length===0) return [];
+    for (let i = 0; i <= arr.length; i++) {
+        if (typeof arr[i] !== 'number') {
+            count++
+        } else break;
+    }
+    for (let i = 0; i < count; i++) {
+        arr.shift()
+    }
+    return arr;
+}
+console.log(deleteNotNumbers(['a', 'b', 1, 2, 3]));
+console.log(deleteNotNumbers( [false,'o','w','f','t',-7,3,2,7,6,-1,-8,'t','k']));
