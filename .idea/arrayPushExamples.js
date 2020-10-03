@@ -245,6 +245,7 @@ function addValue(arr, value){
 console.log(addValue([1, 2, 3], 10));
 console.log(addValue([1, 2, 3], 'a'));
 console.log(addValue([1], "b"));
+console.log('-----------------------------------')
 
 //Array.prototype.shift() examples
 /*
@@ -262,3 +263,31 @@ function deleteFirstElement(arr){
     return arr;
 }
 console.log(deleteFirstElement([10, 1, 2, 3]));
+
+console.log('-----------------------------------')
+/*
+Удалите пять элементов в начале массива
+Напишите функцию deleteFiveElements, которая принимает массив arr в качестве аргумента, удаляет первые пять
+элементов массива и возвращает полученный массив.
+
+    Пример:
+
+функция deleteFiveElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) должна возвратить [6, 7, 8, 9, 10];
+функция deleteFiveElements([1, 2, 3, 4, 5, 6]) должна возвратить [6];
+функция deleteFiveElements([1, 2, 3, 4, 5]) должна возвратить [];
+функция deleteFiveElements([1, 2, 3]) должна возвратить [];
+функция deleteFiveElements([]) должна возвратить [].*/
+function deleteFiveElements(arr){
+    for(let i=0; i<5; i++){
+        arr.shift();
+    }
+    return arr;
+}
+console.log(deleteFiveElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+
+
+
+
+
+console.log('-----------------------------------')
