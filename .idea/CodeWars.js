@@ -2308,3 +2308,16 @@ function multiples(s1,s2,s3){
     return res;
 }
 console.log(multiples(2,4,40));
+
+/*Holy cats
+My granny has several cats. Most of them are wicked, some are normal and some of them are the likes of ^(~_~)^ aka holy
+cats. So my granny asked me to separate the holy cats from the rest of the crew. But I don't know how to do it. Can you' +
+' help me separate the holy cats from the rest?' +
+' In case there are no holy cats in the group, return an empty array.*/
+function holycats(input){
+    let res =[];
+    for(let i=0; i<input.length; i++){
+        if(input[i]!=='wicked'&& input[i]!=='normal' ){res.push(input[i]);}
+    }
+    return res;
+}
