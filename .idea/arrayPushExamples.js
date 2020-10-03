@@ -168,4 +168,20 @@ function deleteFromEnd(arr){
     arr.pop();
     return arr;
 }
-console.log(deleteFromEnd([1, 2, 3]))
+console.log(deleteFromEnd([1, 2, 3]));
+console.log('------------------------')
+
+/*Удаление последнего элемента: новый массив и удаленный элемент
+Напишите функцию deleteFromEnd, которая принимает массив arr в качестве аргумента, удаляет последний элемент массива
+и возвращает полученный массив и удаленный элемент в виде массива [newArray, element].
+
+    Пример:
+
+функция deleteFromEnd([1, 2, 3]) должна возвратить [[1, 2], 3];
+функция deleteFromEnd([1]) должна возвратить [[], 1];
+функция deleteFromEnd([]) должна возвратить [[], undefined].*/
+function deleteFromEnd(arr){
+    let del = arr.pop();
+    return [arr, del]
+}
+console.log(deleteFromEnd([1, 2, 3]));
