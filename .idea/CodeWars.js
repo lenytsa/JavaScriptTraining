@@ -2321,3 +2321,25 @@ function holycats(input){
     }
     return res;
 }
+console.log('------------------------');
+/*Backspaces in string
+Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+
+Your task is to process a string with "#" symbols.
+"abc#d##c"      ==>  "ac"
+"abc##d######"  ==>  ""
+"#######"       ==>  ""
+""              ==>  ""*/
+function cleanString(s) {
+    //s=s.split``;
+    let res=[];
+    for(let i=0; i<s.length; i++){
+        if(s[i]==='#'){
+            res.pop();
+            continue;
+        }
+        res.push(s[i])
+    }
+    return res.join('');
+}
+console.log(cleanString('abc#d##c'));//ac
