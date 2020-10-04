@@ -61,3 +61,18 @@ function indexMaxMin(arr){
 console.log(indexMaxMin([2, 20, 20, 2])); //min
 console.log(indexMaxMin([20, 1, 1, 20])); //max
 console.log(indexMaxMin([20])); //undefined
+console.log('-------------------------');
+
+/*Найдите индекс элемента в массиве
+Напишите функцию indexOfValue, которая принимает непустой массив arr и величину value в качестве аргументов,
+    и возвращает индекс элемента массива со значением value, или undefined - если такой элемент отсутствует.
+
+    Пример:
+
+функция indexOfValue([1, 3, 6, 2, 6], 6) должна возвратить 2;
+функция indexOfValue([0, 1, 2], 5) должна возвратить undefined;
+функция indexOfValue([4, 1, 1, 2], 1) должна возвратить 1.*/
+function indexOfValue(arr, value){
+    if(!arr.includes(value)) return undefined;
+    return arr.indexOf(value);
+}
