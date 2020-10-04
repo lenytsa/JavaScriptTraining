@@ -32,3 +32,32 @@ function indexOfMin(arr){
     return arr.indexOf(Math.min(...arr));
 }
 console.log(indexOfMin([10, 3, 4, 3,0, 5]));
+console.log('-------------------------');
+
+
+/*
+Какой элемент встретится раньше: максимальный или минимальный?
+    Напишите функцию indexMaxMin, которая принимает непустой массив arr в качестве аргумента, и возвращает строку
+    "max", если индекс первого максимального элемента массива меньше индекса первого минимального элемента массива,
+    и строку "min" - в противном случае. Если в массиве все элементы равны, то возвратить undefined.
+
+    Пример:
+
+функция indexMaxMin([1, 10, 2, -3, 8]) должна возвратить "max", так как максимальный элемент массива (10) находится
+левее минимального элемента (-3) ;
+функция indexMaxMin([-10, 1, 20]) должна возвратить "min", так как минимальный элемент массива (-10) находится левее
+ максимального элемента (20);
+функция indexMaxMin([2, 20, 20, 2]) должна возвратить "min";
+функция indexMaxMin([20, 1, 1, 20]) должна возвратить "max";
+функция indexMaxMin([1, 1]) должна возвратить undefined;
+функция indexMaxMin([1]) должна возвратить undefined.*/
+function indexMaxMin(arr){
+    let min = Math.min(...arr);
+    let max = Math.max(...arr);
+    if(arr.indexOf(max)=== arr.indexOf(min) || arr.length===1) return undefined;
+    if(arr.indexOf(max)<arr.indexOf(min)) return 'max';
+    else return 'min'
+}
+console.log(indexMaxMin([2, 20, 20, 2])); //min
+console.log(indexMaxMin([20, 1, 1, 20])); //max
+console.log(indexMaxMin([20])); //undefined
