@@ -56,3 +56,22 @@ function includesFirstLetter(arr, word){
     return arr.includes(word[0]);
 }
 console.log(includesFirstLetter(['a', 'b', 'c'], 'banana'));
+console.log('------------------------')
+
+/*Содержит ли первый массив максимальный элемент второго массива?
+    Напишите функцию includesOtherMax, которая принимает два числовых массива arr1 и arr2 в качестве аргументов, и
+возвращает
+true, если массив arr1 содержит максимальный элемент массива arr2, и false - в противном случае.
+
+    Пример:
+
+функция includesOtherMax([1, 7, 5], [3, 4, 5]) должна возвратить true, т.к. первый массив содержит 5 - максимальный
+элемент второго массива;
+функция includesOtherMax([9, 0, -5, 8], [1, 2, 3]) должна возвратить false, т.к. первый массив не содержит 3 -
+максимальный элемент второго массива.*/
+    function includesOtherMax(arr1, arr2){
+    let max = Math.max(...arr2);
+    return arr1.includes(max);
+}
+console.log(includesOtherMax([1, 7, 5], [3, 4, 5]));// true
+console.log(includesOtherMax([9, 0, -5, 8], [1, 2, 3]));// false
