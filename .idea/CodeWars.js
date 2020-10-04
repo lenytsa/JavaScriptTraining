@@ -2399,4 +2399,4 @@ function reverseSeq(n)  {
     return res;
 }
 console.log(reverseSeq(5));
-
+console.log('-----------------------------');
