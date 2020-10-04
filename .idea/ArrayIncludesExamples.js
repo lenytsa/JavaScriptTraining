@@ -35,3 +35,24 @@ function includeGreaterThanMin(arr){
 }
 console.log(includeGreaterThanMin([1, 3, 4, 5])); //false
 console.log(includeGreaterThanMin([0, 1, 2, 3]));//true
+
+console.log('------------------------')
+/*
+Содержит ли массив букв первую букву заданного слова?
+    Дан массив, содержащий некоторое количество букв алфавита. Дано слово. Содержит ли массив первую букву данного слова?
+
+    Напишите функцию includesFirstLetter, которая принимает массив букв arr и слово word в качестве аргументов, и
+возвращает true, если массив содержит первую букву данного слова, и false - в противном случае.
+
+    Пример:
+
+функция includesFirstLetter(['a', 'b', 'c'], 'banana') должна возвратить true, т.к. массив содержит b - первую
+букву слова banana;
+функция includesFirstLetter(['c', 'd', 'q', 'a'], 'cat') должна возвратить true, т.к. массив содержит c - первую
+букву слова cat;
+функция includesFirstLetter(['f', 't', 'z'], 'apple') должна возвратить false, так как массив не содержит букву a.
+*/
+function includesFirstLetter(arr, word){
+    return arr.includes(word[0]);
+}
+console.log(includesFirstLetter(['a', 'b', 'c'], 'banana'));
