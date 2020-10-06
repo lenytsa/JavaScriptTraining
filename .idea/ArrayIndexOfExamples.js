@@ -129,3 +129,20 @@ function lastIndexOfValue(arr, value) {
 }
 console.log(lastIndexOfValue([2, 3, -2, -4], 0)); // Not found
 console.log(lastIndexOfValue([2, 2, 2, 2], 2)) //3
+
+console.log('---------------------------');
+// Является ли элемент массива уникальным?
+//     Напишите функцию uniqueElement, которая принимает непустой массив arr и величину value в
+// качестве аргументов, и возвращает true, если элемент со значением value является уникальным (т.е.
+//     встречается в массиве только один раз), и false - в противном случае.
+//
+//     Пример:
+//
+// функция uniqueElement([10, 3, 4, 3, 5], 3) должна возвратить false;
+// функция uniqueElement([10, 11, 12, 13], 11) должна возвратить true;
+// функция uniqueElement([10, 12, 12, 12], 10) должна возвратить true;
+// функция uniqueElement([5, 4, 4, 4, 3], 4) должна возвратить false.
+    function uniqueElement(arr, value){
+    return arr.indexOf(value)===arr.lastIndexOf(value)? true: false;
+}
+console.log(uniqueElement([10, 3, 4, 3, 5], 3));//false
