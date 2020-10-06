@@ -76,3 +76,56 @@ function indexOfValue(arr, value){
     if(!arr.includes(value)) return undefined;
     return arr.indexOf(value);
 }
+
+//В следующем примере indexOf() используется для поиска всех индексов элемента в указанном массиве,
+// которые с помощью push() добавляются в другой массив.
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = array.indexOf(element);
+while (idx != -1) {
+    indices.push(idx);
+    idx = array.indexOf(element, idx + 1);
+}
+console.log('-----------------------')
+
+console.log(indices);
+// [0, 2, 4]
+const arr = ['cat', 'CAT', '1 ', 1, 'cat'];
+console.log(arr.indexOf(1, -3)); // 3
+console.log(arr.indexOf('cat', 1)); // 4
+console.log(arr.indexOf('1 ', 5)); // -1
+console.log('-----------------------')
+
+const arr2 = [100, 1, 100, 3, 100, 100, 6];
+let elem = 100;
+const indices2 = [];
+let i = arr2.indexOf(elem);
+while (i !== -1){
+    indices2.push(i);
+    i = arr2.indexOf(elem, i + 1);
+}
+console.log(indices2); // [0, 2, 4, 5]
+
+const arrL = ['1', 5, 'b', NaN, 'a', 'b', 0];
+console.log(arrL.lastIndexOf('b', 4));
+console.log('-----------------------')
+/*Последний индекс элемента массива
+question
+Напишите функцию lastIndexOfValue, которая принимает непустой массив arr и величину value в
+ качестве аргументов, и возвращает последний индекс элемента массива со значением value, или
+ "Not found" - если такой элемент отсутствует.
+
+    Примеры:
+
+функция lastIndexOfValue([10, 3, 4, 3, 5], 3) должна возвратить 3;
+функция lastIndexOfValue([0, 1, 2, 3], 1) должна возвратить 1;
+функция lastIndexOfValue([5, 4, 4, 4, 5, 3], 4) должна возвратить 3;
+функция lastIndexOfValue([2, 2, 2, 2], 2) должна возвратить 3.
+функция lastIndexOfValue([2, 3, -2, -4], 0) должна возвратить "Not found".*/
+function lastIndexOfValue(arr, value) {
+    if (!arr.includes(value)) return 'Not found';
+    return arr.lastIndexOf(value);
+}
+console.log(lastIndexOfValue([2, 3, -2, -4], 0)); // Not found
+console.log(lastIndexOfValue([2, 2, 2, 2], 2)) //3
