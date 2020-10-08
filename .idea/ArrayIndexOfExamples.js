@@ -87,10 +87,9 @@ while (idx != -1) {
     indices.push(idx);
     idx = array.indexOf(element, idx + 1);
 }
+console.log(indices);// [0, 2, 4];
 console.log('-----------------------')
 
-console.log(indices);
-// [0, 2, 4]
 const arr = ['cat', 'CAT', '1 ', 1, 'cat'];
 console.log(arr.indexOf(1, -3)); // 3
 console.log(arr.indexOf('cat', 1)); // 4
@@ -146,3 +145,25 @@ console.log('---------------------------');
     return arr.indexOf(value)===arr.lastIndexOf(value)? true: false;
 }
 console.log(uniqueElement([10, 3, 4, 3, 5], 3));//false
+console.log('------------')
+const arr5 = ['b', 'a', 'b', 'a', 'b', 'c'];
+console.log(arr5.lastIndexOf('b', 6)); // 4
+console.log(arr5.lastIndexOf('b', -3));
+console.log(arr5.lastIndexOf('a'));
+console.log(arr5.lastIndexOf('c', 2));
+console.log(arr5.lastIndexOf('B'))
+console.log('-----------------');
+var positions = [];
+var array3 = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+let idx1= array3.lastIndexOf(element);
+while(idx1!=-1){
+    positions.push(idx1);
+    if(idx1>0){
+        idx1 = array.lastIndexOf(element,idx1-1 );
+    }
+    else{
+        idx1=-1;
+    }
+}
+console.log(positions);
