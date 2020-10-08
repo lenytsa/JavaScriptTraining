@@ -2500,6 +2500,7 @@ function removeEveryOther(arr){
 }
 console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
 console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log('------------------------------------------')
 
 //same as above removeEveryOther but regular function
 function remove(arrY) {
@@ -2513,6 +2514,7 @@ function remove(arrY) {
 }
 console.log(remove(['Hello', 'Goodbye', 'Hello Again']));
 console.log(remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log('------------------------------------------')
 
 /*Filter out the geese
 Write a function, gooseFilter / goose-filter / goose_filter /GooseFilter, that takes an array of strings
@@ -2535,8 +2537,26 @@ function gooseFilter (birds) {
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
 //[ 'Mallard', 'Hook Bill', 'Crested', 'Blue Swedish' ]
 //OR other solution
-function gooseFilter (birds) {
+function gooseFilter1(birds) {
     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    return gooseFilter.pop(geese);
+    return gooseFilter1.pop(geese);
     // return an array containing all of the strings in the input array except those that match strings in geese
 };
+console.log('------------------------------------------')
+
+/*Well of Ideas - Easy Version
+For every good kata idea there seem to be quite a few bad ones!
+
+    In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'.
+    If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.
+    If there are no good ideas, as is often the case, return 'Fail!'.*/
+function well(x) {
+    return  x.filter(fil).length >= 1 && x.filter(fil).length <= 2 ? 'Publish!' :
+            x.filter(fil).length > 2 ? 'I smell a series!' : 'Fail!';
+}
+function fil(word) {
+    if (word.includes('good')) {
+        return word;
+    }
+}
+console.log(well(['good', 'bad', 'bad', 'bad', 'bad']));
