@@ -2485,3 +2485,31 @@ function divisibleBy(numbers, divisor){
     return numbers.filter(el=>el%divisor===0);
 }
 console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2));
+console.log('------------------------------------------')
+
+/*
+Removing Elements
+Take an array and remove every second element from the array. Always keep the first element and start
+removing with the next element.
+
+    Example:
+
+myArr = ['Keep', 'Remove', 'Keep', 'Remove', 'Keep', ...];*/
+function removeEveryOther(arr){
+   return arr.filter((el,i) => i %2===0);
+}
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+//same as above removeEveryOther but regular function
+function remove(arrY) {
+    let res =[];
+    for(let i=0; i<arrY.length; i++){
+        if(i %2===0){
+            res.push(arrY[i])
+        }
+    }
+    return res;
+}
+console.log(remove(['Hello', 'Goodbye', 'Hello Again']));
+console.log(remove([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
