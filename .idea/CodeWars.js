@@ -2574,3 +2574,22 @@ var filterLucky=x=>{
     return x.filter(el => (el +'').includes(7));
 }
 console.log( filterLucky([1,2,3,4,5,6,7,68,69,70,15,17]));
+/*
+
+Filter out the vowels
+Write a function, vowelFilter, that takes an array of strings as an argument and returns
+a filtered array containing the same elements but with the 'vowels' removed.
+
+    The vowels are any strings in the following array, which is pre-populated in your solution:
+    vowels = ["a", "e", "i", "o", "u"]
+For example, if this array were passed as an argument:
+
+    ["d", "a", "r", "z", "i", "q", "o"]
+Your function would return the following array:
+
+    ["d", "r", "z", "q"]*/
+function vowelFilter (letters) {
+    var vowels = ["a", "e", "i", "o", "u"];
+   return letters.filter(el=>!(vowels.includes(el)));
+};
+console.log(vowelFilter(["i", "s", "e", "a", "w", "e", "m"]));
