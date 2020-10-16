@@ -287,3 +287,68 @@ function addExtra( listOfNumbers ){
     return res;
 }
 console.log(addExtra([1,2,3]));
+console.log('-----------------------------------------');
+
+/*
+Training JS #29: methods of arrayObject---concat() and join()
+This lesson we learn two methods of array: concat() and join(). We have seen concat() in the stringObject
+method, but the method of the arrayObject is different from the stringObject method,
+    so we need to learn again. When studying the stringObject method split(), we have simply learned the
+join() method. This time we will review and explain it in detail.
+
+    Their definitions and syntax please refer to:
+
+    Array.prototype.concat()
+Array.prototype.join()
+(Please forgive me for my laziness;-)
+
+Here are some examples to help us understand the use of concat() and join():
+
+We first learn the concat() method, which can add some elements to the end of the array. concat() can have
+more and more parameters, and the parameter can be values, array or otherthings. Look this example:
+    var arr1=[1,2,3],arr2=[4,5,6];
+//The following ways can achieve the same purpose:
+//It can use an array as parameter
+console.log(arr1.concat(arr2));
+//also can use some values as parameters
+console.log(arr1.concat(4,5,6));
+//also can use more than one array as parameters
+console.log(arr1.concat([4],[5],[6]));
+//use ... accept the value of an enumeration
+console.log(arr1.concat(...arr2));
+//It can be used continuously
+console.log(arr1.concat(4).concat(5).concat(6));
+//output:
+[ 1, 2, 3, 4, 5, 6 ]
+    [ 1, 2, 3, 4, 5, 6 ]
+    [ 1, 2, 3, 4, 5, 6 ]
+    [ 1, 2, 3, 4, 5, 6 ]
+    [ 1, 2, 3, 4, 5, 6 ]
+    concat() can be used for the flat output of two-dimensional or multidimensional arrays. look this example:
+
+var arr=[[1,2],[3,4],[5,6]];
+var result=[];
+for (var i=0;i<arr.length;i++)
+  result=result.concat(arr[i]);
+console.log(result);    //output: [ 1, 2, 3, 4, 5, 6 ]
+Task
+Coding in function bigToSmall. function accept 1 parameter arr(2D number array).
+
+Your task is: First to all, refer to the example above, flat output arr to a one-dimensional array.
+
+And then sort array in descending order.
+
+Finally, use the separator ">" to connect the elements into a string.
+
+Don't complain about the situation like 1>1 is not reasonable, it is just a separator.
+
+Some example:
+
+bigToSmall([[1,2],[3,4],[5,6]]) should return "6>5>4>3>2>1"
+bigToSmall([[1,3,5],[2,4,6]]) should return "6>5>4>3>2>1"
+bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"*/
+function bigToSmall(arr){
+    let res =[].concat(...arr);
+    return res.slice().sort((a,b)=>b-a).join('>');
+}
+console.log(bigToSmall([[1,2],[3,4],[5,6]]));
