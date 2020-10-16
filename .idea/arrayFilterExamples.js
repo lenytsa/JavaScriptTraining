@@ -83,6 +83,4 @@ console.log('Unique no include duplicates', uniqueNotIncludeDuplicates)
 console.log('Duplicates without repeating',duplicatesOnlyOnce);//[ 7, -1 ]
 
 
-// в данном случае также можно использовать метод arr.lastIndexOf()
-// для получения всех элементов без их дубликатов
 

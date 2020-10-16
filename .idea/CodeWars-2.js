@@ -157,3 +157,24 @@ Given an array, find the duplicates in that array, and return a new array of tho
             .filter ((e,i,a) => a.indexOf(e) === i);//[ 4, 3, 1 ]
 }
 console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3, "5" ]));
+    console.log('---------------------------');
+
+/*
+Two to One
+Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible
+    , containing distinct letters,
+
+    each taken only once - coming from s1 or s2.
+    Examples:
+a = "xyaabbbccccdefww"
+b = "xxxxyyyyabklmopq"
+longest(a, b) -> "abcdefklmopqwxy"
+
+a = "abcdefghijklmnopqrstuvwxyz"
+longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"*/
+function longest(s1, s2) {
+    let s3= (s1+ s2).split('');
+    console.log(s3);
+    return s3.filter((el, i) => i === s3.indexOf(el)).sort().join('');
+}
+console.log(longest("aretheyhere", "yestheyarehere"));
