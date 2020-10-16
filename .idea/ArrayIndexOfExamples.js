@@ -167,3 +167,15 @@ while(idx1!=-1){
     }
 }
 console.log(positions);
+console.log('---------------')
+//reverse array without reverse method
+const arrRe = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < arrRe.length /2; i++) {
+    let temp = arrRe[i];
+    console.log('temp:', temp)
+    arrRe[i] = arrRe[arrRe.length - 1 - i];
+    console.log('arr[i]:'+ arrRe[i]);
+    arrRe[arrRe.length - 1 - i] = temp;
+    console.log(arrRe);
+}
+console.log(arrRe); // [6, 5, 4, 3, 2, 1]
