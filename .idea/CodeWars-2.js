@@ -238,3 +238,16 @@ function unique(arr) {
     return arr.filter((el, i) => i === arr.indexOf(el));
 }
 console.log(unique([1,2,2,3]));
+console.log('----------------------------');
+
+/*Convert number to reversed array of digits
+Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+    Example:
+348597 => [7,9,5,8,4,3]*/
+function digitize(n) {
+    let str= n.toString().split('');
+    return str.reverse().map(Number);
+}
+console.log(digitize(35231));
