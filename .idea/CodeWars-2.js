@@ -353,6 +353,7 @@ function bigToSmall(arr){
 }
 console.log(bigToSmall([[1,2],[3,4],[5,6]]));
 /*
+console.log('-----------------------------------------');
 
 Two Oldest Ages
 The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument
@@ -371,3 +372,31 @@ function twoOldestAges(ages){
 }
 console.log(twoOldestAges( [1, 2, 10, 8] ));
 console.log(twoOldestAges([1,5,87,45,8,8]));
+console.log('-----------------------------------------');
+
+/*
+Largest pair sum in array
+Given a sequence of numbers, find the largest pair sum in the sequence.
+
+    For example
+
+    [10, 14, 2, 23, 19] -->  42 (= 23 + 19)
+    [99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
+    Input sequence contains minimum two elements and every element is an integer.*/
+function largestPairSum(numbers)
+{
+   let largest = numbers[0]+numbers[1];
+   console.log(largest);
+   for(let i=0; i<numbers.length; i++){
+       if(numbers[i]+numbers[i+1]>largest){
+           largest = numbers[i]+numbers[i+1];
+       }
+   }
+   return largest;
+}
+//Other solution using sort
+function largestPairSum(numbers){
+    numbers.sort(function(a, b){ return b - a });
+    return numbers[0] + numbers[1];
+}
+console.log(largestPairSum([10, 14, 2, 23, 19]));
