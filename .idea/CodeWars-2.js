@@ -547,3 +547,38 @@ If the array is empty or the array has only one element the result should be 0 (
         return  Math.max(...arr) - Math.min(...arr);
     }
 console.log(sumOfDifferences([1, 2, 10]));
+console.log('------------------------------------------');
+
+/*
+Mirror, mirror, on the wall...
+Too long, didn't read
+You get a list of integers, and you have to write a function mirror that returns the "mirror" (or symmetric) version
+of this list: i.e. the middle element is the greatest, then the next greatest on both sides, the the next greatest,
+    and so on...
+
+More info
+The list will always consist of integers in range -1000..1000 and will vary in size between 0 and 10000. Your
+function should not mutate the input array, and this will be tested (where applicable). Notice that the returned
+    list will always be of odd size,
+    since there will always be a definitive middle element.
+    []  -->  []
+    [1]  -->  [1]
+    [2, 1]  -->  [1, 2, 1]
+    [1, 3, 2]  -->  [1, 2, 3, 2, 1]
+    [-8, 42, 18, 0, -16]  -->  [-16, -8, 0, 18, 42, 18, 0, -8, -16]*/
+
+    function mirror(data) {
+        let arr = [];
+        for (let i = 0; i < data.length; i++){
+            arr.push(data[i])
+        }
+        let part1 = arr.sort((a,b)=>a-b)
+        console.log('part 1',part1)
+        console.log('part 1 slice', part1.slice(0,-1))
+        //console.log('part 1 slice reverse', part1.slice(0,-1).reverse())
+        let part2 = part1.slice(0,-1).reverse().sort((a,b) => b-a);
+        console.log('part 2',part2)
+        return part1.concat(part2)
+    }
+
+console.log(mirror([1, 3, 2]));
