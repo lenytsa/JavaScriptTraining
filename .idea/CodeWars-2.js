@@ -453,5 +453,76 @@ function findChildren(santasList, children) {
         return santasList.filter((el, i) => i === santasList.indexOf(el)).sort();
 }
 
-//console.log(findChildren(["Jason", "Jackson", "Jordan", "Johnny"], ["Jason", "Jordan", "Jennifer"]));
+console.log(findChildren(["Jason", "Jackson", "Jordan", "Johnny"], ["Jason", "Jordan", "Jennifer"]));
 console.log(findChildren( ["jASon", "JAsoN", "JaSON", "jasON"], ["JasoN", "jASOn", "JAsoN", "jASon", "JASON"]));
+console.log('-----------------------------------------');
+
+
+/*Minimize Sum Of Array (Array Series #1)
+Task
+Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+    Notes
+Array/list will contain positives only .
+    Array/list will always has even size
+Input >> Output Examples
+minSum({5,4,2,3}) ==> return (22)
+Explanation:
+    The minimum sum obtained from summing each two integers product , 5*2 + 3*4 = 22
+minSum({12,6,10,26,3,24}) ==> return (342)
+Explanation:
+    The minimum sum obtained from summing each two integers product , 26*3 + 24*6 + 12*10 = 342*/
+function minSum(arr) {
+    arr = arr.sort((a, b) => a - b);
+    console.log(arr);
+    let sum = 0
+    for (let i = 0; i < arr.length / 2; i++) {
+        sum = sum + arr[i] * arr[arr.length - 1 - i];
+    }
+    return sum;
+}
+console.log(minSum([5,4,2,3]));
+
+console.log('------------------------------------------');
+/*
+Minimum Steps (Array Series #6)
+Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the
+array until their Sum becomes greater or equal to K.
+    Notes:
+List size is at least 3.
+
+All numbers will be positive.
+
+    Numbers could occur more than once , (Duplications may exist).
+
+Threshold K will always be reachable.
+
+    Input >> Output Examples
+minimumSteps({1, 10, 12, 9, 2, 3}, 6)  ==>  return (2)
+Explanation:
+    We add two smallest elements (1 + 2), their sum is 3 .
+
+    Then we add the next smallest number to it (3 + 3) , so the sum becomes 6 .
+
+    Now the result is greater or equal to 6 , Hence the output is (2) i.e (2) operations are required to do this .
+
+minimumSteps({8 , 9, 4, 2}, 23)  ==> return (3)
+Explanation:
+    We add two smallest elements (4 + 2), their sum is 6 .
+
+    Then we add the next smallest number to it (6 + 8) , so the sum becomes 14 .
+
+    Now we add the next smallest number (14 + 9) , so the sum becomes 23 .
+
+    Now the result is greater or equal to 23 , Hence the output is (3) i.e (3) operations are required to do this .
+
+*/
+function minimumSteps(numbers, value) {
+    numbersSort = numbers.sort((a, b) => a - b);
+    let sum = 0;
+    for (let i = 0; i < numbersSort.length; i++) {
+        sum = sum + numbersSort[i];
+        if (sum >= value) return i;
+    }
+}
+console.log(minimumSteps([8,9,10,4,2], 23));//3
+//console.log(minimumSteps([19,98,69,28,75,45,17,98,67], 464));
