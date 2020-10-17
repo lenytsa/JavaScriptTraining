@@ -526,3 +526,24 @@ function minimumSteps(numbers, value) {
 }
 console.log(minimumSteps([8,9,10,4,2], 23));//3
 console.log(minimumSteps([19,98,69,28,75,45,17,98,67], 464));
+
+console.log('------------------------------------------');
+/*
+Sum of differences in array
+Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+    For example: sumOfDifferences([2, 1, 10]) Returns 9
+
+Descending order: [10, 2, 1]
+
+Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell).
+
+*/
+
+    function sumOfDifferences(arr) {
+        if(arr.length<1) return 0;
+        return  Math.max(...arr) - Math.min(...arr);
+    }
+console.log(sumOfDifferences([1, 2, 10]));
