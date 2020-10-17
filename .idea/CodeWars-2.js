@@ -525,4 +525,4 @@ function minimumSteps(numbers, value) {
     }
 }
 console.log(minimumSteps([8,9,10,4,2], 23));//3
-//console.log(minimumSteps([19,98,69,28,75,45,17,98,67], 464));
+console.log(minimumSteps([19,98,69,28,75,45,17,98,67], 464));
