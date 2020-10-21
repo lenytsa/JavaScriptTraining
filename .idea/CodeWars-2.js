@@ -593,6 +593,7 @@ function solution(nums){
     return nums.sort((a,b)=>a-b);
 }
 console.log(solution([1, 2, 10, 50, 5]));
+console.log('------------------------------------');
 
 /*
 //Array.prototype.join()  Sentence Smash
@@ -607,3 +608,14 @@ function smash (words) {
    return words.join(' ')
 };
 console.log(smash(['hello', 'world', 'this', 'is', 'great']));
+console.log('------------------------------------');
+
+/*
+https://www.codewars.com/kata/55c90cad4b0fe31a7200001f/train/javascript
+String Templates - Bug Fixing #5
+Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help' +
+' Timmy with his string template so it works as he expects!*/
+function buildString(...template){
+    return `I like ${template.join(', ')}!`;
+}
+console.log(buildString('Cheese','Milk','Chocolate'));
