@@ -728,6 +728,7 @@ function inAscOrder(arr) {
     }
     return true;
 }
+
 console.log(inAscOrder([1,2,4,7,19])); //true
 console.log(inAscOrder([1,2,4,7,19])); //true
 console.log(inAscOrder([9,8,7,6,5,4,3,2,1])); //false
