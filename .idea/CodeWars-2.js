@@ -619,3 +619,16 @@ function buildString(...template){
     return `I like ${template.join(', ')}!`;
 }
 console.log(buildString('Cheese','Milk','Chocolate'));
+console.log('------------------------------------');
+
+/*
+Printing Array elements with Comma delimiters
+Input: Array of elements
+
+    ["h","o","l","a"]
+
+Output: String with comma delimited elements of the array in th same order.*/
+function printArray(array){
+   return array.join(',')
+}
+console.log(printArray(["h","o","l","a"]));
