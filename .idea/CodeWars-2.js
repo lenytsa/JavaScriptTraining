@@ -572,7 +572,8 @@ function should not mutate the input array, and this will be tested (where appli
         for (let i = 0; i < data.length; i++){
             arr.push(data[i])
         }
-        let part1 = arr.sort((a,b)=>a-b)
+        console.log('before', arr);
+        let part1 = arr.sort((a,b)=>a-b);
         console.log('part 1',part1)
         console.log('part 1 slice', part1.slice(0,-1))
         //console.log('part 1 slice reverse', part1.slice(0,-1).reverse())
@@ -580,5 +581,15 @@ function should not mutate the input array, and this will be tested (where appli
         console.log('part 2',part2)
         return part1.concat(part2)
     }
+    console.log('------------------------------------');
+/*Sort Numbers.https://www.codewars.com/kata/5174a4c0f2769dd8b1000003
 
-console.log(mirror([1, 3, 2]));
+Finish the solution so that it sorts the passed in array of numbers. If the function passes in an
+empty array or null/nil value then it should return an empty array.
+solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+solution(null); // should return []*/
+function solution(nums){
+    if(nums === null) return[];
+    return nums.sort((a,b)=>a-b);
+}
+console.log(solution([1, 2, 10, 50, 5]));
