@@ -81,6 +81,16 @@ console.log('All elements shown with duplicates but not repeting',allElements); 
 console.log('All duplicates',duplicates); // [ -1, 7, 7, 7, -1 ]
 console.log('Unique no include duplicates', uniqueNotIncludeDuplicates)
 console.log('Duplicates without repeating',duplicatesOnlyOnce);//[ 7, -1 ]
+console.log('-------------------------');
 
+//Задание 2. Дан массив строк arr. Вернуть новый массив строк и их длину, причем длину указать в виде массива рядом
+// со строкой, к которой он относится.
+
+const arr = ['One', 'Two', 'Three', '!'];
+const newArr = [];
+arr.forEach(function(el) {
+    newArr.push(el, [el.length]);
+});
+console.log(newArr); // ["One", [3], "Two", [3], "Three", [5], "!", [1]]
 
 
