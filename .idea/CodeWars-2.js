@@ -744,3 +744,61 @@ function smallEnough(a, limit){
  return a.every(el => el<=limit);
 }
 console.log(smallEnough([66, 101], 200));
+console.log('------------------------------------');
+
+/*Dominant array elements
+An element in an array is dominant if it is greater than all elements to its right. You will be given an array and
+your task will be to return a list of all dominant elements. For example:
+
+    solve([1,21,4,7,5]) = [21,7,5] because 21, 7 and 5 are greater than elments to their right.
+solve([5,4,3,2,1]) = [5,4,3,2,1]
+
+Notice that the last element is always included.*/
+//solution from student
+function solve(arr){
+    const arr1=[];
+    for (let i=0;i<arr.length-1;i++){
+        let n=arr[i]
+        let arr2=arr.slice(i+1);
+        console.log("arr2",arr2);
+        let arr3=arr2.map(v=>n>v)
+        console.log("arr3",arr3);
+        if (arr3.every(v=>v===true)){arr1.push(n)}
+    }
+    arr1.push(arr[arr.length-1])
+    return arr1
+};
+console.log(solve([16,17,14,3,14,5,2]));
+//solution2 from student
+function solve1(arr){
+
+    console.log(arr.filter((currentV,i)=>arr.slice(i+1)));
+    return arr.filter((currentV,i)=>arr.slice(i+1).every(el=>el<currentV))
+};
+//solution from Larisa O
+function solve(arr){
+    let res = [];
+    for (let i = 0; i < arr.length - 1; i++){
+        if (arr[i] > Math.max(...arr.slice(i+1))){
+            res.push(arr[i])
+        }
+    }
+    return res.concat(arr[arr.length-1])
+};
+console.log(solve1([16,17,14,3,14,5,2]));
+console.log('------------------------------------');
+
+/*Are there any arrows left?
+    Check your arrows
+You have a quiver of arrows, but some have been damaged. The quiver contains arrows with an optional range
+information (different types of targets are positioned at different ranges), so each item is an arrow.
+    You need to verify that you have some good ones left, in order to prepare for battle:
+anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}])
+If an arrow in the quiver does not have a damaged status, it means it's new.
+
+The expected result is a boolean, indicating whether you have any good arrows left.*/
+function anyArrows(arrows){
+    return arrows.some(el => !el.damaged);
+}
+console.log(anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}])); //true
+console.log(anyArrows([{range: 10, damaged: true}, {damaged: true}])); //false
