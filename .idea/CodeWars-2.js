@@ -802,3 +802,18 @@ function anyArrows(arrows){
 }
 console.log(anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}])); //true
 console.log(anyArrows([{range: 10, damaged: true}, {damaged: true}])); //false
+
+//https://www.codewars.com/kata/58646a1173bd9c86080000ef/javascript
+//All Star Code Challenge #10
+
+function  fibonacci(n){
+    if(n===0) return 0;
+    if(n===1) return 1;
+    let fib =[0,1];
+    for(let i=2;i<=n; i++)
+    {
+        fib[i]=fib[i-2] + fib[i-1];
+    }
+    return fib[fib.length-1];
+}
+console.log(fibonacci(6));
