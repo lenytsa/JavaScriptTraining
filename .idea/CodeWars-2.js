@@ -858,3 +858,29 @@ function avg(a){
     return (a.reduce((acc,val)=>acc + val))/a.length;
 }
 console.log(avg([0, 1, 2, 3, 4]));
+console.log('------------------------------------');
+
+/*
+Calculate mean and concatenate string
+You will be given an array which will include both integers and characters.
+
+    Return an array of length 2 with a[0] representing the mean of the ten integers as a floating point number.
+    There will always be 10 integers and 10 characters. Create a single string with the characters and return it as
+    a[1] while maintaining the original order.
+    lst = ['u', '6', 'd', '1', 'i', 'w', '6', 's', 't', '4', 'a', '6', 'g', '1', '2', 'w', '8', 'o', '2', '0']
+Here is an example of your return
+
+[3.6, "udiwstagwo"]
+*/
+function mean(lst){
+    let n= lst.filter(function (item) {
+        return (!isNaN(item));
+    });
+    let s= lst.filter(function (item) {
+        return (isNaN(item))
+
+    });
+    let mean= n.reduce((acc,value)=>acc + parseFloat(value),0)/10;
+    return [mean,s.join('')];
+}
+console.log(mean(['u', '6', 'd', '1', 'i', 'w', '6', 's', 't', '4', 'a', '6', 'g', '1', '2', 'w', '8', 'o', '2', '0']));
