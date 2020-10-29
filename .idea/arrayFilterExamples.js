@@ -93,4 +93,25 @@ arr.forEach(function(el) {
 });
 console.log(newArr); // ["One", [3], "Two", [3], "Three", [5], "!", [1]]
 
+console.log('---------------')
+let words = ['one', 'two', 'three', 'four']
+words.forEach((word) => {
+    console.log(word)
+    if (word === 'two') {
+        words.shift()
+    }
+})
+// one
+// two
+// four
+function reverseStr(word){
+    let results='';
+    for(let i=0; i <word.length; i++){
+        results= word[i] + results
+        //results =results + word[i]
+    }
+    return results;
+}
+//let word= 'strange';
 
+console.log(reverseStr('123456'));
