@@ -897,3 +897,14 @@ function sumSquares(array) {
 console.log(sumSquares([1,2,3,4,5]));
 console.log(sumSquares([7,3,9,6,5]));
 console.log(sumSquares([11,13,15,18,2]));
+console.log('------------------------------------');
+
+/*SpeedCode #2 - Array Madness
+Objective
+Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of
+each element in a is strictly greater than the sum of the cubes of each element in b.
+arrayMadness([4, 5, 6], [1, 2, 3]); // returns true since 4 ** 2 + 5 ** 2 + 6 ** 2 > 1 ** 3 + 2 ** 3 + 3 ** 3*/
+function arrayMadness(a, b) {
+   return a.reduce((acc,val)=>acc+ val**2,0)> b.reduce((acc,val)=> acc + val**3,0);
+}
+console.log(arrayMadness([4,5,6],[1,2,3]));
