@@ -908,3 +908,12 @@ function arrayMadness(a, b) {
    return a.reduce((acc,val)=>acc+ val**2,0)> b.reduce((acc,val)=> acc + val**3,0);
 }
 console.log(arrayMadness([4,5,6],[1,2,3]));
+console.log('------------------------------------');
+
+/*Beginner - Reduce but Grow
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24*/
+function grow(x){
+    return x.reduce((acc,val)=> acc*val);
+}
+console.log(grow([1, 2, 3, 4]));
