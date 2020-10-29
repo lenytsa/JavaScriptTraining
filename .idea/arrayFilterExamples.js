@@ -140,3 +140,24 @@ function maxRectangleSquare(arr){
 }
 console.log(maxRectangleSquare([[3, 4], [8, 1], [2, 3]]));
 console.log(maxRectangleSquare([]));
+
+console.log('------------------------------------')
+/*
+Максимальный периметр прямоугольника
+question
+Имеется последовательность прямоугольников. Каждый прямоугольник определяется парой своих сторон [a, b]:
+
+[[a0, b0], [a1, b1], ..., [an, bn]]. Найдите прямоугольник с максимальным периметром.
+
+    Напишите функцию maxRectanglePerimeter, которая в качестве аргумента принимает массив arr, содержащий
+размеры прямоугольников, и возвращает максимальный периметр прямоугольника. Если массив пустой, вернуть null.
+
+    Пример:
+
+функция maxRectanglePerimeter([[2, 3], [5, 6], [2, 7]]) должна возвратить 22;
+функция maxRectanglePerimeter([[2, 4]]) должна возвратить 12;
+функция maxRectanglePerimeter([]) должна возвратить null.*/
+function maxRectanglePerimeter(arr){
+    let p= arr.map(el=>el.reduce((acc, cur)=>(acc + cur)*2));
+     return arr.length===0? null: Math.max(...p)   ;
+}
