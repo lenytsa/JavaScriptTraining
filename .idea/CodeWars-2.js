@@ -884,3 +884,16 @@ function mean(lst){
     return [mean,s.join('')];
 }
 console.log(mean(['u', '6', 'd', '1', 'i', 'w', '6', 's', 't', '4', 'a', '6', 'g', '1', '2', 'w', '8', 'o', '2', '0']));
+console.log('------------------------------------');
+
+/*Be Concise III - Sum Squares
+sumSquares([1,2,3,4,5]) === 55 // 1 ** 2 + 2 ** 2 + 3 ** 2 + 4 ** 2 + 5 ** 2
+sumSquares([7,3,9,6,5]) === 200
+sumSquares([11,13,15,18,2]) === 843
+Shorten the code such that it meets the requirements.*/
+function sumSquares(array) {
+    return array.reduce((acc, val)=> acc+val**2,0);
+}
+console.log(sumSquares([1,2,3,4,5]));
+console.log(sumSquares([7,3,9,6,5]));
+console.log(sumSquares([11,13,15,18,2]));
