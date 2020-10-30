@@ -1018,3 +1018,27 @@ function howManySmaller(arr,n){
    return  arr.filter(el=> el.toFixed(2)<n).length;
 }
 console.log(howManySmaller([1.234,1.235,1.228],1.24));
+
+/*
+Convert an array of strings to array of numbers
+Oh no!
+    Some really funny web dev gave you an array of numbers from his API response as an array of strings!
+
+    You need to cast the whole array to the correct type.
+
+    Create the function
+
+JavaScript: toNumberArray(array)
+Ruby: toNumberArray(array)
+C#: ToDoubleArray(array)
+that takes as a parameter an array of numbers represented as strings and outputs an array of numbers.
+
+    ie:["1", "2", "3"] to [1, 2, 3]
+
+Note that you can receive floats as well.*/
+function toNumberArray(stringarray){
+    return stringarray.map(el=> parseFloat(el));
+}
+console.log(toNumberArray(["1.1","2.2","3.3"])); //[ 1.1, 2.2, 3.3 ]
+//OR
+// const toNumberArray = arr => arr.map(Number);
