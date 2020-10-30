@@ -161,3 +161,47 @@ function maxRectanglePerimeter(arr){
     let p= arr.map(el=>el.reduce((acc, cur)=>(acc + cur)*2));
      return arr.length===0? null: Math.max(...p)   ;
 }
+//Map() Examples
+const arr11 = ['-2', '0', '3', '18'];
+//const nums = arr11.map(el => Number(el)); //[ -2, 0, 3, 18 ]
+//const nums =arr11.map(el => +el); //[ -2, 0, 3, 18 ]
+//const nums= arr11.map(el => el * 1);[ -2, 0, 3, 18 ]
+const nums =arr11.map(el => el * (-1));[ 2, -0, -3, -18 ]
+//const nums =arr11.map(el => el.toString()); //[ '-2', '0', '3', '18' ]
+console.log(nums); // [-2, 0, 3, 18]
+
+//Map examples
+const arr33 = ['a', 'ab', 'abc', 'abcd', 'abcde'];
+const newAr33r = arr33.map(el => [el, el.length]);
+console.log(newAr33r); // [["a", 1], ["ab", 2], ["abc", 3], ["abcd", 4], ["abcde", 5]]
+
+//Map examples: Задание: увеличить каждое число в массиве на 5 и вернуть новый массив с элементами в виде строк.
+const arr44 = [2, 5, -10, 0, 50, -6];
+//const newArr44= arr44.map(el => toString(el + 5));
+const newArr44= arr44.map(el => (el + 5).toString());
+console.log(arr44);
+
+//Splice() examples
+//Задание 1. Удалить 2 элемента по индексу 2.
+const arr0 = ['year', 'day', 'week', 'minute', 'second'];
+let removed0 = arr0.splice(2, 2);
+console.log(removed0); // ["week", "minute"] массив удаленных элементов
+console.log(arr0); // ["year", "day", "second"] измененный исходный массив
+
+//Задание 2. Добавить элемент 'life' по индексу 3.
+const arr5 = ['year', 'day', 'week', 'minute', 'second'];
+let removed5 = arr5.splice(3, 0, 'life');
+console.log(removed5); // [], т.к. мы ничего не удаляли, возвращен пустой массив
+console.log(arr5); // ["year", "day", "week", "life", "minute", "second"], по индексу 3 теперь находится добавленный элемент
+
+//Задание 3. Удалить 2 элемента по индексу 1 и заменить их на '365' и '7'.
+const arr = ['year', 'day', 'week', 'minute', 'second'];
+let removed = arr.splice(1, 2, '365', '7');
+console.log(removed); // ["day", "week"] возвращен массив элементов, удаленных методом splice()
+console.log(arr); // ["year", "365", "7", "minute", "second"], 2 элемента, начиная с индекса 1, заменены
+
+//Задание 5. Удалить 2 элемента с конца массива.
+const arr = ['year', 'day', 'week', 'minute', 'second'];
+let removed = arr.splice(-2); // индекс start задан отрицательным числом, которое значит смещение с конца массива
+console.log(removed); // ["minute", "second"], возвращен массив элементов, удаленных методом splice()
+console.log(arr); // ["year", "day", "week"], измененный исходный массив
