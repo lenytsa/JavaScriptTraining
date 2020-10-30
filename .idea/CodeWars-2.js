@@ -953,3 +953,21 @@ function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
     return Math.floor(Math.sqrt(res) / 2);
 }
 console.log(predictAge(65,60,75,55,60,63,64,45));
+console.log('------------------------------------');
+
+/*
+Take an Arrow to the knee, Functionally
+Arrow style Functions
+Come here to practice the Arrow style functions Not much else to say good luck!
+    Details
+You will be given an array of numbers which can be used using the String.fromCharCode() (JS),
+    Tools.FromCharCode() (C#) method to convert the number to a character. It is recommended to map
+over the array of numbers and convert each number to the corresponding ascii character.
+
+    Examples
+These are example of how to convert a number to an ascii Character:
+    Javascript => String.fromCharCode(97) // a*/
+var ArrowFunc = function(arr) {
+    return arr.map((el)=> String.fromCharCode(el)).join('');
+}
+console.log(ArrowFunc([70,85,83,32,82,79,72,32,68,65,72]))
