@@ -1042,3 +1042,17 @@ function toNumberArray(stringarray){
 console.log(toNumberArray(["1.1","2.2","3.3"])); //[ 1.1, 2.2, 3.3 ]
 //OR
 // const toNumberArray = arr => arr.map(Number);
+
+/*
+Beginner - Lost Without a Map
+Given an array of integers, return a new array with each value doubled.
+
+    For example:
+
+    [1, 2, 3] --> [2, 4, 6]
+
+For the beginner, try to use the map method - it comes in very handy quite a lot so is a good one to know.*/
+function maps(x){
+    return x.map(el=>el *2);
+}
+console.log(maps([4, 1, 1, 1, 4])); //[ 8, 2, 2, 2, 8 ]
