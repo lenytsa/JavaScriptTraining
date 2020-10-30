@@ -1056,3 +1056,43 @@ function maps(x){
     return x.map(el=>el *2);
 }
 console.log(maps([4, 1, 1, 1, 4])); //[ 8, 2, 2, 2, 8 ]
+console.log('------------------------------------');
+
+/*
+
+The Skiponacci Sequence
+Your task is to generate the Fibonacci sequence to n places, with each alternating value as "skip". For example:
+
+    "1 skip 2 skip 5 skip 13 skip 34"
+
+Return the result as a string
+
+You can presume that n is always a positive integer between (and including) 1 and 64.*/
+function skiponacci(n) {
+    let ar=[1,1];
+    if(n===0) return 0;
+    if(n===1) return 1;
+    for(let i=2;i<n; i++)
+    {
+        ar.push(ar[i-2] + ar[i-1]);
+    }
+  console.log(ar)
+  return ar.map((el,i)=>(i+1)%2===0? 'skip':el).join(` `);
+
+}
+console.log(skiponacci(5));//1 skip 2 skip 5
+console.log(skiponacci(7)); //"1 skip 2 skip 5 skip 13"
+console.log('------------------------------------');
+
+/*
+function  fibonacci(n){
+    if(n===0) return 0;
+    if(n===1) return 1;
+    let fib =[0,1];
+    for(let i=2;i<=n; i++)
+    {
+        fib[i]=fib[i-2] + fib[i-1];
+    }
+    return fib[fib.length-1];
+}
+console.log(fibonacci(7))*/
