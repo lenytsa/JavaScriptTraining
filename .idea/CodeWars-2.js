@@ -1110,3 +1110,22 @@ function take(arr, n) {
    return arr.splice(0,n);
 }
 console.log(take([0, 1, 2, 3, 5, 8, 13], 3));
+console.log('----------------------');
+/*
+Remove First and Last Character Part Two
+This is a spin off of my first kata. You are given a list of character sequences as a comma separated string.
+    Write a function which returns another string containing all the character sequences except the first and
+
+the last ones, separated by spaces. If the input string is empty, or the removal of the first and last items would
+cause the string to be empty, return a null value.
+*/
+function array(arr){
+    // let arrN= arr.split(',');
+    // console.log('after split:', arrN);
+    // console.log('after slice:',arrN.slice(1,-1));
+    // console.log('after join:', arrN.join(' '));
+    // console.log('sol:', arr.split(',').slice(1,-1).join(' '))
+    return  arr.split(',').slice(1,-1).join(' ') || null;
+}
+console.log(array('1,2,3,4')); //2 3
+console.log(array('')); null
