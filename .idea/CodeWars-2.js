@@ -1159,4 +1159,37 @@ const cutIt1 = arr => {
   const minLength = Math.min(...arr.map(str => str.length))
   return arr.map(str => str.slice(0, minLength))
 }
-console.log(cutIt1(["ab","cde","fgh"]));
+console.log(cutIt(["ab","cde","fgh"]));
+console.log('----------------------');
+
+/*
+Peak array index
+Given an array of ints, return the index such that the sum of the elements to the right of that index equals the
+sum of the elements to the left of that index. If there is no such index, return -1. If there is more than one such
+index, return the left-most index.
+
+    For example:
+    peak([1,2,3,5,3,2,1]) = 3, because the sum of the elements at indexes 0,1,2 == sum of elements at indexes 4,5,6.
+We don't sum index 3.
+peak([1,12,3,3,6,3,1]) = 2
+peak([10,20,30,40]) = -1
+--For Haskell
+peak [1,12,3,3,6,3,1] == Just 2
+peak [10,20,30,40]  == Nothing
+The special case of an array of zeros (for instance [0,0,0,0]) will not be tested.
+
+*/
+//lndgalante user solution
+function peak(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let sumLeft = arr.slice(0, i).reduce((total, value) => total + value, 0)
+    let sumRight = arr.slice(i + 1).reduce((total, value) => total + value, 0)
+    if (sumLeft === sumRight) return i
+  }
+  return -1
+}
+
+// Short Solution
+const sum = array => array.reduce((sum, number) => sum + number, 0)
+
+const peak1 = array => array.findIndex((value, i, array) => sum(array.slice(0, i)) === sum(array.slice(i + 1)));
