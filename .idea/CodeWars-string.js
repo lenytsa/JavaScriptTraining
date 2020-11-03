@@ -57,3 +57,18 @@ Make a function that will return a greeting statement that uses an input; your p
 function greet(name){
     return `Hello, ${name} how are you doing today?`;
 }
+console.log("---------------------------");
+/*Grasshopper - Combine strings
+Combine strings function
+Create a function named combineNames that accepts two parameters (first and last name).
+The function should return the full name.
+
+    Example:
+
+combineNames('James', 'Stevens')
+returns:
+
+    'James Stevens'*/
+function combineNames(first,last) {
+    return `${first} ${last}`;
+}
