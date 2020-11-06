@@ -239,3 +239,21 @@ function digitsOfNumber(num){
     return num.toString().length;
 }
 console.log(digitsOfNumber(328));
+console.log("+---------------------------");
+
+/*
+Получите n-й символ строки
+Дана строка. Получить ее n-ый символ.
+
+    Напишите функцию с именем getCharacter, которая принимает строку str и число n в качестве аргументов
+и возвращает n-й символ строки. Если в строке нет символа с таким индексом, вернуть "Error"
+
+Примеры:
+
+    функция getCharacter("abcde", 2) должна возвратить c.
+    функция getCharacter("abc", 5) должна возвратить "Error".*/
+function getCharacter(str, n){
+    return n>str.length || n<0 ? "Error": str.charAt(n);
+}
+console.log(getCharacter("abc", 5));
+console.log(getCharacter("abcde", 2))
