@@ -325,6 +325,14 @@ function correctTail(body, tail) {
         return false;
     }
 }
+
 console.log(correctTail("Rhino", "o"));
 console.log(correctTail("Meerkat", "t"));
 console.log(correctTail("Sgvotagjsgtnqngdqerdfowmenfyfpbul", "s"))
+//Or
+function correctTail1(bod, tail) {
+    return bod[bod.length-1] === tail
+}
+console.log(correctTail1("Rhino", "o"));
+console.log(correctTail1("Meerkat", "t"));
+console.log(correctTail1("Sgvotagjsgtnqngdqerdfowmenfyfpbul", "s"))
