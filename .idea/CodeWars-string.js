@@ -218,3 +218,24 @@ var countSheep = function (num){
     return res;
 }
 console.log(countSheep(3));
+console.log("---------------------------");
+
+/*
+Сколько цифр содержит число?
+    question
+    Дано целое число. Определите, сколько цифр в этом числе?
+
+    Напишите функцию с именем digitsOfNumber, которая принимает число num в качестве аргумента и возвращает
+количество цифр в этом числе.
+
+    Указание. Преобразуйте число в строку и найдите длину этой строки.
+
+    Примеры:
+
+функция digitsOfNumber(328) должна возвратить 3.
+функция digitsOfNumber(1234567890) должна возвратить 10.
+функция digitsOfNumber(3) должна возвратить 1.*/
+function digitsOfNumber(num){
+    return num.toString().length;
+}
+console.log(digitsOfNumber(328));
