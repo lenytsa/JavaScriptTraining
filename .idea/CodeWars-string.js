@@ -256,4 +256,34 @@ function getCharacter(str, n){
     return n>str.length || n<0 ? "Error": str.charAt(n);
 }
 console.log(getCharacter("abc", 5));
-console.log(getCharacter("abcde", 2))
+console.log(getCharacter("abcde", 2));
+console.log("---------------------------");
+
+/*
+Получите строку, вставив пробелы между буквами исходной строки
+Дана строка. Получите новую строку, вставив пробелы между буквами исходной строки.
+
+    Напишите функцию с именем insertSpaces, которая принимает строку str в качестве аргумента и возвращает
+строку, в которой между буквами вставлены пробелы.
+
+    Пример:
+функция insertSpaces("abcde") должна возвратить "a b c d e".*/
+function insertSpaces(str){
+    let res = '';
+    for(let i=0;i<str.length; i++){
+        if(i<str.length-1){
+            res = res + str[i] + " ";
+        }
+        else{
+            res= res + str[i];
+        }
+    }
+    return res;
+}
+console.log(insertSpaces("abcde"));
+
+//or
+function insertSpaces1(str){
+    return str.split('').join(' ');
+}
+console.log(insertSpaces1("abcde"));
