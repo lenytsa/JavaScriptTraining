@@ -382,3 +382,22 @@ console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8']));
 const alpha = ' zyxwvutsrqponmlkjihgfedcba!? '
 const switcher1 = x => x.map(item => alpha[item]).join('')
 console.log(switcher1(['24', '12', '23', '22', '4', '26', '9', '8']));
+console.log('--------------');
+
+/*Number of Decimal Digits
+Determine the total number of digits in the integer (n>=0) given as input to the function. For example,
+    9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+
+    All inputs will be valid.*/
+    function digits(n) {
+    n = n + '';
+    n.split('');
+    return n.length;
+}
+//OR
+function digits(n) {
+    return n.toString().length;
+}
+//OR
+let digits = n => (n + "").length;
+console.log(digits(9876543210))
