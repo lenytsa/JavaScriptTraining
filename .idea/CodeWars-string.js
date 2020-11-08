@@ -395,9 +395,18 @@ Determine the total number of digits in the integer (n>=0) given as input to the
     return n.length;
 }
 //OR
-function digits(n) {
+function digits2(n) {
     return n.toString().length;
 }
 //OR
-let digits = n => (n + "").length;
-console.log(digits(9876543210))
+let digits1 = n => (n + "").length;
+console.log(digits1(9876543210));
+console.log('--------------');
+/*
+5 without numbers !!
+    Write a function that always returns 5
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/*/
+function unusualFive() {
+    let str = 'tests';
+    return str.length;
+}
