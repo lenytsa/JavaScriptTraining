@@ -467,4 +467,13 @@ function validParentheses(str) {
 console.log(validParentheses("(()()"));
 console.log(validParentheses("()"));
 console.log(validParentheses(")("));
-console.log(validParentheses('(())'))
+console.log(validParentheses('(())'));
+
+console.log('--------------');
+
+var uniqueInOrder=function(iterable){
+   if(typeof iterable=== 'string')return iterable.split('').filter((el,i)=>el !== iterable[i+1]) ;
+    return iterable.filter((el,i)=> i=== iterable.indexOf(el));
+}
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+console.log(uniqueInOrder([1,2,2,3,3]));
