@@ -410,3 +410,61 @@ function unusualFive() {
     let str = 'tests';
     return str.length;
 }
+console.log('--------------');
+/*
+Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside
+and the longer string on the inside. The strings will not be the same length, but they may be empty ( length 0 ).
+
+For example:
+
+    solution("1", "22") // returns "1221"
+solution("22", "1") // returns "1221"*/
+function solution(a, b){
+   if(a.length<b.length){
+       return a+b+a;
+   }
+    if(a.length>b.length){
+        return b+a+b;
+    }
+}
+//OR short solution
+function solution1(a, b) {
+    return a.length < b.length ? a + b + a : b + a + b;
+}
+console.log(solution('45', '1'));
+
+console.log('--------------');
+/*
+Валидные скобки
+
+question
+Напишите функцию, которая принимает строку, состоящую из круглых открывающих и закрывающих скобок
+и определяет, является ли порядок скобок допустимым. Функция должна возвращать true, если строка допустима,
+и false, если она недопустима.
+
+    Примеры:
+
+функция validParentheses( "()" ) должна возвратить true;
+функция validParentheses( ")()(" ) должна возвратить false;
+функция validParentheses( "(((())))" ) должна возвратить true;
+функция validParentheses( "())" ) должна возвратить false.*/
+
+function validParentheses(str) {
+   str = str +''.split();
+   console.log(str);
+   let res =[];
+   for(let i=0; i<str.length; i++){
+       let char = res[res.length-1];
+    if(str[i]==='('){
+        res.push(str[i]);
+    }else if(char==='(' && str[i]===')'){
+        res.pop();
+    }else
+        return false;
+   }
+   return res.length===1 ? false: true;
+}
+console.log(validParentheses("(()()"));
+console.log(validParentheses("()"));
+console.log(validParentheses(")("));
+console.log(validParentheses('(())'))
