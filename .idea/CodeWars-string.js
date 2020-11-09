@@ -475,5 +475,34 @@ var uniqueInOrder=function(iterable){
    if(typeof iterable=== 'string')return iterable.split('').filter((el,i)=>el !== iterable[i+1]) ;
     return iterable.filter((el,i)=> i=== iterable.indexOf(el));
 }
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-console.log(uniqueInOrder([1,2,2,3,3]));
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));//[ 'A', 'B', 'C', 'D', 'A', 'B' ]
+console.log(uniqueInOrder([1,2,2,3,3]));//[ 1, 2, 3 ]
+console.log(uniqueInOrder('ABBCcAD') ); //[ 'A', 'B', 'C', 'c', 'A', 'D' ]
+
+console.log('------------------');
+/*
+Regex count lowercase letters
+Your task is simply to count the total number of lowercase letters in a string.
+lowercaseCount("abc"); ===> 3
+
+lowercaseCount("abcABC123"); ===> 3
+
+lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 3
+
+lowercaseCount(""); ===> 0;
+
+lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 0
+
+lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26*/
+function lowercaseCount(str){
+    str = str.replace(/[1-9]/g, '');
+    str = str.replace(/[A-Z]/g, '');
+    str=str.replace(/[^a-z]/g,'');
+    return str.length;
+}
+//or
+function lowercaseCount(str){
+    return str.replace(/[^a-z]/g, "").length;
+}
+console.log(lowercaseCount("abcABC123"));
+console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"))
