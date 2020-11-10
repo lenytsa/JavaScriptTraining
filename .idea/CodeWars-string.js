@@ -531,3 +531,20 @@ console.log(doubleChar("Adidas"));
 const doubleChar1 = (str) => str.split("").map(c => c + c).join("");
 console.log(doubleChar1("abcd"));
 console.log(doubleChar1("Adidas"));
+console.log('------------------');
+
+/*Remove First and Last Character
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string.' +
+' You're given one parameter, the original string. You don't have to worry with strings with less than two characters.*/
+function removeChar(str) {
+    let s = '';
+    for (let i = 1; i < str.length - 1; i++) {
+        s = s + str[i];
+    }
+    return s;
+}
+console.log(removeChar('eloquent'));
+//OR better aproach
+const removeChar1 = str => str.slice(1,-1);
+console.log(removeChar1('eloquent'));
+
