@@ -593,3 +593,23 @@ console.log(spacify('hello world'))
 //OR short way
 const spacify1 = str => str.split('').join(' ');
 console.log(spacify1('hello world'));
+console.log('------------------');
+/*
+question
+Дано слово. Получите слово, прочитав его справа налево, т.е. "переверните" это слово.
+
+    Напишите функцию с именем reverseWord, которая принимает слово word в качестве аргумента и возвращает строку,
+    содержащую перевернутое слово. Использовать метод reverse() в этом задании не разрешено.
+
+    Примеры:
+
+функция reverseWord("abc") должна возвратить "cba";
+функция reverseWord("No") должна возвратить "oN"`.*/
+function reverseWord(word) {
+    let s = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        s = s + word[i]
+    }
+    return s;
+}
+console.log(reverseWord("abc"))
