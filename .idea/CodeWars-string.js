@@ -574,3 +574,22 @@ function noSpace(x) {
     return x.replace(/[ ]/g, '');
 }
 console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'));
+
+
+/*Spacify
+Modify the spacify function so that it returns the given string with spaces inserted between each character.
+
+spacify("hello world") // returns "h e l l o   w o r l d"*/
+function spacify(str) {
+    let s = '';
+    for (let i = 0; i < str.length; i++) {
+        if (i < str.length - 1) {
+            s = s + str[i] + ' ';
+        } else s = s + str[i];
+    }
+    return s;
+}
+console.log(spacify('hello world'))
+//OR short way
+const spacify1 = str => str.split('').join(' ');
+console.log(spacify1('hello world'));
