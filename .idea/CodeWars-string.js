@@ -725,3 +725,22 @@ function countPalindrome(arr){
     return count;
 }
 console.log(countPalindrome(["abc", "dad", "noon"])); //2
+
+/*
+Reversed Strings
+Complete the solution so that it reverses the string passed into it.
+
+'world'  =>  'dlrow'*/
+function solution(str) {
+    let rev = '';
+    for (let letter of str) {
+        rev = letter + rev;
+    }
+    return rev;
+}
+console.log(solution('world'));
+//or
+function solution1(str){
+    return str.split('').reverse().join('');
+}
+console.log(solution1('world'));
