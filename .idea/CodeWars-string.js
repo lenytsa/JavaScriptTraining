@@ -638,4 +638,28 @@ function isPalindrome(word){
     else return false;
 }
 console.log(isPalindrome("abba"));
-console.log(isPalindrome("abc"))
+console.log(isPalindrome("abc"));
+console.log('------------------');
+
+/*
+Сколько восклицательных знаков стоит в конце предложения?
+    Напишите функцию с именем exclamationMarks, которая принимает строку str в качестве аргумента и возвращает
+количество восклицательных знаков в конце предложения.
+
+    Примеры:
+
+функция exclamationMarks("Hello!!!") должна возвратить 3;
+функция exclamationMarks("Hi! What a nice day!!") должна возвратить 2.*/
+function exclamationMarks(str){
+    let count=0;
+    for(let i = 0; i < str.length; i++){
+        if(str[str.length-i-1]==='!'){
+            count++
+        }
+        if(str[str.length-i-2]!=='!'){
+            break;
+        }
+    }
+    return count;
+}
+console.log(exclamationMarks("Hi! What a nice day!!")); //2
