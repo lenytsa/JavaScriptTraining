@@ -663,3 +663,37 @@ function exclamationMarks(str){
     return count;
 }
 console.log(exclamationMarks("Hi! What a nice day!!")); //2
+
+/*Является ли строка из нескольких слов палиндромом?
+    question
+    Палиндром – это слово или предложение, одинаково читающееся в обоих направлениях. Примеры строк - палиндромов на
+английском языке: 'madam im adam', 'pull up if i pull up', 'live not on evil'.
+
+    Напишите функцию с именем isPalindrome, которая принимает строку str в качестве аргумента и возвращает true, если
+строка является палиндромом после удаления из нее всех пробелов и false - в противном случае.
+
+    Во всех тестах строки содержат лишь строчные (lowerCase) буквы, поэтому не волнуйтесь из-за регистра.
+
+    В решении используйте циклы. Использование методов split, reverse, replace запрещено.
+
+    Примеры:
+
+функция isPalindrome("every moment is life") должна возвратить false;
+функция isPalindrome("pull up if i pull up') должна возвратить true.*/
+function isPalindrome(str){
+    let rev='';
+    let org='';
+    for(let i=str.length-1; i>=0; i--){
+        if(str[i]!==' '){
+            rev= rev+ str[i];
+        }
+    }
+    for(let i=0; i<str.length; i++){
+        if(str[i]!==' '){
+            org= org+ str[i];
+        }
+    }
+    return rev===org;
+}
+console.log(isPalindrome("every moment is life"));//false
+console.log(isPalindrome("pull up if i pull up")); //true
