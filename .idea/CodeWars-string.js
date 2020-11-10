@@ -744,3 +744,18 @@ function solution1(str){
     return str.split('').reverse().join('');
 }
 console.log(solution1('world'));
+
+/*
+Is it a palindrome?
+    Write function isPalindrome that checks if a given string (case insensitive) is a palindrome.
+
+    In Racket, the function is called palindrome?
+
+    (palindrome? "nope") ; returns #f
+(palindrome? "Yay")  ; returns #t*/
+function isPalindrome(x) {
+  let rev=x.toLowerCase().split('').reverse().join('');
+  return x.toLowerCase()===rev? true:false;
+}
+console.log(isPalindrome('nope'));
+console.log(isPalindrome('Yay'));
