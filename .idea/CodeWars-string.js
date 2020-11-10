@@ -505,4 +505,29 @@ function lowercaseCount(str){
     return str.replace(/[^a-z]/g, "").length;
 }
 console.log(lowercaseCount("abcABC123"));
-console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"))
+console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"));
+console.log('------------------');
+
+/*
+Double Char
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+doubleChar("String") ==> "SSttrriinngg"
+
+doubleChar("Hello World") ==> "HHeelllloo  WWoorrlldd"
+
+doubleChar("1234!_ ") ==> "11223344!!__  "*/
+function doubleChar(str) {
+   let s= '';
+   for(let i=0; i<str.length; i++){
+       s= s + str[i] + str[i];
+   }
+   return s;
+}
+
+console.log(doubleChar("abcd"));
+console.log(doubleChar("Adidas"));
+//OR
+const doubleChar1 = (str) => str.split("").map(c => c + c).join("");
+console.log(doubleChar1("abcd"));
+console.log(doubleChar1("Adidas"));
