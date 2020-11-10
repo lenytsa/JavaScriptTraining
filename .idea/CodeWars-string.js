@@ -612,4 +612,30 @@ function reverseWord(word) {
     }
     return s;
 }
-console.log(reverseWord("abc"))
+console.log(reverseWord("abc"));
+console.log('------------------');
+/*
+Является ли слово палиндромом?
+    question
+    Палиндром - слово, которое читается одинаково справа налево и слева направо.
+
+    Дано слово. Определите, является ли это слово палиндромом.
+
+    Напишите функцию с именем isPalindrome, которая принимает слово word в качестве аргумента и возвращает true,
+    если слово является палиндромом, и false - в противном случае. Использовать метод reverse() в этом задании не разрешено.
+
+    Примеры:
+
+функция isPalindrome("abc") должна возвратить false;
+функция isPalindrome("abba") должна возвратить true.*/
+
+function isPalindrome(word){
+    let s='';
+    for(let i=word.length-1; i>=0; i--){
+        s= s + word[i];
+    }
+    if(s==word) return true;
+    else return false;
+}
+console.log(isPalindrome("abba"));
+console.log(isPalindrome("abc"))
