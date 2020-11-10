@@ -697,3 +697,31 @@ function isPalindrome(str){
 }
 console.log(isPalindrome("every moment is life"));//false
 console.log(isPalindrome("pull up if i pull up")); //true
+console.log('------------------');
+
+/*Найдите количество палиндромов в массиве слов
+Палиндром - слово, которое читается одинаково справа налево и слева направо. Дан массив, содержащий некоторое
+количество слов. Найдите количество элементов массива, которые являются палиндромами.
+
+    Напишите функцию с именем countPalindrome, которая принимает массив слов arr в качестве аргумента и возвращает
+количество слов, являющихся палиндромами. Использовать метод reverse() в этом задании не разрешено.
+
+    Примеры:
+
+функция countPalindrome(["abc", "dad", "noon"]) должна возвратить 2;
+функция countPalindrome(["mum"]) должна возвратить 1.
+функция countPalindrome(["mother"]) должна возвратить 0.
+функция countPalindrome([]) должна возвратить 0.*/
+
+function countPalindrome(arr){
+    let count = 0;
+    for(let words of arr){
+        let rev = '';
+        for(let letter of words){
+            rev = letter + rev;
+        }
+        if(rev === words) count ++;
+    }
+    return count;
+}
+console.log(countPalindrome(["abc", "dad", "noon"])); //2
