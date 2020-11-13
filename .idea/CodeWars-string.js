@@ -731,6 +731,7 @@ Reversed Strings
 Complete the solution so that it reverses the string passed into it.
 
 'world'  =>  'dlrow'*/
+//Solution 1
 function solution(str) {
     let rev = '';
     for (let letter of str) {
@@ -739,11 +740,21 @@ function solution(str) {
     return rev;
 }
 console.log(solution('world'));
-//or
+//Solution 2
 function solution1(str){
     return str.split('').reverse().join('');
 }
 console.log(solution1('world'));
+//Solution3
+function solution3(str) {
+    let s = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        s = s + str[i];
+    }
+    return s;
+}
+console.log(solution3('world'));
+
 
 /*
 Is it a palindrome?
