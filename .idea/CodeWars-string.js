@@ -989,3 +989,17 @@ function solve1(s){
     let lower = s.length - upper
     return (upper > lower) ? s.toUpperCase() : s.toLowerCase()
 }
+console.log('-----------------------------------');
+
+/*
+Строчная или прописная? Lowercase or Uppercase?
+    question
+    Напишите функцию с именем lowerOrUpperCase, которая принимает строку, содержащую букву английского алфавита letter в качестве аргумента и возвращает строку "The letter is in Lowercase" или "The letter is in Uppercase".
+
+    Примеры:
+
+функция lowerOrUpperCase('a') должна возвратить "The letter is in Lowercase";
+функция lowerOrUpperCase('A') должна возвратить "The letter is in Uppercase".)*/
+function lowerOrUpperCase(letter){
+    return letter===letter.toLowerCase()? 'The letter is in Lowercase':'The letter is in Uppercase';
+}
