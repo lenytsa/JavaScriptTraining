@@ -895,3 +895,33 @@ switch (param) {
     }
 }
 console.log(getDrinkByProfession("School Counselor"));//Anything with Alcohol
+console.log('-----------------------------------');
+
+/*
+Hello, Name or World!
+    Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given
+(or passed as an empty String).
+
+Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+    Examples:
+
+hello "john"   => "Hello, John!"
+hello "aliCE"  => "Hello, Alice!"
+hello          => "Hello, World!" # name not given
+hello ''       => "Hello, World!" # name is an empty String*/
+function hello(name) {
+    if(name == null || name.length==0) return 'Hello, World!';
+    name = name.toLowerCase();
+    return 'Hello, '+ name.charAt(0).toUpperCase() + name.slice(1)+ '!';
+}
+
+console.log(hello('johN'));
+console.log(hello(''));
+console.log(hello());
+//OR best  solution
+const hello1 = s =>
+    `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+console.log(hello1('johN'));
+console.log(hello1(''));
+console.log(hello1());
