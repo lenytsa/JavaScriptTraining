@@ -1028,4 +1028,31 @@ function isNameStartsWithUpper(name) {
     return 'Howdy';
 }
 console.log(isNameStartsWithUpper('Alex'));
-console.log(isNameStartsWithUpper('alice'))
+console.log(isNameStartsWithUpper('alice'));
+
+/*
+Find the capitals
+Instructions
+Write a function that takes a single string (word) as argument. The function must return an ordered list
+containing the indexes of all capital letters in the string.
+    Example
+Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );*/
+
+//Find the capitals
+var capitals = function (word) {
+    let letterIndex=[];
+    let upper= word[0];
+    let index=0;
+   for(let i=0; i<word.length; i++){
+       if(word[i]===word[i].toUpperCase()){
+            upper = word[i]
+            index=i;
+            letterIndex.push(index)
+       }
+   }
+   return letterIndex;
+};
+console.log(capitals('CodEWaRs'));
+//Other interesting solution
+const capitals1 = word => { return word.match(/[A-Z]/g).map( x => { return word.indexOf(x) }) }
+console.log(capitals1('CodEWaRs'));
