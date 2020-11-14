@@ -725,6 +725,7 @@ function countPalindrome(arr){
     return count;
 }
 console.log(countPalindrome(["abc", "dad", "noon"])); //2
+console.log('------------------');
 
 /*
 Reversed Strings
@@ -755,6 +756,7 @@ function solution3(str) {
 }
 console.log(solution3('world'));
 
+console.log('------------------');
 
 /*
 Is it a palindrome?
@@ -770,3 +772,51 @@ function isPalindrome(x) {
 }
 console.log(isPalindrome('nope'));
 console.log(isPalindrome('Yay'));
+console.log('------------------');
+
+//Using while loop
+function f(oo){
+    let i = oo.length - 1;
+    while(i >= 0){
+        console.log(oo[i]);
+        i--
+    }
+}
+console.log(f('Bobik'));
+console.log('------------------');
+
+/*
+Number-Star ladder
+Task
+Using n as a parameter in the function pattern, where n>0, complete the codes to get the pattern (take the help
+ of examples):
+
+Note: There is no newline in the end (after the pattern ends)
+
+Examples
+pattern(3) should return "1\n1*2\n1**3", e.g. the following:
+
+    1
+1*2
+1**3*/
+function pattern(n){
+    let str ='';
+   for(let i=1; i<=n; i++){
+      if(i>1 && i<n) {str =  str + 1 + '*'.repeat(i-1) + i +'\n'};
+      if(i==n)       {str =  str + 1 + '*'.repeat(i-1) + i};
+   }
+    return 1+'\n' + str;
+}
+console.log(pattern(3))//
+// 1
+// 1*2
+// 1**3
+//Other student solution
+function pattern1(n){
+    if (n < 1) return "";
+    var output = "1";
+    for (let i = 2; i <= n; ++i) {
+        output += "\n1" + Array(i).join("*") + i;
+    }
+    return output;
+}
