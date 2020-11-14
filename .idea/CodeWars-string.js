@@ -817,6 +817,8 @@ function pattern1(n){
     var output = "1";
     for (let i = 2; i <= n; ++i) {
         output += "\n1" + Array(i).join("*") + i;
+        //console.log(Array(i).join('*'));
     }
     return output;
 }
+console.log(pattern1(6))
