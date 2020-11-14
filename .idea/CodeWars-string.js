@@ -1003,3 +1003,29 @@ console.log('-----------------------------------');
 function lowerOrUpperCase(letter){
     return letter===letter.toLowerCase()? 'The letter is in Lowercase':'The letter is in Uppercase';
 }
+console.log('-----------------------------------');
+
+/*
+Является ли первая буква имени прописной?
+    Дана строка, содержащая имя пользователя. Если первая буква имени прописная (UpperCase), возвратить сообщение
+"Welcome, sir", в противном случае возвратить "Howdy".
+
+    Напишите функцию с именем isNameStartsWithUpper, которая принимает строку name, содержащую имя пользователя
+в качестве аргумента, и возвращает строку "Welcome, sir", если первая буква имени заглавная (прописная) или "Howdy",
+    если первая буква имени строчная.
+
+    Примеры:
+
+функция isNameStartsWithUpper('Alex') должна возвратить "Welcome, sir";
+функция isNameStartsWithUpper('alice') должна возвратить "Howdy".
+*/
+
+function isNameStartsWithUpper(name) {
+    let first = name.charAt(0);
+    if (first === first.toUpperCase()) {
+        return 'Welcome, sir'
+    }
+    return 'Howdy';
+}
+console.log(isNameStartsWithUpper('Alex'));
+console.log(isNameStartsWithUpper('alice'))
