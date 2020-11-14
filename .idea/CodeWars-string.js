@@ -942,3 +942,14 @@ function mouthSize(animal) {
     return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
 }
 console.log(mouthSize("toucan"));
+console.log('-----------------------------------');
+
+
+/*
+Beginner friendly: Lowercase letters
+Convert a string to lowercase letters.
+
+    Example: convert "Hello world!" to "hello world!"*/
+function convertLowerCase(str) {
+    return str.toLowerCase()
+}
