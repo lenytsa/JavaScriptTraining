@@ -1029,6 +1029,7 @@ function isNameStartsWithUpper(name) {
 }
 console.log(isNameStartsWithUpper('Alex'));
 console.log(isNameStartsWithUpper('alice'));
+console.log('-----------------------------------');
 
 /*
 Find the capitals
@@ -1056,3 +1057,37 @@ console.log(capitals('CodEWaRs'));
 //Other interesting solution
 const capitals1 = word => { return word.match(/[A-Z]/g).map( x => { return word.indexOf(x) }) }
 console.log(capitals1('CodEWaRs'));
+//Or one more solution
+var capitals2 = function (word) {
+    return word.split('').reduce(function(n, l, i){
+        return /[A-Z]/.test(l) && n.push(i), n;
+    }, []);
+};
+console.log(capitals2('CodEWaRs'));
+console.log('-----------------------------------');
+
+/*
+Mumbling
+This time no story, no theory. The examples below show you how to write function accum:
+
+    Examples:
+
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+*/
+function accum(s) {
+   let str='';
+   for(let i=0; i<s.length; i++){
+       if(i===0){ str = str  + s[i].charAt(0).toUpperCase()  + '-'};
+       if(i>0 && i<s.length) {str = str  + s[i].charAt(0).toUpperCase()  + s[i].toLowerCase().repeat(i) + '-'};
+   }
+   return str.slice(0,-1);
+}
+//console.log(accum("abcd"));
+console.log(accum('ZpglnU'))
+//OR other solution
+function accum(s) {
+   return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+ }
