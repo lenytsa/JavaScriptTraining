@@ -1101,7 +1101,9 @@ function testit(s){
 console.log(testit("a a b"))
 //console.log(testit(''));
 //OR
-const testit1 = s => s.replace(/.\b/g, c => c.toUpperCase())
+const testit1 = s => s.replace(/.\b/g, c => c.toUpperCase());
+console.log('-----------------------------------');
+
 /*
 
 MakeUpperCase
@@ -1112,3 +1114,16 @@ Write a function which converts the input string to uppercase.
     function makeUpperCase(str) {
     return str.toUpperCase();
 }
+console.log('-----------------------------------');
+
+/*
+Beginner friendly: Uppercase a string
+Convert a string to all uppercase letters.
+
+    Example: "Hello world!" to "HELLO WORLD!"*/
+
+function capitalizeEachWord(str) {
+    return str.toUpperCase();
+}
+console.log('-----------------------------------');
+
