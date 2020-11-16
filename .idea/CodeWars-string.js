@@ -1091,3 +1091,24 @@ console.log(accum('ZpglnU'))
 function accum(s) {
    return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
  }
+console.log('-----------------------------------');
+
+/*Thinking & Testing : Something capitalized*/
+function testit(s){
+    console.log(s.split(' ').map(el => el.slice(0, -1)));
+    return s.length === 0 ? '' : s.split(' ').map(el => el.slice(0, -1) + el[el.length - 1].toUpperCase()).join(' ');
+}
+console.log(testit("a a b"))
+//console.log(testit(''));
+//OR
+const testit1 = s => s.replace(/.\b/g, c => c.toUpperCase())
+/*
+
+MakeUpperCase
+Write a function which converts the input string to uppercase.
+
+*/
+
+    function makeUpperCase(str) {
+    return str.toUpperCase();
+}
