@@ -1403,3 +1403,20 @@ function billboard(name, price = 30){
 }
 console.log(billboard("Jeong-Ho Aristotelis"));
 console.log(billboard("Hadufuns John"));
+//Or other solution #2
+function billboard1(name, price = 30) {
+    return name.split('').reduce((sum, letter) => sum + price, 0);
+}
+//Or other solution  #3
+const billboard = (name, price = 30) =>
+    [...name].reduce(pre => pre + price, 0);
+console.log('-------------------------');
+
+/*String repeat
+Write a function called repeat_str which repeats the given string src exactly count times.
+
+repeatStr(6, "I") // "IIIIII"
+repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"*/
+function repeatStr (n, s) {
+    return s.repeat(n);
+}
