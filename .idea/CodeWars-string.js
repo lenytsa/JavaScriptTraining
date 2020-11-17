@@ -1306,7 +1306,32 @@ Example
 "Hi", 2 --> "HiHi"
 1234, 5 --> "Not a string"*/
 var repeatIt = function(str, n) {
-    if(typeof str !== 'string') return 'Not a string'
+    if(typeof str !== 'string') return 'Not a string';
     return str.repeat(n);
 }
-console.log(repeatIt("*",3))
+console.log(repeatIt("*",3));
+console.log('-------------------------');
+
+/*
+Stringy Strings
+write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+
+    the string should start with a 1.
+
+a string with size 6 should return :'101010'.
+
+    with size 4 should return : '1010'.
+
+    with size 12 should return : '101010101010'.
+
+    The size will always be positive and will only use whole numbers.*/
+function stringy(size) {
+   return size%2===0? '10'.repeat(size/2): '10'.repeat(size/2)+'1'
+}
+console.log(stringy(4));
+console.log(stringy(6));
+console.log(stringy(7));
+// other interesting solutions #2
+const stringy1 = size => "10".repeat(size).slice(0,size);
+// other interesting solutions #3
+const stringy2 = x => ''.padStart(x,'10');
