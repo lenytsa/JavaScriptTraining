@@ -1270,3 +1270,25 @@ function repeatWord(word){
 }
 console.log(repeatWord("One")); //One One One
 console.log(repeatWord('Five')); //Five Five Five Five
+/*
+
+Валидный пароль
+Функция получает строку, содержащую пароль. Валидным считается пароль длиной не менее 7 символов. Если пароль содержит менее 7 символов, функция дополняет его справа символами "$" до 7 символов.
+
+    Напишите функцию с именем validPassword, которая принимает строку password в качестве аргумента и возвращает строку, дополненную символами "$" справа, если пароль имеет длину менее 7 символов, или исходную строку, если пароль имеет длину 7 и более символов.
+
+    Примеры:
+
+функция validPassword("abc") должна возвратить "abc$$$$";
+функция validPassword("Null") должна возвратить "Null$$$";
+функция validPassword("Qwertyu") должна возвратить "Qwertyu";
+функция validPassword("VeryStrongPassword123456") должна возвратить "VeryStrongPassword123456".
+    Write your solution here
+unit
+*/
+function validPassword(password){
+    if(password.length<7) return password.padEnd(7, '$');
+    if(password.length>=7) return password;
+}
+console.log(validPassword("Qwertyu")); //Qwertyu
+console.log(validPassword("Null")); //Null$$$
