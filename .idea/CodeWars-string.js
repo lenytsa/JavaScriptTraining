@@ -1408,7 +1408,7 @@ function billboard1(name, price = 30) {
     return name.split('').reduce((sum, letter) => sum + price, 0);
 }
 //Or other solution  #3
-const billboard = (name, price = 30) =>
+const billboard2 = (name, price = 30) =>
     [...name].reduce(pre => pre + price, 0);
 console.log('-------------------------');
 
@@ -1422,9 +1422,35 @@ function repeatStr (n, s) {
 }
 
 //Repeat example
-let str = 'One';
+let strA = 'One';
 let result = '';
 for(let i = 0; i < 3; i++){
-    result += str.repeat(i);
+    result += strA.repeat(i);
 }
-console.log(result)
+console.log(result);
+
+console.log('------------------------');
+/*
+Счастливое число для китайцев.
+    Восьмёрка — наиболее счастливое число для всех китайцев. Звучит, как «богатство» и «процветание».
+
+Китайцы очень часто готовы платить огромные деньги за номер телефона, номер машины или номер квартиры, в которых присутствует цифра 8. Кроме того, форма восьмёрки напоминает знак бесконечности, и поэтому у китайцев восьмёрка ассоциируется с никогда не заканчивающимся потоком денег.
+
+    Дан массив, содержащий числа. Получите массив из чисел, содержащих цифру 8.
+
+Напишите функцию с именем luckyChineseNumber, которая принимает массив numbers в качестве аргумента и возвращает массив счастливых для китайцев чисел, т.е. чисел, содержащих цифру 8.
+
+Примеры:
+
+    функция luckyChineseNumber([124, 18, 13, 8, 81, 182, 11]) должна возвратить [18, 8, 81, 182].
+*/
+function luckyChineseNumber(numbers){
+    let result=[];
+    for(let i=0; i<numbers.length; i++){
+        if(numbers[i].toString().includes(8)===true){
+            result.push(numbers[i]);
+        }
+    }
+    return result
+}
+console.log(luckyChineseNumber([124, 18, 13, 8, 81, 182, 11]))
