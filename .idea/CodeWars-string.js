@@ -1420,3 +1420,11 @@ repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"*/
 function repeatStr (n, s) {
     return s.repeat(n);
 }
+
+//Repeat example
+let str = 'One';
+let result = '';
+for(let i = 0; i < 3; i++){
+    result += str.repeat(i);
+}
+console.log(result)
