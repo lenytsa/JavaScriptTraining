@@ -1693,3 +1693,14 @@ console.log('------------------------');
 const animals = [{ name: '🐱' }, { name: '🐒' }, { whale: '🐋' }];
 const found = animals.find(elem => elem.name === '🐒');
 console.log(found); // { name: '🐒' }
+
+//Метод some() проверяет, удовлетворяет ли какой-либо элемент массива условию, указанному в передаваемой функции.
+//Метод some() вызывает переданную функцию func один раз для каждого элемента до тех пор, пока не найдет такой, для которого func вернёт true
+const fruits = ['🍎', '🍋', '🍊', '🍇', '🍍', '🍐'];
+fruits.some(elem => elem === '🍐');     // true
+fruits.some(elem => elem === '🍓');     // false
+//The some() method can also be used with an array an objects:
+
+const animals = [{ name: '🐱' }, { name: '🐒' }, { whale: '🐋' }];
+animals.some(elem => elem.name === '🐒');   // true
+animals.some(elem => elem.name === '🍊');   // false
