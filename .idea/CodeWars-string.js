@@ -1555,3 +1555,81 @@ function dontGiveMeFive1(start, end)
 }
 //Other solutions #3
 const dontGiveMeFive2=(s,e)=>[...Array(e-s+1)].reduce((r,_,n)=>r+!/5/.test(n+s),0)
+console.log('------------------------');
+
+
+/*
+Mispelled word
+Create a function mispelled(word1, word2):
+
+    mispelled('versed', 'xersed'); // returns true
+mispelled('versed', 'applb'); // returns false
+mispelled('versed', 'v5rsed'); // returns true
+mispelled('1versed', 'versed'); // returns true
+It checks if the word2 differs from word1 by only one character.
+
+    This can include an extra char at the end or the beginning of either of words.
+
+    In the tests that expect true, the mispelled word will always differ only by one character.*/
+
+var mispelled = function(word1, word2)
+{
+    if (Math.abs(word1.length - word2.length) === 1){
+        if (word1.includes(word2) || word2.includes(word1)){
+            return true
+        } else {
+            return false
+        }
+    }
+    let count = 0
+    for (let i = 0; i < word1.length; i++){
+        if (word1[i] !== word2[i]){
+            count++
+        }
+    }
+    return count === 1
+}
+console.log(mispelled('versed', 'v5rsed'));
+console.log(mispelled('1versed', 'versed'));
+
+//ONe more good solution by other user
+var mispelled1 = function (word1, word2) {
+    if (word1.length - word2.length > 1) return false;
+    let count = 0;
+    for (let i in word2) {
+        if (!word1.includes(word2[i])) count++;
+        if (count === 2) return false;
+    }
+    return true;
+}
+console.log(mispelled1('versed', 'v5rsed'));
+console.log(mispelled1('1versed', 'versed'));
+console.log('------------------------');
+
+/*
+Do you speak "English"?
+    Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string
+contains the whole word "English".
+
+    The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+
+    Upper or lower case letter does not matter -- "eNglisH" is also correct.
+
+    Return value as boolean values, true for the string to contains "English", false for it does not.*/
+function spEng(sentence){
+    sentence= sentence.toLowerCase()
+    for(let i in sentence){
+        if(sentence.includes('english')) return true;
+    }
+    return false;
+}
+console.log(spEng("English"));
+//Other solutions #2
+function spEng2(s){
+    return /english/i.test(s)
+}
+//Other solutions #3
+function spEng(sentence){
+    let sentenceLower3 = sentence.toLowerCase();
+    return sentenceLower.includes('english');
+}
