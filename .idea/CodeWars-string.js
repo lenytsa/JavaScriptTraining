@@ -1703,9 +1703,9 @@ fruits.some(elem => elem === '🍓');     // false
 //The some() method can also be used with an array an objects:
 console.log('------------------------');
 
-const animals = [{ name: '🐱' }, { name: '🐒' }, { whale: '🐋' }];
-animals.some(elem => elem.name === '🐒');   // true
-animals.some(elem => elem.name === '🍊');   // false
+const animals22 = [{ name: '🐱' }, { name: '🐒' }, { whale: '🐋' }];
+animals22.some(elem => elem.name === '🐒');   // true
+animals22.some(elem => elem.name === '🍊');   // false
 console.log('------------------------');
 
 //Examples of map() and includes()
@@ -1716,3 +1716,13 @@ names.some(elem => elem.toLowerCase() === 'atta');   // true
 
 
 console.log('------------------------');
+
+//IndexOf examples
+let s = 'Buy milk, cherry, butter, cherry, flour, cherry, sugar.';
+let count = 0; // (1)
+let index = s.indexOf('cherry'); // (2)
+while(index !== -1){ // (3)
+    count++; // (4)
+    index = s.indexOf('cherry', index + 1); // (5)
+}
+console.log(count); // 3
