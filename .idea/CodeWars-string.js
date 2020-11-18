@@ -1631,5 +1631,60 @@ function spEng2(s){
 //Other solutions #3
 function spEng(sentence){
     let sentenceLower3 = sentence.toLowerCase();
-    return sentenceLower.includes('english');
+    return sentenceLower3.includes('english');
+}
+//example of includes() and some() methods
+let arr = [
+    {
+        name: 'Jack',
+        id: 1
+    },
+    {
+        name: 'Gabriel',
+        id: 2
+    },
+    {
+        name: 'John',
+        id: 3
+    }
+]
+var r = arr.some(i => i.name.includes('Jack'));
+console.log("true or false:",r);
+console.log('------------------------');
+//example of includes() and some() methods
+
+const array = [{ name: 'js' }, { name: 'css' }];
+console.log(array.some(code => code.name === 'js')); // true
+console.log(array.some(code => code.name === '🤖')); // false
+
+console.log('------------------------');
+//example of includes() and some() methods
+
+const array1 = [{ name: 'js' }, { name: 'css' }];
+array1.some(code => JSON.stringify(code) === JSON.stringify({ name: 'css' }));// true
+console.log('------------------------');
+
+const array2 = ['SAMANTHA'];
+array2.includes('samantha'); // false
+array2.indexOf('samantha') !== -1; // false
+
+console.log('------------------------');
+
+//To make it case insensitive, you could consider changing the case of the array like so:
+const array3 = ['SAMANTHA'];
+const sameCaseArray = array3.map(value => value.toLowerCase());// ['samantha']
+
+sameCaseArray.includes('samantha'); // true
+sameCaseArray.indexOf('samantha') !== -1; // true
+
+//But if you were using some, you can do it in one line:
+const array4 = ['SAMANTHA'];
+array4.some(value => value.toLowerCase() === 'samantha'); // true
+
+console.log('+++------------------------');
+const object = {kiwi: '🥝', pear: '🍐', cheese: '🧀'};
+'kiwi' in object; // true
+// Use it as a conditional
+if ('kiwi' in object) {
+    console.log("Do something")
 }
