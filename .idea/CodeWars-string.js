@@ -1688,3 +1688,8 @@ const object = {kiwi: '🥝', pear: '🍐', cheese: '🧀'};
 if ('kiwi' in object) {
     console.log("Do something")
 }
+console.log('------------------------');
+//Метод find() предназначен для поиска первого элемента в массиве
+const animals = [{ name: '🐱' }, { name: '🐒' }, { whale: '🐋' }];
+const found = animals.find(elem => elem.name === '🐒');
+console.log(found); // { name: '🐒' }
