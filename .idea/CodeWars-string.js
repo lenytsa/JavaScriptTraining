@@ -1453,4 +1453,64 @@ function luckyChineseNumber(numbers){
     }
     return result
 }
-console.log(luckyChineseNumber([124, 18, 13, 8, 81, 182, 11]))
+console.log(luckyChineseNumber([124, 18, 13, 8, 81, 182, 11]));
+console.log('------------------------');
+
+/*
+noobCode 03: CHECK THESE LETTERS... see if letters in "String 1" are present in "String 2"
+Write a function that checks if all the letters in the second string are present in the first one at least once,
+    regardless of how many times they appear:
+
+    ["ab", "aaa"]    =>  true
+    ["trances", "nectar"]    =>  true
+    ["compadres", "DRAPES"]  =>  true
+    ["parses", "parsecs"]    =>  false
+Function should not be case sensitive, as indicated in example #2. Note: both strings are presented as a single
+argument in the form of an array.*/
+function letterCheck(arr) {
+    return [...arr[1].toLowerCase()].every(el => arr[0].toLowerCase().includes(el));
+
+}
+console.log(letterCheck(["trances", "nectar"]));
+console.log(letterCheck(["THE EYES", "they see"]));
+console.log('------------------------');
+
+/*
+Fruit string calculator
+Given a string of words and numbers. Extract the expression including:
+
+    the operator: either addition or subtraction
+the two numbers that we are operating on
+Return the result of the calculation.
+
+    Example:
+
+"Panda has 48 apples and loses 4" returns 44
+
+"Jerry has 34 apples and gains 6" returns 40
+
+"loses" and "gains" are the only two words describing operators.
+
+    Should be a nice little kata for you :)
+
+Note: No fruit debts nor bitten apples = The numbers are integers and no negatives
+
+*/
+
+function calculate(string) {
+    let n = string.split(' ');
+    let s=0;
+  if(n.includes('gains')){
+      s = Number(n[2]) + Number(n[n.length-1]);
+  }
+    if(n.includes('loses')){
+        s=Number(n[2]) - Number(n[n.length-1]);
+    }
+return s;
+}
+console.log(calculate("Panda has 48 apples and loses 4"));
+console.log(calculate("Jerry has 34 apples and gains 6"));
+//Or other solutions
+function calculate(string) {
+    return eval(string.match(/\d+|lose|gain/g).join("").replace("lose", "-").replace("gain", "+"))
+}
