@@ -1975,4 +1975,84 @@ return `Hello ${name.charAt(0).toUpperCase()}${name.slice(1)}!`
 console.log(greet('riley'));
 console.log(greet('ctlTQbwMsC'));
 
+console.log('-----------slice() ---------------------')
 
+/*
+Credit Card Mask
+Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most ' +
+'secret question is still correct. However, since someone could look over your shoulder, you don't want that shown
+on your screen. Instead, we mask it.
+
+    Your task is to write a function maskify, which changes all but the last four characters into '#'.
+maskify("4556364607935616") == "############5616"
+maskify(     "64607935616") ==      "#######5616"
+maskify(               "1") ==                "1"
+maskify(                "") ==                 ""
+
+// "What was the name of your first pet?"
+maskify("Skippy")                                   == "##ippy"
+maskify("Nananananananananananananananana Batman!") == "####################################man!"
+*/
+function maskify(cc) {
+    let lastFour = cc.slice(-4);
+    return lastFour.padStart(cc.length, '#');
+}
+console.log(maskify('4556364607935616'));
+console.log(maskify('1'));
+
+//Other solutions
+function maskify1(cc) {
+    return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+}
+console.log(maskify1('4556364607935616'));
+console.log(maskify1('1'));
+//Other solutions
+// return masked string
+function maskify2(cc) {
+    var maskedString = "";
+    for(var i = 0; i < cc.length; i++) {
+        if(i < cc.length - 4) {
+            maskedString = maskedString + "#";
+        } else {
+            maskedString = maskedString + cc.charAt(i);
+            console.log("char",cc.charAt(i))
+        };
+    }
+    return maskedString;
+}
+console.log(maskify2('15616'));
+console.log('-----------slice() ---------------------')
+
+/*
+Trimming a string
+Return a function that will trim a string (the first argument given) if it is longer than the maximum string length
+(the second argument given). The result should also end with "..."
+
+    These dots at the end also add to the string length.
+
+    So in the above example, trim("Creating kata is fun", 14) should return "Creating ka..."
+
+If the string is smaller than or equal to 3 characters then the length of the dots is not added to the string length.
+
+e.g. trim("He", 1) should return "H..."
+
+If the string is smaller or equal than the maximum string length, then simply return the string with no trimming or
+dots required.
+
+e.g. trim("Code Wars is pretty rad", 50) should return "Code Wars is pretty rad"
+
+
+*/
+
+function trim(arr, size) {
+    if (arr.length<=size) return arr;
+    if (arr.length<=3) return arr.slice(0,size)+'...';
+    return arr.slice(0,size-3)+'...';
+}
+console.log(trim("Creating kata is fun", 14));
+console.log(trim("He", 1));
+console.log(trim("Code Wars is pretty rad", 50));
+//Other solutions
+function trim1(arr, size) {
+    return arr.length <= size ? arr : arr.slice(0, arr.length > 3 ? size - 3 : size) + '...'
+}
