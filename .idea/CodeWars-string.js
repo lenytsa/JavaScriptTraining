@@ -1959,6 +1959,20 @@ function createPhoneNumber1(numbers){
     return format;
 }
 console.log(createPhoneNumber1([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+console.log('-----------slice() ---------------------')
 
+/*Greet Me
+Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+    Example:
+
+"riley" --> "Hello Riley!"
+"JACK"  --> "Hello Jack!"*/
+var greet = function(name) {
+    name= name.toLowerCase();
+return `Hello ${name.charAt(0).toUpperCase()}${name.slice(1)}!`
+};
+console.log(greet('riley'));
+console.log(greet('ctlTQbwMsC'));
 
 
