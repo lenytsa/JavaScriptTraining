@@ -1726,3 +1726,35 @@ while(index !== -1){ // (3)
     index = s.indexOf('cherry', index + 1); // (5)
 }
 console.log(count); // 3
+
+console.log('--------------IndexOf---------------------------');
+
+/*
+L2: Triple X
+Given a string, return true if the first instance of "x" in the string is immediately followed by the string "xx".
+
+tripleX("abraxxxas") → true
+tripleX("xoxotrololololololoxxx") → false
+tripleX("softX kitty, warm kitty, xxxxx") → true
+tripleX("softx kitty, warm kitty, xxxxx") → false
+Note :
+
+    capital X's do not count as an occurrence of "x".
+if there are no "x"'s then return false*/
+
+function tripleX(str) {
+    let index = str.indexOf('x');
+    if (index !== -1 && str.charAt(index + 1) == 'x' && str.charAt(index + 2) == 'x') return true
+    return false
+}
+console.log(tripleX("softX kitty, warm kitty, xxxxx")); //true
+console.log(tripleX("softx kitty, warm kitty, xxxxx"));// false
+console.log('--------------IndexOf---------------------------');
+
+function tripleX1(str){
+    console.log('one:',str.indexOf('x'));
+    console.log('two:',str.indexOf('xxx'));
+    return str.match('x') ? str.indexOf('x') === str.indexOf('xxx') : false;
+}
+console.log(tripleX1("softX kitty, warm kitty, xxxxx")); //true
+console.log(tripleX1("softx kitty, warm kitty, xxxxx"));// false
