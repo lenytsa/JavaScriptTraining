@@ -1915,3 +1915,21 @@ solution('abc', 'd') // returns false*/
 function solution(str, ending){
     return str.endsWith(ending);
 }
+console.log('-----------endsWith()---------------------')
+
+/*
+Automorphic Number (Special Numbers Series #6)
+Definition
+A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+    Task
+Given a number determine if it Automorphic or not .
+*/
+function automorphic(n){
+    let sq_num= n**2;
+   return  sq_num.toString().endsWith(n)? 'Automorphic': 'Not!!'
+}
+console.log(automorphic(1));
+console.log(automorphic(3));
+console.log(automorphic(6));
+
+
