@@ -1758,3 +1758,8 @@ function tripleX1(str){
 }
 console.log(tripleX1("softX kitty, warm kitty, xxxxx")); //true
 console.log(tripleX1("softx kitty, warm kitty, xxxxx"));// false
+//one more solution from other user
+const tripleX2 = str => {
+    let x = str.indexOf('x')
+    return x > -1 && x === str.indexOf('xxx')
+}
