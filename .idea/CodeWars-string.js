@@ -2054,5 +2054,41 @@ console.log(trim("He", 1));
 console.log(trim("Code Wars is pretty rad", 50));
 //Other solutions
 function trim1(arr, size) {
-    return arr.length <= size ? arr : arr.slice(0, arr.length > 3 ? size - 3 : size) + '...'
+    return arr.length <= size ? arr : arr.slice(0, arr.length > 3 ? size - 3 : size) + '...';
 }
+console.log('-----------slice() ---------------------');
+
+/*
+Remove the time
+You're re-designing a blog and the blog's posts have the following format for showing the date and time a post was made:
+
+    Weekday Month Day, time e.g., Friday May 2, 7pm
+
+You're running out of screen real estate, and on some pages you want to display a shorter format, Weekday Month Day' +
+' that omits the time.
+
+Write a function, shortenToDate, that takes the Website date/time in its original string format, and returns the
+shortened format.
+
+    Assume shortenToDate's input will always be a string, e.g. "Friday May 2, 7pm". Assume shortenToDate's output
+will be the shortened string, e.g., "Friday May 2".*/
+// function shortenToDate(longDate) {
+//         if(longDate.length<=17) return longDate.slice(0,-5)
+//         if(longDate.length>=24) return longDate.slice(0,-6);
+// }
+function shortenToDate(longDate) {
+        let comma = longDate.indexOf(',');
+        return longDate.slice(0,comma);
+}
+console.log(shortenToDate("Friday May 2, 9am"));
+console.log(shortenToDate("Tuesday January 29, 10pm"));
+//Or another solution
+function shortenToDate1(longDate) {
+    console.log(longDate.split(',')); //[ 'Friday May 2', ' 9am' ]
+    return longDate.split(',')[0];
+}
+console.log(shortenToDate1("Friday May 2, 9am")); //Friday May 2
+//Or
+const shortenToDate2 = longDate =>
+    longDate.replace(/,.*/, ``);
+console.log(shortenToDate2("Friday May 2, 9am")); //Friday May 2
