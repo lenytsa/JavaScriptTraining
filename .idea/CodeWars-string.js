@@ -2141,11 +2141,35 @@ function tailSwap(arr) {
     let v= arr[0].split(':');
     let v1= arr[1].split(':');
     return [`${v[0]}:${v1[1]}`, `${v1[0]}:${v[1]}`]
-
 }
+console.log(tailSwap(['abc:123', 'cde:456']));
 
-console.log(tailSwap1(['abc:123', 'cde:456']));
+console.log('-----------replace() ---------------------');
+//Массив объектов. Символ 'x' означает состояние 'on', символ '-' (дефис) означает состояние 'off',
+// а символ '_' (нижнее подчёркивание) означает продолжительность состояния 'on'.
 
+var strK = 'x-x_';
+var retArr = [];
+str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
+    if (p1) { retArr.push({ on: true, length: p1.length }); }
+    if (p2) { retArr.push({ on: false, length: 1 }); }
+}); //[ { on: false, length: 1 } ]
+console.log(retArr);
+console.log('-----------replace() ---------------------');
 /*
-console.log(longDate.split(',')); //[ 'Friday May 2', ' 9am' ]
-return longDate.split(',')[0];*/
+Vowel remover
+Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+    Examples
+shortcut("codewars") // --> cdwrs
+shortcut("goodbye")  // --> gdby*/
+function shortcut(string){
+    let re = /[aeiou]/g;
+    return string.replace(re,'');
+}
+console.log(shortcut("codewars"));
+
+function shortcut1(string){
+    return string.replace(/[aeiou]/g,'')
+}
+console.log(shortcut1("codewars"));
