@@ -2122,4 +2122,30 @@ function rotate(str){
     }
     return arr;
 }
-console.log(rotate("Hello"))
+console.log(rotate("Hello"));
+console.log('+++-----------slice() ---------------------');
+
+/*
+Tail Swap
+You'll be given a list of two strings, and each will contain exactly one colon (":") in the middle (but not at ' +
+'beginning or end). The length of the strings, before and after the colon, are random.
+
+Your job is to return a list of two strings (in the same order as the original list), but with the characters after
+each colon swapped.
+
+    Examples
+    ["abc:123", "cde:456"]  -->  ["abc:456", "cde:123"]
+    ["a:12345", "777:xyz"]  -->  ["a:xyz", "777:12345"]*/
+
+function tailSwap(arr) {
+    let v= arr[0].split(':');
+    let v1= arr[1].split(':');
+    return [`${v[0]}:${v1[1]}`, `${v1[0]}:${v[1]}`]
+
+}
+
+console.log(tailSwap1(['abc:123', 'cde:456']));
+
+/*
+console.log(longDate.split(',')); //[ 'Friday May 2', ' 9am' ]
+return longDate.split(',')[0];*/
