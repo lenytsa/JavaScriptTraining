@@ -2329,3 +2329,65 @@ function getNumberFromString(s) {
 }
 console.log(getNumberFromString("1"));
 console.log(getNumberFromString("this is number: 7"));
+console.log('-----------replace() ---------------------');
+/*
+
+Polish alphabet
+There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+    Your task is to change the letters with diacritics:
+
+ą -> a,
+    ć -> c,
+    ę -> e,
+    ł -> l,
+    ń -> n,
+    ó -> o,
+    ś -> s,
+    ź -> z,
+    ż -> z*/
+function correctPolishLetters (string) {
+    // const corrections = { ć: "c", ę: "e", ł: "l", ń: "n", ó:'o', ś:'s',ź:'z',ż:'z' };
+    // const correct = string => (
+    //     string.replace(/[ćęłńóśźż ]/g, character => corrections[character])
+    // )
+    return string
+        .replace(/ą/g,'a')
+        .replace(/ć/g, 'c')
+        .replace(/ę/g, 'e')
+        .replace(/ł/g, 'l')
+        .replace(/ń/g, 'n')
+        .replace(/ó/g, 'o')
+        .replace(/ś/g, 's')
+        .replace(/ź/g, 'z')
+        .replace(/ż/g, 'z');
+}
+console.log(correctPolishLetters("Jędrzej Błądziński"));
+console.log('-----------replace() ---------------------');
+
+/*Fake Binary
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
+    Return the resulting string.*/
+function fakeBin(x){
+    let res=''
+    for(let i=0; i<x.length; i++){
+        if(x[i]<5) {
+            res = res + 0
+        }
+        if(x[i]>=5){
+            res = res + 1
+        }
+    }
+    return res;
+}
+console.log(fakeBin('45385593107843568'));
+//Nice solutions from codewars bellow:
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+function fakeBin(x) {
+    return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+}
+function fakeBin(x){
+    return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1')
+}
