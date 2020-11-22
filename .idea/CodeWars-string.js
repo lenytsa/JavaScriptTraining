@@ -2471,3 +2471,54 @@ var replaceDots = function(str) {
     return str.replace(/[.]/g, '-');
 }
 console.log(replaceDots("one.two.three"));
+//Solution from codewars
+var replaceDots = function(str) {
+    return str.replace(/\./g,'-');
+}
+console.log('-----------replace() ---------------------');
+
+/*
+Contamination #1 -String-
+An AI has infected a text with a character!!
+
+    This text is now fully mutated to this character.
+
+    If the text or the character are empty, return an empty string.
+    There will never be a case when both are empty as nothing is going on!!
+
+    Note: The character is a string of length 1 or an empty string.
+
+    Example
+text before = "abc"
+character   = "z"
+text after  = "zzz"*/
+function contamination1(text, char){
+    if(char.length===0) return '';
+    return text.replace(/./g,char);
+}
+//Other solution from codewars
+const contamination = (text, char) => text.replace(/./g, char);
+//Or one more
+function contamination2(text, char){
+    return text.replace(/[^]/gi, char)
+}
+console.log('-----------replace() ---------------------');
+
+/*
+Start with a Vowel
+Create a function that takes any sentence and redistributes the spaces (and adds additional spaces if needed) so that
+each word starts with a vowel. The letters should all be in the same order but every vowel in the sentence should be the
+start of a new word. The first word in the new sentence may start without a vowel. It should return a string in all
+lowercase with no punctuation (only alphanumeric characters).
+
+EXAMPLES 'It is beautiful weather today!' becomes 'it isb e a ut if ulw e ath ert od ay' 'Coding is great' becomes
+'c od ing isgr e at' 'my number is 0208-533-2325' becomes 'myn umb er is02085332325'*/
+function vowelStart(str){
+    return str
+        .replace(/[^a-z0-9]/gi,'')
+        .replace(/[aeiou]/gi, el => ' ' + el)
+        .trim().toLowerCase()
+}
+console.log(vowelStart('under_score')); //und ersc or e
+console.log('under_score'.replace(/[^a-z0-9]/gi,'')); //underscore
+console.log('under_score'.replace(/[aeiou]/g, el => ' ' + el));// und er_sc or e
