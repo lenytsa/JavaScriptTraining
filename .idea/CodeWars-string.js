@@ -2415,4 +2415,29 @@ function remove(s){
     return s.replace(/!+$/, '');
 }
 console.log(remove("Hi!!!"))
-console.log(remove("!Hi!"))
+console.log(remove("!Hi!"));
+console.log('-----------replace() ---------------------');
+
+/*
+Replace vowels
+Create a function to replace all vowels (aeiou) of string for ?, example:
+
+replaceVogals('lorem ipsum') => 'l?r?m ?ps?m'*/
+function replaceVogals(str) {
+    return str.replace(/[aeiou]/g,'?');
+}
+console.log(replaceVogals('a'));//?
+console.log(replaceVogals('lorem ipsum')); //l?r?m ?ps?m
+
+console.log('-----------replace() ---------------------');
+/*
+All Star Code Challenge #3
+This Kata is intended as a small challenge for my students
+
+Create a function, called removeVowels (or remove_vowels), that takes a string argument and returns that same string with all vowels removed (vowels are "a", "e", "i", "o", "u").
+
+removeVowels("drake") // => "drk"
+removeVowels("aeiou") // => ""*/
+var removeVowels = function(str){
+    return str.replace(/[aeiou]/g,'');
+}
