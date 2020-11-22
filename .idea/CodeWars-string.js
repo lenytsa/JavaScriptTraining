@@ -2307,3 +2307,25 @@ function correct(string)
 
 }
 console.log(correct('J. K. R0WL1NG - HARRY P0TTER AND THE PR150NER 0F Azkaban'));
+console.log('-----------replace() ---------------------');
+
+/*
+Get number from string
+Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
+
+Function: ####javascript
+
+getNumberFromString(s)*/
+function getNumberFromString(s) {
+    return +s.replace(/[^0-9.]/g,''); //remove all the alphabetic characters
+}
+//Other solutions from codewars
+function getNumberFromString(s) {
+    return +s.replace(/\D/g, "");
+}
+//OR
+function getNumberFromString(s) {
+    return parseInt(s.replace(/[^\d]+/g, ""), 10)
+}
+console.log(getNumberFromString("1"));
+console.log(getNumberFromString("this is number: 7"));
