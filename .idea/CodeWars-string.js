@@ -2372,10 +2372,10 @@ function fakeBin(x){
     let res=''
     for(let i=0; i<x.length; i++){
         if(x[i]<5) {
-            res = res + 0
+            res = res + 0;
         }
         if(x[i]>=5){
-            res = res + 1
+            res = res + 1;
         }
     }
     return res;
@@ -2391,3 +2391,28 @@ function fakeBin(x) {
 function fakeBin(x){
     return x.replace(/[1234]/g, '0').replace(/[56789]/g, '1')
 }
+console.log('-----------replace() ---------------------');
+/*
+
+Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+Description:
+    Remove all exclamation marks from the end of sentence.
+
+    Examples
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+remove("Hi! Hi!") === "Hi! Hi"
+remove("Hi") === "Hi"*/
+//The n+ quantifier matches any string that contains at least one n.
+//The n$ quantifier matches any string with n at the end of it.
+// Do a global search for "is" at the end of a string:
+// var str = "Is this his";
+// var patt1 = /is$/g;
+// Tip: Use the ^n quantifier to match any string with n at the BEGINNING of it.
+function remove(s){
+    return s.replace(/!+$/, '');
+}
+console.log(remove("Hi!!!"))
+console.log(remove("!Hi!"))
