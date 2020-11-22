@@ -2202,6 +2202,7 @@ function DNAStrand(dna) {
     return s;
 }
 console.log(DNAStrand ("GTAT")); //CATA
+console.log('-----------replace() ---------------------');
 
 //Others solutions
 function DNAStrand1(dna){
@@ -2212,6 +2213,97 @@ function DNAStrand1(dna){
         .replace(/G/g, 'c').toUpperCase();
 }
 console.log(DNAStrand1("GTAT")); //CATA
+console.log('-----------replace() ---------------------');
+
 //other user solution
 let pairs = { A: "T", T: "A", C: "G", G: "C" };
 const DNAStrand4 = dna => dna.replace(/./g, c => pairs[c]);
+
+console.log('-----------replace() ---------------------');
+
+/*
+//DNA to RNA Conversion
+Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. It is composed of four
+nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+
+    Ribonucleic acid, RNA, is the primary messenger molecule in cells. RNA differs slightly from DNA its chemical
+structure and contains no Thymine. In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+    Create a function which translates a given DNA string into RNA.
+
+    For example:
+    The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid,
+    i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+
+    "GCAT"  =>  "GCAU"*/
+function DNAtoRNA(dna) {
+    return dna.replace(/T/g, 'u').toUpperCase();
+}
+console.log(DNAtoRNA("TTTT")); //UUUU
+console.log('-----------replace() ---------------------');
+
+//Ohters codewars solution
+function DNAtoRNA(dna) {
+    return dna.split("T").join("U");
+}
+console.log('-----------replace() ---------------------');
+
+//Or another codewars solution
+DNAtoRNA = dna => dna.split('').map( i =>  i == 'T' ? i = 'U' : i).join('');
+
+console.log('-----------replace() ---------------------');
+
+/*
+Help the Fruit Guy
+Our fruit guy has a bag of fruit (represented as an array of strings) where some fruits are rotten. He wants
+to replace all the rotten pieces of fruit with fresh ones. For example, given ["apple","rottenBanana","apple"]
+the replaced array should be ["apple","banana","apple"]. Your task is to implement a method that accepts an array
+of strings containing fruits should returns an array of strings where all the rotten fruits are replaced by good ones.
+
+    Notes
+If the array is null/nil/None or empty you should return empty array ([]).
+    The rotten fruit name will be in this camelcase (rottenFruit).
+    The returned array should be in lowercase.
+*/
+function removeRotten(bagOfFruits){
+    if (!Array.isArray(bagOfFruits) || !bagOfFruits.length) {return []}
+    for(let i=0; i<bagOfFruits.length; i++){
+        if(bagOfFruits[i].includes('rotten')){
+            bagOfFruits[i]=bagOfFruits[i].replace('rotten','').toLowerCase();
+        }
+    }
+    return bagOfFruits
+}
+console.log(removeRotten(["apple","rottenBanana","kiwi","melone","orange"]));
+//Other solutions from codewars:
+function removeRotten(arr){
+    return arr ? arr.map(x=>x.replace('rotten', '').toLowerCase()) : [] ;
+}
+//Other solutions from codewars:
+
+removeRotten = a => a == null ? [] : a.map(e => e.replace('rotten', '').toLowerCase());
+
+console.log('-----------replace() ---------------------');
+/*
+//Correct the mistakes of the character recognition software
+Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched
+and stored on a computer.
+
+    When documents (especially pretty old ones written with a typewriter), are digitised character recognition
+softwares often make mistakes.
+
+    Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+    S is misinterpreted as 5
+O is misinterpreted as 0
+I is misinterpreted as 1
+The test cases contain numbers only by mistake.*/
+function correct(string)
+{
+    return string
+        .replace(/5/g, 'S')
+        .replace(/0/g, 'O')
+        .replace(/1/g, 'I');
+
+}
+console.log(correct('J. K. R0WL1NG - HARRY P0TTER AND THE PR150NER 0F Azkaban'));
