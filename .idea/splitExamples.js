@@ -67,3 +67,30 @@ function isNotInRange(arr, { from, to } = {}) {
 }
 console.log(changeDigitsOrder(1500));//1005
 console.log(changeDigitsOrder(1513)); //1135
+
+console.log('-----------------------------');
+/*
+Выведите строку по одному слову в столбик, выравнивание по правому краю.
+    question
+Функция получает строку из нескольких слов. Выведите слова в столбик, выравнивание по правому краю.
+
+    Например, text = 'I will get everything I want'. Функция должна возвратить этот текст в виде строки, содержащей слова:
+
+    Напишите функцию с именем wordsInColumn, которая принимает строку text в качестве аргумента и возвращает строку, разделенную на слова, которые выводятся по одному в строке с выравниванием по правому краю.
+
+    Пример:
+
+функция wordsInColumn("Enjoy every moment") должна возвратить:
+    Write your solution here
+unit
+*/
+function wordsInColumn(text) {
+    text = text.split(' ');
+    let longestlength = Math.max(...(text.map(el => el.length)));
+    let res = '';
+    for (let i = 0; i < text.length; i++) {
+        res = res + ' '.repeat(longestlength - text[i].length) + text[i] + '\n';
+    }
+    return  res.trimEnd();
+}
+console.log(wordsInColumn("Enjoy every moment"));
