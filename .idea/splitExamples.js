@@ -94,3 +94,27 @@ function wordsInColumn(text) {
     return  res.trimEnd();
 }
 console.log(wordsInColumn("Enjoy every moment"));
+console.log('-----------------------------');
+/*
+
+Читается ли строка одинаково слева направо и справа налево?
+    Палиндром – это слово или предложение, одинаково читающееся в обоих направлениях. Предположительно, палиндром изобрел древнегреческий поэт Сотад (3 в. до н.э.).
+
+Примеры палиндромов на английском языке: 'Deed', 'Nun', 'Madam Im Adam', 'Pull up if I pull up'.
+
+    Напишите функцию с именем isPalindrome, которая принимает строку str в качестве аргумента и возвращает true, если строка является палиндромом после удаления из нее всех пробелов и приведения всех символов к нижнему регистру, и false - в противном случае.
+
+    Пример:
+
+функция isPalindrome("Enjoy every moment") должна возвратить false;
+функция isPalindrome("Was it a car or a cat I saw") должна возвратить true.
+*/
+function isPalindrome(str){
+    //Remove all Whitespace From a String .replace(/\s+/g, '')
+    str=[...str].join('').replace(/\s+/g, '');
+    let str1 = [...str].reverse().join('').replace(/\s+/g, '');
+    return str.toLowerCase() == str1.toLowerCase()
+}
+console.log(isPalindrome("Enjoy every moment"));//
+console.log(isPalindrome("Was it a car or a cat I saw"));// true
+console.log('-------------------------------');
