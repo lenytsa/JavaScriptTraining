@@ -202,4 +202,52 @@ console.log(isAnagram("foefet", "toffee")); //true
 console.log(isAnagram("dumble", "bumble")); //false
 console.log('------------------------');
 
+/*
 
+Descending Order
+Your task is to make a function that can take any non-negative integer as an argument and return it with its
+    digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+    Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321*/
+function descendingOrder(n){
+  return +n.toString().split('').sort((a, b) => b-a).join('');
+}
+console.log(descendingOrder(42145)); //54421
+console.log('------------------------');
+
+/*
+Highest and Lowest
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+    Example:
+
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+Notes:
+
+    All numbers are valid Int32, no need to validate them.
+    There will always be at least one number in the input string.
+    Output string must be two numbers separated by a single space, and highest number is first.
+*/
+function highAndLow(numbers){
+    let n= numbers.split(' ').sort((a, b) => b-a)
+    return `${n[0]} ${n.slice(-1)[0]}`;
+}
+console.log(highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")); //542 -214
+//other solutions from codewars
+function highAndLow1(numbers){
+    numbers = numbers.split(' ');
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+console.log('------------------------');
+
+function highAndLow(numbers){
+    numbers = numbers.split(' ').map(Number);
+    return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
