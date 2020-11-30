@@ -264,9 +264,36 @@ function nameShuffler(str){
 }
 console.log(nameShuffler('john McClane'));
 //Or other solutions from codewars
-function nameSuffle(str){
+function nameSuffle1(str){
     return str.split(' ').reverse().join(' ')
 }
 //Or other solutions from codewars
-const nameShuffler = str =>
+const nameShuffler2 = str =>
     str.replace(/([^\s]+) ([^\s]+)/, `$2 $1`);
+
+/*
+Add Length
+What if we need the length of the words separated by a space to be added at the end of that same word and have it
+returned as an array?
+
+    addLength('apple ban') => ["apple 5", "ban 3"]
+addLength('you will win') => ["you 3", "will 4", "win 3"]
+Your task is to write a function that takes a String and returns an Array/list with the length of each word added
+to each element .
+
+    Note: String will have at least one element; words will always be separated by a space.*/
+function addLength(str) {
+    let res = []
+    str = str.split(' ');
+    for (let el of str) {
+        res.push(el + ' ' + el.length);
+    }
+    return res;
+}
+console.log(addLength('you will win'))
+//Other codewars solutions
+function addLength1(str){
+    return str.split(" ").map(s => `${s} ${s.length}`)
+}
+//Or
+var addLength2 = s => s.split(' ').map(x => x + ' ' + x.length);
