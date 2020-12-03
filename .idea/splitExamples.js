@@ -343,4 +343,54 @@ function reverseString(str) {
 return str.split('').reverse().join('');
 
 }
-console.log(reverseString("nice"))
+console.log(reverseString("nice"));
+console.log('------------------------');
+
+/*
+Return String of First Characters
+In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
+
+    For example:
+
+    "This Is A Test" ==> "TIAT"*/
+function makeString(s){
+   s= s.split(' ');
+   let res = [];
+   console.log(s,res)
+    for(let i=0; i<s.length; i++){
+        res.push(s[i].charAt(0))
+    }
+    return res.join('');
+}
+console.log(makeString("sees eyes xray yoat"));
+//Other codewars solutions
+const makeString1 = s => s.split(' ').map(x => x[0]).join('')
+//Other codewars solutions
+function makeString2(s){
+    return (s.match(/\b\w/g)).join('');
+}
+//Other codewars solutions
+var makeString3 = s => s.split(' ').map( a => a.slice(0,1) ).join('') ;
+//Or
+const makeString4 = s => s.replace(/(\w)\w* ?/g, '$1');
+console.log('------------------------');
+
+/*Is number a palindrome?
+    Write a function which for given number returns true if number is palindrome or false if it is not.
+
+    A number is a palindrome if when the digits are reversed it is the same number.
+
+    Ex. 121 is a palindrome
+
+121 -> 121
+
+Ex. 345 is not a palindrome
+
+345 => 543*/
+function isPalindromic(a) {
+    let rev = a.toString().split('').reverse('').join('');
+    console.log(rev)
+    return a === rev ? true : false;
+}
+//console.log(isPalindromic(1234567))
+console.log(isPalindrome(22322))
