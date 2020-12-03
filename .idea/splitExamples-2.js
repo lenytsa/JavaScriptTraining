@@ -101,3 +101,29 @@ function reverse(string){
     return string.split(' ').reverse().join(' ');
 }
 console.log(reverse('no one cares'));
+console.log('----------------------');
+
+/*Number of ones in binary
+Write a function which takes a positive integer and returns the number of ones that appear in its binary representation.
+
+    For example,
+
+    ones(1); // -> 1
+ones(4); // -> 1
+ones(7); // -> 3*/
+function ones(n) {
+    return n.toString(2).split('').filter(el=>+el ===1).length;
+}
+console.log(ones(4));
+console.log(ones(7));
+//console.log(ones(8));
+//Other codewars solutions
+ones=z=>z.toString(2).match(/1/g).length
+//other codewars solutions
+function ones(n) {
+    return n.toString(2).match(/1/g).length
+}
+//Other codewars solutions
+function ones(n) {
+    return n.toString(2).split('').reduce((sum, x) => sum + +x, 0)
+}
