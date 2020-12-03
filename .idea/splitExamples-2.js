@@ -45,3 +45,45 @@ const findLongest1 = s => Math.max(...s.split(" ").map(x => x.length));
 console.log('----------------------');
 //Other codewars solutions
 var findLongest2=s=>s.split` `.reduce((t,v)=>(v=v.length)>t?v:t,0) //reduces array to one length of the longest element (word)
+
+console.log('----------------------');
+
+/*
+Initialize my name
+Some people just have a first name; some people have first and last names and some people have first, middle and last names.
+
+    You task is to initialize the middle names (if there is any).
+
+Examples
+'Jack Ryan'                   => 'Jack Ryan'
+'Lois Mary Lane'              => 'Lois M. Lane'
+'Dimitri'                     => 'Dimitri'
+'Alice Betty Catherine Davis' => 'Alice B. C. Davis'*/
+function initializeNames(name){
+    //console.log(name)
+    name= name.split(' ');
+    let res=[];
+    for(let i=1; i<name.length-1; i++){
+        let w = name[i].slice(0,1) + '.';
+        res.push(w);
+    }
+    return name.length>2? name[0] + ' '+  res.join(' ')  + ' '+ name.slice(-1): name.join(' ');
+}
+console.log(initializeNames('Alice Betty Catherine Davis'));
+
+//Other codewars solutions
+function initializeNames(name){
+    var n = name.split(" ");
+    if(n.length < 3) return name;
+    for(i = 1; i < n.length-1; i++){
+        n[i] = n[i][0] + ".";
+    }
+    return n.join(" ");
+}
+//Other codewars solutions
+function initializeNames(name){
+    var arr = name.split(' ');
+    for (var i = 1; i < arr.length - 1; i++)
+        arr[i] = arr[i].charAt(0) + '.';
+    return arr.join(' ');
+}
