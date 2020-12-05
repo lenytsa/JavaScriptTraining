@@ -155,11 +155,13 @@ Take a sentence (string) and reverse each word in the sentence. Do not reverse t
 "Hi mom" => "iH mom"
 " A fun little challenge! " => " A nuf elttil !egnellahc "*/
 // reverse the letters in the sentence
+console.log('----------------------');
 
 function reverser(sentence) {
     return sentence.split('').reverse().join('').split(' ').reverse().join(' ')
 }
 console.log(reverser("Hello mother")); //olleH rehtom
+console.log('----------------------');
 
 /*
 Exclamation marks series #13: Count the number of exclamation marks and question marks, return the product
@@ -186,6 +188,8 @@ function product(s) {
     console.log(questonMark, exclamationMark);//9
 }
 console.log(product("!!!???"));
+console.log('----------------------');
+
 //other codewars solutions
 function product2(s){
     excs = s.split('!').length - 1
@@ -195,3 +199,26 @@ function product2(s){
 //Other codewars solutions
 const product3 = s =>
     s.replace(/[^!]/g, ``).length * s.replace(/[^?]/g, ``).length;
+console.log('----------------------');
+
+/*
+Pig Latin Converter
+Write a function that takes in a string and convert that string to Pig Latin.
+
+    Definition of Pig Latin for the purposes of this program:
+    Take the first letter of each word and put it at the end
+Add 'ay' at the end of each word
+Example
+The cat ran away with the spoon
+
+would evaluate to
+
+hetay atcay anray wayaay ithway hetay poonsay
+
+Misc Info
+The returned value should be in all lowercase.*/
+function pigLatin(phrase) {
+    return phrase.toLowerCase().split(' ').map(v=>v.slice(1)+v.slice(0,1)+'ay').join(` `);
+}
+console.log(pigLatin('sup')); //upsay
+console.log(pigLatin('The cat ran away with the spoon'));//hetay atcay anray wayaay ithway hetay poonsay
