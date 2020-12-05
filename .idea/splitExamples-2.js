@@ -223,3 +223,5 @@ function pigLatin(phrase) {
 
 console.log(pigLatin('sup')); //upsay
 console.log(pigLatin('The cat ran away with the spoon'));//hetay atcay anray wayaay ithway hetay poonsay
+// other solutions
+const pigLatin = s => s.split` `.map(e => e.slice(1) + e[0].toLowerCase() + 'ay').join` `;
