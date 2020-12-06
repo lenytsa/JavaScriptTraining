@@ -224,4 +224,22 @@ function pigLatin(phrase) {
 console.log(pigLatin('sup')); //upsay
 console.log(pigLatin('The cat ran away with the spoon'));//hetay atcay anray wayaay ithway hetay poonsay
 // other solutions
-const pigLatin = s => s.split` `.map(e => e.slice(1) + e[0].toLowerCase() + 'ay').join` `;
+const pigLatin2 = s => s.split` `.map(e => e.slice(1) + e[0].toLowerCase() + 'ay').join` `;
+
+console.log('----------------------');
+
+/*
+String Reversing, Changing case, etc.
+    Given 2 string parameters, show a concatenation of:
+
+    the reverse of the 2nd string with inverted case; e.g Fish -> HSIf
+a separator in between both strings: @@@
+    the 1st string reversed with inverted case and then mirrored; e.g Water -> RETAwwATER
+    ** Keep in mind that this kata was initially designed for Shell, I'm aware it may be easier in other languages.***/
+function reverseAndMirror(s1,s2) {
+    let m1= s1.split('').map(v => (v === v.toLowerCase() ? v.toUpperCase() : v.toLowerCase())).reverse().join('');
+    let m2 =s2.split('').map(v => (v === v.toLowerCase() ? v.toUpperCase() : v.toLowerCase())).reverse().join('');
+    let m3 = m1.split('').reverse().join('');
+   return `${m2}@@@${m1}${m3}`;
+}
+console.log(reverseAndMirror('FizZ','buZZ'));//zzUB@@@zZIffIZz
