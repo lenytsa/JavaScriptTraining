@@ -300,7 +300,7 @@ function interweave(s1, s2) {
     return arr.join('').replace(/[0-9]/gi,'') ;
 }
 //another codewars solutons
-function interweave(s1, s2) {
+function interweave1(s1, s2) {
     let arr = [];
     s1 = s1.split('');
     s2 = s2.split('');
@@ -310,4 +310,23 @@ function interweave(s1, s2) {
     }
     return arr.join('').trim().replace(/\d/g, '');
 }
-console.log(interweave("hlo", "el2"))
+console.log(interweave1("hlo", "el2"));//hello
+console.log('----------------------');
+
+/*
+Reverse the bits in an integer
+Write a function that reverses the bits in an integer.
+
+    For example, the number 417 is 110100001 in binary. Reversing the binary is 100001011 which is 267.
+
+You can assume that the number is not negative.*/
+function reverseBits (n) {
+    let b = n.toString(2).split('').reverse().join('');
+    return parseInt(b,2)
+}
+console.log(reverseBits(417));//267
+
+//or
+function reverseBits1(num) {
+    return parseInt(num.toString(2).split("").reverse().join(""), 2);
+}
