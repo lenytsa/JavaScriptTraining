@@ -243,3 +243,28 @@ function reverseAndMirror(s1,s2) {
    return `${m2}@@@${m1}${m3}`;
 }
 console.log(reverseAndMirror('FizZ','buZZ'));//zzUB@@@zZIffIZz
+console.log('----------------------');
+
+/*
+Can Santa save Christmas?
+    Can Santa save Christmas?
+    Oh no! Santa's little elves are sick this year. He has to distribute the presents on his own.
+
+But he has only 24 hours left. Can he do it?
+
+    Your Task:
+You will get an array as input with time durations as string in the following format: HH:MM:SS. Each duration is a
+present Santa has to distribute. Determine whether he can do it in 24 hours or not.
+Your Task:
+You will get an array as input with time durations as string in the following format: HH:MM:SS.
+ Each duration is a present Santa has to distribute. Determine whether he can do it in 24 hours or not.*/
+function determineTime(durations){
+    let sec = 0;
+    for (let i = 0; i < durations.length; i++ ){
+       let arr = durations[i].split(':');
+        console.log(arr);
+        sec += arr[0] * 60 * 60 + arr[1] * 60 + arr[2]*1;
+    }
+    return (sec <= 86400 ) ? true : false;
+}
+console.log(determineTime(["12:00:00", "11:00:00"]));
