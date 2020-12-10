@@ -401,6 +401,7 @@ function hydrate(s) {
 }
 console.log(hydrate("2 glasses of wine and 1 shot")); //3 glasses of water
 console.log(hydrate('1 beer 2 glasses of wine and 1 shot 1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer'));
+console.log('----------------------------');
 
 //Other codewars solutions
 function hydrate1(s) {
@@ -412,5 +413,32 @@ function hydrate1(s) {
     }
     return answer > 1 ? `${answer} glasses of water`: '1 glass of water'
 }
+console.log('----------------------------');
+
 //Other codewars
 const hydrate2 = (s, w = [...s].filter(x => !isNaN(x)).reduce((a, b) => a + +b, 0)) => `${w} glass${w === 1 ? '' : 'es'} of water`;
+
+console.log('----------------------------');
+
+/*
+Remove consecutive duplicate words
+Your task is to remove all consecutive duplicate words from a string, leaving only first words entries. For example:
+
+    "alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta"
+
+--> "alpha beta gamma delta alpha beta gamma delta"*/
+function removeConsecutiveDuplicates(s){
+    let arr = s.split(' ');
+    let nArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if (arr[i] !== arr[i+1])(
+            nArr.push(arr[i])
+        )
+    }
+    return nArr.join(' ');
+}
+console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'))//alpha beta gamma delta alpha beta gamma delta
+//Other codewars
+const removeConsecutiveDuplicates1 = s => s.split(" ").filter((x,i,arr) => x!=arr[i-1]).join(" ");
+//Other codewars
+const removeConsecutiveDuplicates = s => s.replace(/\b(\w+)(?: \1)+\b/g, '$1')
