@@ -330,3 +330,46 @@ console.log(reverseBits(417));//267
 function reverseBits1(num) {
     return parseInt(num.toString(2).split("").reverse().join(""), 2);
 }
+console.log('----------------------');
+
+ /*   Tidy Number (Special Numbers Series #9)
+    Definition
+    A Tidy number is a number whose digits are in non-decreasing order.
+
+        Task
+    Given a number, Find if it is Tidy or not .
+tidyNumber (12) ==> return (true)
+Explanation:
+    The number's digits { 1 , 2 } are in non-Decreasing Order (i.e) 1 <= 2 .
+tidyNumber (32) ==> return (false)
+Explanation:
+    The Number's Digits { 3, 2} are not in non-Decreasing Order (i.e) 3 > 2 .*/
+function tidyNumber(n){
+    let arr = n.toString().split('');
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]>arr[i+1])return  false;
+    }
+    return true;
+}
+console.log(tidyNumber(102));
+console.log(tidyNumber(2789));
+console.log('----------------------');
+
+/*
+Simple equation reversal
+Given a mathematical equation that has *,+,-,/, reverse it as follows:
+
+solve("100*b/y") = "y/b*100"
+solve("a+b-c/d*30") = "30*d/c-b+a"
+More examples in test cases.*/
+function solve(eq){
+    console.log(eq.split(/([*+-/])/));
+    return eq.split(/([*+-/])/).reverse().join('');
+}
+console.log(solve("100*b/y")); //y/b*100
+console.log(solve("a+b-c/d*30"));//"30*d/c-b+a"
+//Or
+function solve1(eq){
+  return eq.split(/([*\+\-\/])/).reverse().join('');
+}
+console.log('----------------------------');
