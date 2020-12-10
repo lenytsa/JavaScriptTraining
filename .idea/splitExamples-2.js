@@ -466,7 +466,7 @@ function digits(num) {
             result.push(+(num[i]) + +(num[j]));
     return result;
 }
-//Or
+//Or other codewars
 // function digits(num){
 //     num = num.toString().split('').map(el => +el);
 //     let arr = [];
@@ -478,3 +478,66 @@ function digits(num) {
 //     return arr;
 // }
 console.log(digits(156));//[ 6, 7, 11 ]
+console.log('----------------------------');
+
+
+/*
+Sentences should start with capital letters.
+    In English, all words at the begining of a sentence should begin with a capital letter.
+
+    You will be given a paragraph that does not use capital letters. Your job is to capitalise the first letter of the first word of each sentence.
+
+    For example,
+
+    input:
+
+"hello. my name is inigo montoya. you killed my father. prepare to die."
+
+output:
+
+    "Hello. My name is inigo montoya. You killed my father. Prepare to die."
+
+You may assume:
+
+    there will be no punctuation besides full stops and spaces
+
+all but the last full stop will be followed by a space and at least one word*/
+
+//console.log(fix("hello. my name is inigo montoya. you killed my father. prepare to die."))
+function fix(p){
+    if(p.length < 1) return '';
+    let arr = p.split('. ');
+    for(let i = 0; i < arr.length; i++){
+        arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+    }
+    return arr.join('. ');
+}
+//Or another codewars
+function fix(paragraph){
+    //console.log(paragraph.replace(/(^|\. )[a-z]/g));
+  return paragraph.replace(/(^|\. )[a-z]/g, val => val.toUpperCase());
+}
+console.log(fix("hello. my name is inigo montoya. you killed my father. prepare to die."))
+
+console.log('----------------------------');
+
+/*
+Duplicate sandwich
+Task
+In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
+
+    Your task is to output a list of everything inbetween both occurrences of this element in the list.
+
+    Examples:
+[0, 1, 2, 3, 4, 5, 6, 1, 7, 8] => [2, 3, 4, 5, 6]
+    ["None", "Hello", "Example", "hello", "None", "Extra"] => ["Hello", "Example", "hello"]
+    [0, 0] => []
+    [true, false, true] => [false]
+"example" => "xampl"*/
+
+function duplicateSandwich(a) {
+    for(let i = 0; i < a.length - 1; i++)
+        if(a.indexOf(a[i]) !== a.lastIndexOf(a[i]))
+            return a.slice(a.indexOf(a[i]) + 1, a.lastIndexOf(a[i]));
+}
+console.log(duplicateSandwich([0, 1, 2, 3, 4, 5, 6, 1, 7, 8]))
