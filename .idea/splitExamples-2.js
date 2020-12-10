@@ -441,4 +441,40 @@ console.log(removeConsecutiveDuplicates('alpha beta beta gamma gamma gamma delta
 //Other codewars
 const removeConsecutiveDuplicates1 = s => s.split(" ").filter((x,i,arr) => x!=arr[i-1]).join(" ");
 //Other codewars
-const removeConsecutiveDuplicates = s => s.replace(/\b(\w+)(?: \1)+\b/g, '$1')
+const removeConsecutiveDuplicates2 = s => s.replace(/\b(\w+)(?: \1)+\b/g, '$1')
+
+
+console.log('----------------------------');
+
+/*
+Every possible sum of two digits
+Given a long number, return all the possible sum of two digits of it.
+
+    For example, 12345: all possible sum of two digits from that number are:
+
+    [ 1 + 2, 1 + 3, 1 + 4, 1 + 5, 2 + 3, 2 + 4, 2 + 5, 3 + 4, 3 + 5, 4 + 5 ]
+Therefore the result must be:
+
+    [ 3, 4, 5, 6, 5, 6, 7, 7, 8, 9 ]
+*/
+
+function digits(num) {
+    let result = [];
+    num = num.toString();
+    for(let i = 0; i < num.length; i++)
+        for(let j = i + 1; j < num.length; j++)
+            result.push(+(num[i]) + +(num[j]));
+    return result;
+}
+//Or
+// function digits(num){
+//     num = num.toString().split('').map(el => +el);
+//     let arr = [];
+//     for(let i = 0; i < num.length - 1; i++){
+//         for(let j = i + 1; j < num.length; j++){
+//             arr.push(num[i] + num[j]);
+//         }
+//     }
+//     return arr;
+// }
+console.log(digits(156));//[ 6, 7, 11 ]
