@@ -540,4 +540,57 @@ function duplicateSandwich(a) {
         if(a.indexOf(a[i]) !== a.lastIndexOf(a[i]))
             return a.slice(a.indexOf(a[i]) + 1, a.lastIndexOf(a[i]));
 }
-console.log(duplicateSandwich([0, 1, 2, 3, 4, 5, 6, 1, 7, 8]))
+console.log(duplicateSandwich([0, 1, 2, 3, 4, 5, 6, 1, 7, 8]));
+console.log('----------------------------');
+
+let str = 'cookies';
+let str2 = str.toUpperCase();
+let res = '';
+for (let i = 0; i < str.length - 1; i++) {
+    if (i === str.length - 2) {
+        res += str2[i] + str[i];
+    } else {
+        res += str2[i] + str[i] + ' ';
+    }
+}
+res = res.split(' ');
+console.log(res);// ["Cc", "Oo", "Oo", "Kk", "Ii", "Ee"]
+console.log('----------------------------');
+
+/*
+Sushi-go-round (Beginner's)
+Sam has opened a new sushi train restaurant - a restaurant where sushi is served on plates that travel around the bar on a conveyor belt and customers take the plate that they like.
+
+    Sam is using Glamazon's new visual recognition technology that allows a computer to record the number of plates at a customer's table and the colour of those plates. The number of plates is returned as a string. For example, if a customer has eaten 3 plates of sushi on a red plate the computer will return the string 'rrr'.
+
+    Currently, Sam is only serving sushi on red plates as he's trying to attract customers to his restaurant. There are also small plates on the conveyor belt for condiments such as ginger and wasabi - the computer notes these in the string that is returned as a space ('rrr r' //denotes 4 plates of red sushi and a plate of condiment).
+
+Sam would like your help to write a program for the cashier's machine to read the string and return the total amount a customer has to pay when they ask for the bill. The current price for the dishes are as follows:
+
+Red plates of sushi ('r') - $2 each, but if a customer eats 5 plates the 5th one is free.
+Condiments (' ') - free.
+    Input: String
+Output: Number
+
+Examples:
+
+    Input: 'rr'  Output: 4
+Input: 'rr rrr' Output: 8
+Input: 'rrrrr rrrrr' Output: 16*/
+//Codewars solutions
+function totalBill(str) {
+    str=str.replace(/\s/g,'');
+    return str?(str.match(/r/g).length-Math.floor(str.match(/r/g).length/5))*2:0;
+}
+//Or others
+function totalBill(str) {
+    var strl = str.split(' ').join('').length;
+    return strl > 4 ? (strl - Math.floor(strl / 5)) *2 : strl*2;
+}
+//Or Larisa O solutions
+function totalBill(str) {
+    let sushi = str.split("").filter(el=>el==="r").length;
+    let free = Math.trunc(sushi / 5);
+    return (sushi - free) * 2;
+}
+console.log(totalBill('rr rrr rr'));
