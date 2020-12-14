@@ -594,3 +594,34 @@ function totalBill(str) {
     return (sushi - free) * 2;
 }
 console.log(totalBill('rr rrr rr'));
+//Objecs lesson
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+let sum =0
+for(let sal in salaries){
+    sum = sum + salaries[sal]
+}
+console.log(sum);
+
+console.log('-----------------');
+
+
+/*
+Semi-Optional
+We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new Javascript Object setting the 'value' key on the new Object to the passed-in value.
+
+    So, for example, if we execute the following code:
+
+    var wrappedObj = wrap("MyWrappedString");
+// wrappedObject should be  {"value":"MyWrappedString"}
+We would then expect the following statement to be true:
+
+wrappedObj.value === "MyWrappedString"
+Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.*/
+function wrap(value) {
+    return {value};
+
+}
