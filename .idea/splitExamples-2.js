@@ -625,3 +625,40 @@ function wrap(value) {
     return {value};
 
 }
+console.log('-----------------');
+
+/*Grasshopper - Create the rooms
+Escape the room
+You are creating an "Escape the room" game. The first step is to create a hash table called rooms that contains all of
+the rooms of the game. There should be at least 3 rooms inside it, each being a hash table with at least three proper*/
+// Add rooms here
+var rooms = {
+    name: {
+        'a': 'a',
+        'b':' b',
+        'c': 'c'
+
+    },
+    description: {
+        'a': 'a',
+        'b':' b',
+        'c': 'c'
+    },
+    completed:{
+        'a': 'a',
+        'b':' b',
+        'c': 'c'
+    }
+}
+//solutions from codewars
+
+var rooms = {}
+for (var i = 0; i < 3; i++) {
+    rooms[`room${i}`] = {'a': 1, 'b': 2, 'c': 3}
+}
+//solutions from codewars
+const rooms = {
+    bedRoom     : [1,2,3],
+    kitchenRoom : [4,5,6],
+    bathRoom    : [7,8,9]
+}
