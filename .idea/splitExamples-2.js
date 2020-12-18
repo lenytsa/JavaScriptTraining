@@ -657,7 +657,7 @@ for (var i = 0; i < 3; i++) {
     rooms[`room${i}`] = {'a': 1, 'b': 2, 'c': 3}
 }
 //solutions from codewars
-const rooms = {
+const rooms3 = {
     bedRoom     : [1,2,3],
     kitchenRoom : [4,5,6],
     bathRoom    : [7,8,9]
@@ -677,4 +677,28 @@ let Person = {
     state: 'FL',
     country: 'USA',
     street: 'Main'
+}
+
+console.log('-----------------');
+/*Grasshopper - Object syntax debug
+Object debugging
+While making a zork-type game, you create an object of rooms. Unfortunately, the game is not working
+    . Find all of the errors in the rooms object to get your game working again.*/
+var rooms = {
+    // added missing commas and closing curly bracket
+    first: {
+        description: 'This is the first room',
+        items: {
+            chair: 'The old chair looks comfortable',
+            lamp: 'This lamp looks ancient'
+        }
+    },
+    // added missing commas and single quote around couch item
+    second: {
+            description: 'This is the second room',
+            items: {
+                couch: 'This couch looks like it would hurt your back',
+                table: 'On the table there is an unopened bottle of water'
+            }
+        }
 }
