@@ -724,3 +724,28 @@ console.log((bloodAlcoholContent({ounces:12.5, abv:0.4}, 190, 'male', 1)));
 function bloodAlcoholContent(drinks, weight, sex, time){
     return parseFloat(((drinks.ounces * drinks.abv * 5.14 / weight * (sex == 'male' ? 0.73 : 0.66)) - 0.015 * time).toFixed(4));
 }
+console.log('--------------');
+/*
+Task
+Coding in function giveMeFive, function accept 1 parameter:obj, it's an object.
+
+You need to the traverse the obj, if the length of the object key equals to 5, then push the key value to the array
+(you need to define the array by yourself, this time I won't help you). Additionally push the value to the array as
+ well, if the length of the value is equal to 5.
+
+Return the five after works finished.
+
+    You should use for..in in your code, otherwise, your solution may not pass this kata. Don't learn bad habits from
+    those lazy guys ;-)
+
+*/
+function giveMeFive(obj) {
+    let arr=[]
+    for (var key in obj) {
+        if (key.length==5) arr.push(key);
+        if (obj[key].length==5) arr.push(obj[key]);
+        console.log('object key:',key);
+    }
+    return arr;
+}
+console.log(giveMeFive({Our:"earth",is:"a",beautyful:"world"}))
