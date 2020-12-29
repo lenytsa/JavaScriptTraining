@@ -485,4 +485,27 @@ function equalElementsInArray1(arr){
 console.log(equalElementsInArray([2, 1, 5, 9, 4, 5, 6]));
 console.log(equalElementsInArray([2, 1, 5, 9, 6, 4, 1, 5, 6]));
 console.log(equalElementsInArray([1, 2, 3]));
-
+// String reverse 1 way
+function stringRev(str) {
+    let s='';
+    for(let i=0; i<str.length; i++){
+        s = str[i] + s;
+    }
+    return s
+}
+console.log(stringRev("Tom"));
+// String reverse 2 way
+function stringRev2(str) {
+    let s= str.split('').reverse().join('')
+return s;
+}
+console.log(stringRev2('Tom'));
+// String reverse 3 way
+function stringRev3(str) {
+    let s='';
+    for(let i = str.length-1; i>=0; i--){
+        s = s + str[i];
+    }
+    return s
+}
+console.log(stringRev3("Tom"));
