@@ -500,6 +500,7 @@ function stringRev2(str) {
 return s;
 }
 console.log(stringRev2('Tom'));
+
 // String reverse 3 way
 function stringRev3(str) {
     let s='';
@@ -509,3 +510,12 @@ function stringRev3(str) {
     return s
 }
 console.log(stringRev3("Tom"));
+
+//String reverse 4 way
+function stringRev4(str) {
+    if(str==='') return '';
+    else{
+        return stringRev4(str.substring(1)) + str.charAt(0)
+    }
+}
+console.log(stringRev4('Hello'));

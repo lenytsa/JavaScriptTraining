@@ -780,3 +780,42 @@ function iTri(s){
     return "You're done! Stop running!"
 }
 console.log(iTri(36));//{ Bike: '104.60 to go!' }
+
+console.log('---------------------');
+let school = {
+    name : "Vivekananda School",
+    location : "Delhi",
+    established : "1971"
+}
+let y=[]
+for(let x in school){
+    console.log(x)
+    //y.push(school[x])
+    y.push(x)
+}
+console.log(y);//[ 'name', 'location', 'established' ]
+console.log('---------------------');
+
+/*Duck Duck Goose
+The objective of Duck, duck, goose is to walk in a circle, tapping on each player's head until one is chosen.
+
+Task: Given an array of Player objects (an array of associative arrays in PHP) and an index (1-based), return the name of the chosen Player(name is a property of Player objects, e.g Player.name)
+Example:
+
+    duck_duck_goose([a, b, c, d], 1) should return a.name
+duck_duck_goose([a, b, c, d], 5) should return a.name
+duck_duck_goose([a, b, c, d], 4) should return d.name*/
+function duckDuckGoose(players, goose) {
+    let n='';
+   // for(let i=0; i<players.length; i++){
+   //     n=players[goose]
+   // }
+   // return n;
+    for(let x in players){
+        //console.log(players[x])
+    }
+    return players[goose]
+}
+console.log(duckDuckGoose(['a', 'b', 'c', 'd'], 1))
+
+
